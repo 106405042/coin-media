@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+
+        }
+
+        .header {
+            margin: 20px 65px 20px 160px
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .header>span {
+            font-size: 20px;
+            line-height: 40px;
+            margin-right: 30px;
+            font-weight: 400;
+            color: #4f4f4f;
+        }
+
+        .round_header {
+            background-color: #FA9D1F;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 28px;
+            margin-left: 2px;
+            vertical-align: text-top
+        }
+
+        .thumbnail {
+            width: 1280px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>.first_image_block {
+            width: 700px;
+            height: 550px;
+            margin-top: 60px;
+            margin-left: 60px
+        }
+
+        .thumbnail>.second_block {
+            display: inline-block;
+            margin-left: 70px;
+        }
+
+        .title {
+            color: #262626;
+            font-size: 35px;
+            font-weight: 700;
+            width: 360px;
+        }
+
+        .price {
+            color: #FA9D1F;
+            font-size: 40px;
+            font-weight: 700;
+            width: 230px;
+            margin-left: 22px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .murmur {
+            margin-left: 22px;
+            width: 350px;
+        }
+
+        .murmur>.block {
+            width: 320px;
+        }
+
+        .round {
+            background-color: #FA9D1F;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+        }
+
+        .discription {
+            margin-top: 0px;
+            margin-left: 30px;
+            font-size: 18px;
+            color: #4f4f4f;
+        }
+
+        .button_shop {
+            width: 330px;
+            height: 55px;
+            background-color: #FA9D1F;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        .button_shop>img {
+            background-color: #FA9D1F;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .button_shop>p {
+            background-color: #FA9D1F;
+            color: #f1f1f1;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+
+        }
+
+        .button_save {
+            width: 330px;
+            height: 50px;
+            border: 3px #FA9D1F solid;
+            margin: auto;
+            margin-top: 25px;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .button_save>img {
+            background-color: #ffffff;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 25px;
+        }
+
+        .button_save>p {
+            background-color: #ffffff;
+            color: #FA9D1F;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+
+        .desktop-block {
+            width: 1440px;
+            background-color: #f1f1f1;
+            margin-left: 75px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .body-block {
+            width: 800px;
+            background-color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 25px;
+        }
+
+        .paragraph {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 30px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff
+        }
+
+        .subtitle {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 25px;
+        }
+
+        .paragraph-img {
+            width: 650px;
+            height: auto;
+            padding-top: 30px;
+            margin-left: 70px;
+            background-color: #ffffff;
+        }
+
+        .paragraph-figcaption {
+            font-size: 14px;
+            color: #4f4f4f;
+            width: 650px;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: normal;
+            margin-left: 70px;
+            text-align: center;
+            margin-top: 5px;
+            line-height: 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #1F88BF;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+            position: relative;
+            top: 7.5px;
+            left: 2px;
+        }
+
+        .abbreviation-triangle {
+            background-color: #ffffff;
+            border-right: 5px solid #ffffff;
+            border-left: 5px solid #ffffff;
+            border-top: 8px solid #1F88BF;
+            display: inline-block;
+            position: relative;
+            top: -9.5px;
+            left: 4px;
+        }
+
+        .abbreviation-block {
+            margin-left: 70px;
+            width: 650px;
+            background-color: #3DA6D3;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .abbreviation {
+            width: 600px;
+            font-family: Noto Sans TC;
+            color: #ffffff;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #3DA6D3;
+        }
+
+
+        h1 {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 40px;
+            color: #4A4949;
+            margin-left: 60px;
+            background-color: #ffffff
+        }
+
+        .seller-block {
+            width: 440px;
+            height: 963px;
+            background-color: #ffffff;
+            position: relative;
+            margin-left: 40px
+        }
+
+        .seller {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff
+        }
+
+        .seller-header {
+            width: 380px;
+            margin-left: 35px;
+            padding: 35px 0 22px 9px;
+            border-bottom: 3px solid #FFB736;
+            background-color: #ffffff
+        }
+
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: 30px;
+            margin-left: 31px;
+            position: absolute;
+
+        }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            margin-left: -20%;
+        }
+
+        .seller-name {
+            font-size: 24px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            width: 214px;
+            margin-top: 30px;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .seller-country {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 40px;
+            display: inline-block;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 70px;
+            background-color: #ffffff
+        }
+
+        .seller-date {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .next-img {
+            width: 400px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .blue-block {
+            background-color: #1F88BF;
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 20px;
+        }
+
+        .blue-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #1f88bf
+        }
+
+        .orange-block {
+            background-color: #FA9D1F;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 258.81px;
+
+
+        }
+
+        .orange-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #FA9D1F
+        }
+
+        .next-title {
+            font-size: 24px;
+            color: #808080;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 350px;
+            margin: 270px 0 0 50px;
+            background-color: #ffffff
+        }
+
+        .original-price {
+            font-size: 22px;
+            color: #4A4949;
+            line-height: 44px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 99px;
+            margin: 5px 0 0 150px;
+            text-decoration: line-through;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .new-price {
+            font-size: 30px;
+            color: #F57F01;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 142px;
+            margin-left: 20px;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .share-sticky {
+            width: 485px;
+            margin-left: 930px;
+            margin-top: 50px;
+            display: inline-block;
+            position: sticky;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-10%);
+        }
+
+        .orange-share {
+            background-color: #FA9D1F;
+            width: 225px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 50px 0 26px 229px;
+        }
+
+        .orange-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 145px;
+            position: fixed;
+            background-color: #FA9D1F
+        }
+
+        .blue-share {
+            background-color: #3DA6D3;
+            width: 250px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 0 0 0 204px;
+        }
+
+        .blue-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 180px;
+            position: fixed;
+            background-color: #3DA6D3;
+        }
+
+        .flex-container-guessyoulike {
+            width: 1440px;
+            background-color: #f1f1f1;
+            align-content: center;
+            display: flex;
+        }
+
+        .flex-container-guessyoulike>p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            color: #4A4949;
+            margin: 0px;
+            padding-left: 669px;
+        }
+
+        .flex-container-footer {
+            width: 1440px;
+            background-color: #e5e5e5;
+            display: inline-block;
+            margin-top: 0px;
+        }
+
+        .news-carousel {
+            width: 1440px;
+            height: 479px;
+            background-color: #f1f1f1;
+            margin-top: 0px;
+        }
+
+        .copyright {
+            margin-left: 247px;
+            margin-top: 8px;
+            background-color: #e5e5e5;
+        }
+
+        .copyright>span {
+            font-weight: 400px;
+            color: #808080;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 50px;
+            display: inline-block;
+            background-color: #e5e5e5;
+        }
+
+        .Logo3 {
+            width: 322px;
+            height: 161px;
+            margin-left: 247px;
+            margin-top: 69px;
+            background-color: #e5e5e5;
+        }
+
+        .know-us {
+            background-color: #f57f01;
+            width: 75px;
+            margin-top: 10px;
+        }
+
+        .know-us>span {
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 6px;
+            margin-bottom: 20px;
+
+        }
+
+        .know-us>a {
+            color: #ffffff;
+        }
+
+        .title-footer {
+            display: inline-block;
+            margin-left: 105px;
+            background-color: #e5e5e5;
+        }
+
+        .title-footer>p {
+            color: #808080;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .you-are-also-browsing {
+            width: 1440px;
+            height: 100px;
+            background-color: #F57F01;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .you-are-also-browsing>span {
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            background-color: #F57F01;
+            padding-left: 519px;
+            padding-top: 19px;
+            display: inline-block;
+
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="website" style="width:1440px">
+        <div class=header>
+            <div class=logo>
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+            </div>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <div class="round_header"></div>
+            <span>校園熱銷</span>
+            <span>文化小物</span>
+            <span>時代精品</span>
+            <span>在地嚴選</span>
+            <span>海外直送</span>
+        </div>
+        <div class=thumbnail style="background-color:#ffffff">
+            <div class=first_image_block style="background-color:#ffffff">
+                <img style="width:700px;height:auto" src="./image/road01.jpg">
+                <p style="color: #4f4f4f;background-color:#ffffff">位於河階地形上的利稻部落，當地布農族居民在這塊海拔1068公尺的土地生活已久。　圖／王慶雄提供
+                </p>
+            </div>
+            <div class=second_block style="background-color:#ffffff">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">在地嚴選
+                </p>
+                <p class=title style="background-color:#ffffff">漫漫修復路</p>
+                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px;margin-bottom: -10px;">南橫居民尋生存之「道」 </p>
+                <p class=price style="background-color:#ffffff">NT$3480</p>
+                <div class="murmur" style="background-color:#ffffff">
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
+                    </div>
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
+                    </div>
+                </div>
+                <div class=button_shop>
+                    <img src="./icon/Group.png">
+                    <p>加入購物車</p>
+                </div>
+                <div class=button_save>
+                    <img src="./icon/small-bookmark 1.png">
+                    <p>收藏商品</p>
+                </div>
+            </div>
+        </div>
+        <div style="height:50px"></div>
+        <!--paragraph-->
+        <div class="desktop-block">
+            <div class="body-block">
+                <h1>
+                    商品介紹
+                </h1>
+                <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
+                <div class="paragraph">
+                    週六正午，行經台20線（台灣南部橫貫公路，俗稱南橫）抵達台東縣海端鄉利稻部落。群山環繞、美景在前，居住於海拔1068公尺的布農族居民，本應坐享南橫交通之便經營餐廳及民宿，在熱門觀光時段等待遊客前來。然而事實並非如此，放眼望去，營業中的餐廳寥寥可數，許多民宿雖高掛招牌卻深鎖大門。三兩隻野狗趴臥在歇業的商家前，因陌生臉孔的出現迅速起身，朝零星到訪的外地人大聲吠叫。仍經營觀光事業的居民們在店內無所事事，看似對單調生活習以為常，卻也藏不住眼底的失落。南橫，路斷人稀已有十年。
+                </div>
+                <!--subtitle-->
+                <div class="subtitle">連結東西兩地　南橫八景引觀光商機</div>
+                <div class="paragraph">
+                    南橫公路貫穿中央山脈，連結台南、高雄及台東等地。1972年通車後，公路沿線自然風貌和布農族部落文化吸引大量觀光人潮湧入，開設在利稻部落的陳大姐名產店（原「枕戈商店」）便是受惠於南橫公路的商家之一。老闆娘陳秀霞憶起公路甫通車的盛況，「那時候一天都一百台遊覽車，大家都想要來走走看啊！」即使道路原先未鋪上瀝青混凝土，遊客們仍不畏石子路難行，紛至沓來。隨著路面工程愈加完善，沿途觀光產業也愈加興盛，利稻部落更獲得「民宿村」之稱。
+                </div>
+                <img class="paragraph-img" src="./image/road02.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">開設名產店的陳秀霞，回憶利稻部落在南橫公路受阻前的觀光榮景，言語間透露感慨。　圖／劉信秀攝</p>
+                <div class="paragraph">
+                    位於高雄市桃源區的梅山口同樣地處南橫公路沿線，2009年莫拉克颱風以前，遊客紛紛由此進入南橫公路東段。高雄市桃源區梅山里社區發展協會理事長顏國經提到，過去連假期間遊客總是絡繹不絕，「過年的時候，梅山口交通會打結！」大量遊客促進南橫公路沿線經濟，也造就當地部落繁榮。沿途知名景點天池、檜谷、埡口、向陽、摩天、利稻河階台地、霧鹿峽谷、天龍吊橋也在遊客口耳相傳下，成為著名的「南橫八景」。
+                </div>
+                <div class="subtitle">莫拉克斬斷南橫　復原遙遙無期</div>
+                <div class="paragraph">
+                    好景不常，莫拉克颱風帶來三天超過2,500毫米的雨量，引發山區土石流並沖毀共22座橋樑，阻斷南橫公路通行。同年8月8日，荖濃溪上游一帶的山坡坍方，堵塞地勢較低的河谷，形成堰塞湖，連日豪雨使得河床難以負荷，在一個夜晚潰堤。高雄市桃源區復興里里長江維明（Dahu-nilu）形容當時場景，「居民看見一個像滾球般混濁的河水往下滾動。」河水四處漫溢，沖上一旁的馬路。他為了避難，背著行動不便的老母親爬上住家附近高地。江維明回想莫拉克颱風，緩緩說道：「那個恐怖跟驚悚的心，只有當時在的人才知道。」
+                </div>
+                <img class="paragraph-img" src="./image/road03.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    復興里里長江維明對莫拉克颱風當天的場景記憶猶新，坐在坡前生動地描述避難故事。　圖／徐佳渝攝</p>
+                    
+                <div class="paragraph">
+                    一場莫拉克颱風，中斷在地居民的一線生機。往後工務段搶修的過程中，又發生2012年611水災、2013年天兔颱風、2014年埡口大崩塌與2016年602水災，對原已脆弱的路段，再度造成嚴重傷害。直至今日，「梅山口」至「向陽」45公里的路段仍嚴重受損，屬封閉管制區，不僅阻斷高雄至台東的路途，南橫八景之三——天池、檜谷、埡口也已與世隔絕近十年。
+                </div>
+                <img class="paragraph-img" src="./image/road04.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    莫拉克颱風來臨時，沖毀南橫公路沿線眾多橋梁，中斷沿線部落對外交通。　圖／簡敏男提供</p>
+                <img class="paragraph-img" src="./image/road05.png">
+                <div class="paragraph">
+                    除了天災接連阻撓，交通部公路總局第三區養護工程處主任工程司王慶雄表示，南橫公路位於高海拔濕冷山區，正午過後容易起霧，「一天適合工作的時間往往只有四小時左右。」此外，南橫位居深山，沒有替代道路，若前後路段同時發生幾處坍塌，大型工程機具無法深入內部崩塌處。「如果前方路段發生災害，後方的修復整個是停下來。」王慶雄說：「所以公路單位只能一段一段慢慢修。」種種困難加上山區落石頻繁，使居民賴以維生的交通要道，至今仍處在漫長的修復工程中。
+                </div>
+                <img class="paragraph-img" src="./image/road06.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    梅山明隧道旁的山坡地崩塌後，缺乏植被保護的地表使施工更加困難。　圖／黃郁期攝</p>
+                <img class="paragraph-img" src="./image/road07.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    山地地形增加道路修復難度，施工工人需同時進行邊坡防治及路基穩固工程。　圖／黃郁期攝</p>
+                <div class="paragraph">
+                    西部路段在2017年明霸克露橋正式完工後，大抵修復完畢，復興、梅蘭和梅山等地居民，也重獲交通之便，生活逐漸回復過往水準。東部通往霧鹿、利稻及向陽的路段，仍有多處施工，經常受天氣影響實施交通管制。遙遙無期的修復工程，讓居民渴望通車的心情無處安放。
+                </div>
+                <img class="paragraph-img" src="./image/road08.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    高山公路邊坡路基下陷，施工修復時道路僅足夠汽車單向行駛，會車不易。　圖／劉信秀攝</p>
+                <img class="paragraph-img" src="./image/road09.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    關山通往利稻路段，警察正攔檢一輛小貨車，旁邊紅色標誌顯示埡口至向陽路暫時封閉。　圖／黃郁期攝</p>
+                <div class="subtitle">利稻生活難返榮景　居民力拚復甦死城</div>
+                <div class="paragraph">
+                    「工務段要盡快讓這條道路趕快通，不然這裡真的是死城。」利稻村村長古金福（族名：vilian）語氣間充滿無奈。放眼望去利稻村，營業中的店家屈指可數，部落安靜如山中孤島。利稻村鄰長古利雄（ibi）提起昔日榮景：「這邊道路還沒斷的時候，小時候那些連續假期，連腳踏車都不能在馬路上過，人擠車子喔！」南橫交通之便帶來的觀光人潮，如今已成過往。
+                </div>
+                <img class="paragraph-img" src="./image/road10.png">
+                <div class="paragraph">
+                    「在出遊的時候，他們（遊客）希望一個循環式的，那如果從甲仙就可以往關山、池上，這樣子每個景點都可以碰到。」古利雄說明，由於南橫公路連接台東至高雄的中間路段，仍屬封閉管制區域，遊客無法透過南橫一次看盡東西部風景，導致吸引力下降，並影響觀光人潮。觀光產業越加蕭條，居民被迫轉以務農維生，卻仍因南橫公路阻斷，無法將作物銷往西部地區。「現在我們市場的選擇性少，只能就近的腹地去做銷售，以致於我們的競爭力下滑。」古金福更補充，花東地區的農產品需求量相對較低，「因為沒有辦法消化掉（農產品），我們就把價錢壓低，壓低之後的價錢就沒有辦法生活了。」為因應現況，居民選擇種植高麗菜、番茄等全年生產作物，爭取多次銷售機會，以維持生活水平，卻仍難以調適南橫阻斷帶來的不便。
+                </div>
+                <div class="paragraph">
+                    去年（2018年）底，隱忍九年的利稻居民第一次綁上白色頭巾、舉起抗議看板，遊行至關山工務段抗議。古金福質疑工務段未盡監督義務，導致工程一再延期，卻未清楚交代延宕原因，「去年我們沒有碰到下大雨，也沒有碰到颱風，他竟然可以講說『災區擴大』這四個字！」對此，關山工務段副段長邱坤寶提到，去年雖沒有颱風等顯著災難，但西南氣流帶來的雨量仍影響山區地貌，且過去天災對山地造成的傷害也需時間復原，因而無法對工程時限提出承諾。古利雄坦言對未來的修復進度不敢抱持太多期望，怕期待越高，往後將面臨更大的失落。
+                </div>
+                <img class="paragraph-img" src="./image/road11.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    利稻村村長古金福提到南橫公路阻斷後對部落民生造成顯著影響，盼公路盡速修復開通。　圖／涂葦慈攝</p>
+                <div class="subtitle">聯外交通修復　梅山口境遇獲改善</div>
+                <div class="paragraph">
+                    南橫西段梅山口附近包括梅蘭、復興、梅山一帶居民，也因經濟上仰賴聯外道路，殷切期盼南橫全線通車。當地居民多種植一年採收一次的梅子、李子，因此須在當季及時銷售。然而莫拉克颱風後，公路經常中斷，部落經濟受到影響，顏國經說：「前兩年採收時間，整個交通中斷，一年下來的紅肉李都給猴子。」往後幾年，居民進出梅山口部落須經過玉穗農路及荖濃溪河床便道，然而一場大雨隨時可能沖垮臨時道路，阻斷對外交通。居民為了生存，只能仰賴中盤商前往部落，以較低廉的價格收購農產品。
+                </div>
+                <img class="paragraph-img" src="./image/road12.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    在2017年明霸克露橋開通以前，居民進出部落皆須通過玉穗農路及荖濃溪河床便道，圖為居民行經荖濃溪河床便道的景象。　圖／江維明提供</p>
+                <div class="paragraph">
+                    所幸，隨著明霸克露橋開通，梅山口聯外道路已修復完畢。農民不再仰賴中盤商，而能直接向遊客販售農產品，獲得更多利潤。除此之外，交通便利亦帶動部落觀光，顏國經提到：「現在我們部落觀光也有在起色，會利用假日遊客進來做一點小攤位。」他認為，近年「深度旅遊」興起，若能結合在地農特產品與部落文化發展「部落觀光」，將能促進經濟，提升居民生活品質。
+                </div>
+                <img class="paragraph-img" src="./image/road13.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    2017年開通的明霸克露橋，成為復興、梅蘭、梅山三里居民通往高雄市區的重要途徑。　圖／涂葦慈攝</p>
+                <img class="paragraph-img" src="./image/road14.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    梅山里社區發展協會理事長顏國經提到自己對部落發展觀光樂觀態度，也期待藉此提升居民生活品質。　圖／徐佳渝攝</p>
+                <div class="paragraph">
+                    梅山口附近部落雖與利稻同樣期盼南橫公路全線通車，然而江維明認為，催促工務段開通南橫公路，可能影響修復品質。他曾親自前往梅山口至向陽的封閉路段，瞭解工程現況。他提到梅山口後方的長青祠，因大雨崩塌近一百公尺，工務段完成修補後，埡口也發生坍塌，崩塌完的光滑石壁成為施工面臨的重大考驗。「那時候他們有一點想要放棄，因為那個很難施工，但他們還是克服了。」他同時分享，工務段曾打趣地說：「你們里民也要一直為我們禱告啊，祈求上帝今年的雨不要下那麼多，讓山趕快穩固，不要再垮了。」
+                </div>
+                <div class="subtitle">路斷情不斷　布農人不畏路阻探親尋醫</div>
+                <div class="paragraph">
+                    「以前那個『野狼125』都可以騎過去了，何況現在大家都有車。兩個小時就到了，以前的關係是真的很緊密。」古金福言語間透露對公路開通的希冀。南橫曾是利稻、梅山兩地布農族人維繫情感的重要途徑，遭阻斷後，取代南橫成為尋親探戚之路的，卻是車程近五小時的南迴公路。雖然便捷不再，家族意識強烈的布農族人，仍竭盡所能建立彼此間的連結。在利稻部落經營民宿的余春蘭，直言公路阻斷對族人往來並無影響，「喜事啦喪事，比如說我們有親戚在梅山或桃源那邊，我們還是會想辦法從這邊過去。」十年以來，團結是破除距離屏障的利刃，古利雄堅定地說：「親情都在，哪怕路斷了，我們的親情都還在，不會因為路斷了就什麼都沒了。」
+                </div>
+                <img class="paragraph-img" src="./image/road15.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    在利稻經營民宿的余春蘭，提到南橫公路阻斷使族人聯繫困難，但並不影響族人情感。　圖／徐佳渝攝</p>
+                <div class="paragraph">
+                    古利雄同時也分享，自己年幼時曾發過一次嚴重高燒，但因當時部落內醫療資源不足，又因南橫阻斷對外交通不便，父母親便背著年幼的自己徒步至和利稻村相距9.9公里遠的天龍橋，坐別人的車到關山急診，才獲得醫療協助。南橫阻斷十年間，不論是延續家族情感和爭取外部資源，居民都在自尋解方，一一破除困境。
+                </div>
+                <div class="subtitle">「臨時便道」盼搶通　南橫居民困境中求出路</div>
+                <div class="paragraph">
+                    「我們也慢慢在嘗試，不要一次就讓工程到位。」王慶雄表示，目前考量「梅山口」至「向陽」路段附近地質脆弱不穩定、路寬不符省道標準且常有落石坍方，去年公路總局已將該路段降低層級至「臨時便道」（現為「台20臨105線」）。他說明，臨時便道以較簡約的工法修建，不影響道路修復品質，期待藉此加速搶通，儘速還給居民交通便利，後續再加以補強，最終恢復至道路原有標準。
+                </div>
+                <div class="paragraph">
+                    南橫沿線居民和工務段共同走過十年修復歷程，其實都在朝著同樣的方向努力，邱坤寶坦言：「事實上我們做這些，都是為了村民，為了這條道路。」公路與人，在這段漫長的時日裡相依、相存。江維明說梅山居民早已在收入擺盪間學會安然自處，無法發展觀光，便回歸早先的務農日常；在勞心勞力栽植的作物有所起色、對外交通陸續恢復後，再次推廣特色觀光。古金福則言，利稻人天性單純、慣於忍讓，因滿懷對通路的渴望，才憤而起身爭取權益，與此同時，也在困境中奮力找尋安穩生活的出路。
+                </div>
+                <div class="paragraph">
+                    南橫修復之路尚未走完，人人都在與地共處的生存之「道」上，不停向前。
+                </div>
+
+                <div
+                    style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
+                </div>
+
+            </div>
+            <!--about sellers-->
+            <!--<div class="mobile-block">-->
+            <div class="seller-block">
+                <div class="seller">
+                    <div class="seller-header">關於賣家</div>
+                </div>
+                <div class="circular--landscape">
+                    <img class=".circular--landscape img" src="./image/Teddy.jpg">
+                </div>
+                <div class="seller-name">Teddy Huang</div>
+                <div>
+                    <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+                        src="./icon/placeholder.svg">
+                    <div class="seller-country">台灣</div>
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                </div>
+                <div class="seller-date" style="margin-top: 123px;">上架日期：2019/06/28</div>
+                <div class="seller-date" style="margin-top: -10px;">共同賣家：劉信秀、涂葦慈</div>
+                <div class="seller-date" style="margin-top: -10px;">蕭佳宜、徐佳渝</div>
+                <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
+                    src="./icon/curve.png">
+                <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                    src="./icon/curve.png">
+                <div class="seller" style="margin-top: 40px; margin-left: 44px;">
+                    強力推薦
+                </div>
+                <img class="next-img" src="./image/water-1.png">
+                <div class="blue-block">
+                    <div class="blue-block-word">視覺化專題報導</div>
+                </div>
+                <div class="orange-block">
+                    <div class="orange-block-word">85折</div>
+                </div>
+                <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                <div class="original-price">NT$3,999</div>
+                <div class="new-price">NT$2,888</div>
+            </div>
+            <div class="share-sticky">
+                <div class="orange-share">
+                    <div class="orange-share-text">好物不分享？</div>
+                    <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
+                        src="./icon/share-white.png">
+                </div>
+                <div class="blue-share">
+                    <div class="blue-share-text">FB Share起來！</div>
+                    <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
+                        src="./icon/facebook.svg">
+                    <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
+                        src="./icon/question-triangle.png">
+                    <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--猜你喜歡-->
+
+    <div class="flex-container-guessyoulike">
+        <p>猜你喜歡
+        </p>
+    </div>
+
+    <!--輪播區-->
+
+    <div class="news-carousel">
+        <p style="margin-top: 0px;">新聞聯播區（尚在研究技能中）</p>
+    </div>
+
+    <!--footer-->
+
+    <div class="flex-container-footer">
+        <img class="Logo3" src="./image/Logo3@4x-8.png">
+        <div class="title-footer">
+            <div class="know-us">
+                <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                        style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                </span>
+            </div>
+            <p style="display: inline-block;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+            <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+            <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+            <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+            <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+            <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+        </div>
+        <div class="copyright">
+            <span>© 2020 資恩荼報 All rights reserved</span>
+        </div>
+    </div>
+</body>
+
+</html>
