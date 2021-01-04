@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+
+        }
+
+        .header {
+            margin: 20px 65px 20px 160px
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .header>span {
+            font-size: 20px;
+            line-height: 40px;
+            margin-right: 30px;
+            font-weight: 400;
+            color: #4f4f4f;
+        }
+
+        .round_header {
+            background-color: #FA9D1F;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 28px;
+            margin-left: 2px;
+            vertical-align: text-top
+        }
+
+        .thumbnail {
+            width: 1280px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>.first_image_block {
+            width: 700px;
+            height: 550px;
+            margin-top: 60px;
+            margin-left: 60px
+        }
+
+        .thumbnail>.second_block {
+            display: inline-block;
+            margin-left: 70px;
+        }
+
+        .title {
+            color: #262626;
+            font-size: 35px;
+            font-weight: 700;
+            width: 380px;
+        }
+
+        .price {
+            color: #FA9D1F;
+            font-size: 40px;
+            font-weight: 700;
+            width: 230px;
+            margin-left: 22px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .murmur {
+            margin-left: 22px;
+            width: 350px;
+        }
+
+        .murmur>.block {
+            width: 320px;
+        }
+
+        .round {
+            background-color: #FA9D1F;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+        }
+
+        .discription {
+            margin-top: 0px;
+            margin-left: 30px;
+            font-size: 18px;
+            color: #4f4f4f;
+        }
+
+        .button_shop {
+            width: 330px;
+            height: 55px;
+            background-color: #FA9D1F;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        .button_shop>img {
+            background-color: #FA9D1F;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .button_shop>p {
+            background-color: #FA9D1F;
+            color: #f1f1f1;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+
+        }
+
+        .button_save {
+            width: 330px;
+            height: 50px;
+            border: 3px #FA9D1F solid;
+            margin: auto;
+            margin-top: 25px;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .button_save>img {
+            background-color: #ffffff;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 25px;
+        }
+
+        .button_save>p {
+            background-color: #ffffff;
+            color: #FA9D1F;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+
+        .desktop-block {
+            width: 1440px;
+            background-color: #f1f1f1;
+            margin-left: 75px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .body-block {
+            width: 800px;
+            background-color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 25px;
+        }
+
+        .paragraph {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 30px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff
+        }
+
+        .subtitle {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 25px;
+        }
+
+        .paragraph-img {
+            width: 650px;
+            height: auto;
+            padding-top: 30px;
+            margin-left: 70px;
+            background-color: #ffffff;
+        }
+
+        .paragraph-figcaption {
+            font-size: 14px;
+            color: #4f4f4f;
+            width: 650px;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: normal;
+            margin-left: 70px;
+            text-align: center;
+            margin-top: 5px;
+            line-height: 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #1F88BF;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .abbreviation-triangle {
+            border-right: 5px solid #ffffff;
+            border-left: 5px solid #ffffff;
+            border-top: 8px solid #1F88BF;
+            display: inline-block;
+            margin: 1px 5px 5px 5px;
+            transform: rotate(30deg);
+            background-color: #ffffff
+        }
+
+
+        h1 {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 40px;
+            color: #4A4949;
+            margin-left: 60px;
+            background-color: #ffffff
+        }
+
+        .seller-block {
+            width: 440px;
+            height: 963px;
+            background-color: #ffffff;
+            position: relative;
+            margin-left: 40px
+        }
+
+        .seller {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff
+        }
+
+        .seller-header {
+            width: 380px;
+            margin-left: 35px;
+            padding: 35px 0 22px 9px;
+            border-bottom: 3px solid #FFB736;
+            background-color: #ffffff
+        }
+
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: 30px;
+            margin-left: 31px;
+            position: absolute;
+
+        }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            margin-left: -20%;
+        }
+
+        .seller-name {
+            font-size: 24px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            width: 214px;
+            margin-top: 30px;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .seller-country {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 40px;
+            display: inline-block;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 70px;
+            background-color: #ffffff
+        }
+
+        .seller-date {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .next-img {
+            width: 400px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .blue-block {
+            background-color: #1F88BF;
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 20px;
+        }
+
+        .blue-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #1f88bf
+        }
+
+        .orange-block {
+            background-color: #FA9D1F;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 258.81px;
+
+
+        }
+
+        .orange-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #FA9D1F
+        }
+
+        .next-title {
+            font-size: 24px;
+            color: #808080;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 350px;
+            margin: 270px 0 0 50px;
+            background-color: #ffffff
+        }
+
+        .original-price {
+            font-size: 22px;
+            color: #4A4949;
+            line-height: 44px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 99px;
+            margin: 5px 0 0 150px;
+            text-decoration: line-through;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .new-price {
+            font-size: 30px;
+            color: #F57F01;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 142px;
+            margin-left: 20px;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .share-sticky {
+            width: 485px;
+            margin-left: 930px;
+            margin-top: 50px;
+            display: inline-block;
+            position: sticky;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-10%);
+        }
+
+        .orange-share {
+            background-color: #FA9D1F;
+            width: 225px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 50px 0 26px 229px;
+        }
+
+        .orange-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 145px;
+            position: fixed;
+            background-color: #FA9D1F
+        }
+
+        .blue-share {
+            background-color: #3DA6D3;
+            width: 250px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 0 0 0 204px;
+        }
+
+        .blue-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 180px;
+            position: fixed;
+            background-color: #3DA6D3;
+        }
+
+        .flex-container-guessyoulike {
+            width: 1440px;
+            background-color: #f1f1f1;
+            align-content: center;
+            display: flex;
+        }
+
+        .flex-container-guessyoulike>p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            color: #4A4949;
+            margin: 0px;
+            padding-left: 669px;
+        }
+
+        .flex-container-footer {
+            width: 1440px;
+            background-color: #e5e5e5;
+            display: inline-block;
+            margin-top: 0px;
+        }
+
+        .news-carousel {
+            width: 1440px;
+            height: 479px;
+            background-color: #f1f1f1;
+            margin-top: 0px;
+        }
+
+        .copyright {
+            margin-left: 247px;
+            margin-top: 8px;
+            background-color: #e5e5e5;
+        }
+
+        .copyright>span {
+            font-weight: 400px;
+            color: #808080;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 50px;
+            display: inline-block;
+            background-color: #e5e5e5;
+        }
+
+        .Logo3 {
+            width: 322px;
+            height: 161px;
+            margin-left: 247px;
+            margin-top: 69px;
+            background-color: #e5e5e5;
+        }
+
+        .know-us {
+            background-color: #f57f01;
+            width: 75px;
+            margin-top: 10px;
+        }
+
+        .know-us>span {
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 6px;
+            margin-bottom: 20px;
+
+        }
+
+        .know-us>a {
+            color: #ffffff;
+        }
+
+        .title-footer {
+            display: inline-block;
+            margin-left: 105px;
+            background-color: #e5e5e5;
+        }
+
+        .title-footer>p {
+            color: #808080;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .you-are-also-browsing {
+            width: 1440px;
+            height: 100px;
+            background-color: #F57F01;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .you-are-also-browsing>span {
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            background-color: #F57F01;
+            padding-left: 519px;
+            padding-top: 19px;
+            display: inline-block;
+
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="website" style="width:1440px">
+        <div class=header>
+            <div class=logo>
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+            </div>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <div class="round_header"></div>
+            <span>校園熱銷</span>
+            <span>文化小物</span>
+            <span>時代精品</span>
+            <span>在地嚴選</span>
+            <span>海外直送</span>
+        </div>
+        <div class=thumbnail style="background-color:#ffffff">
+            <div class=first_image_block style="background-color:#ffffff">
+                <img style="width:700px;height:auto" src="./image/跨國婚姻-1.png">
+                <p style="color: #4f4f4f;background-color:#ffffff">跨國婚媒團體違法在網上刊登廣告，主打「政府立案」、「成功率最高」等字眼，藉此吸引欲媒合民眾。　圖／截自網路
+                </p>
+            </div>
+            <div class=second_block style="background-color:#ffffff">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">
+                </p>
+                <p class=title style="background-color:#ffffff">說好的幸福呢？　戳破非法跨國婚姻仲介的粉紅泡泡 </p>
+                <p class=price style="background-color:#ffffff">NT$5799</p>
+                <div class="murmur" style="background-color:#ffffff">
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
+                    </div>
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
+                    </div>
+                </div>
+                <div class=button_shop>
+                    <img src="./icon/Group.png">
+                    <p>加入購物車</p>
+                </div>
+                <div class=button_save>
+                    <img src="./icon/small-bookmark 1.png">
+                    <p>收藏商品</p>
+                </div>
+            </div>
+        </div>
+        <div style="height:50px"></div>
+        <!--paragraph-->
+        <div class="desktop-block">
+            <div class="body-block">
+                <h1>
+                    商品介紹
+                </h1>
+                <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
+                <div class="paragraph">
+                    【專題記者徐佳渝、黃郁期、劉信秀、涂葦慈、蕭佳宜綜合報導】打著「清純」、「乖巧」等字眼，非法跨國（境）婚姻媒合團體（後簡稱「非法跨國婚媒」，俗稱仲介）的網站上，各國女性照片映入眼簾，吸引欲透過跨國婚媒尋找配偶的台灣人。事實上，公開刊登女性照片於網站上已觸法，但主管機關無法制止非法廣告蔓延，讓遵守法律、默默耕耘數十年的合法跨國（境）婚姻媒合團體（後簡稱「合法跨國婚媒」），被非法跨國婚媒佔據多數媒合機會。而非法跨國婚媒頻繁引起爭議，不但拖累合法跨國婚媒，須背負詐騙的質疑和負評，更讓許多受媒合當事人走上沒有保障的尋伴之路。
+                </div>
+                <div class="subtitle">別為愛沖「婚」了頭　非法婚仲資訊不明藏危機</div>
+                <div class="paragraph">
+                    在台灣，已過適婚年齡卻未能成婚的男子，常基於成家與傳宗接代等理由，尋求婚姻媒合管道。從事服務業、年近四十歲的楊佳文，為了達成家人所盼，選擇透過跨國境婚姻媒合謀求終身大事。他透過網路搜尋，找到一家以女性照片與直播宣傳、專替客戶辦理越南婚姻媒合的仲介，就此踏上尋伴的旅途。然而，楊佳文萬萬沒料到，他即將經歷一場注定以失敗收場的婚姻騙局。
+                </div>
+                <div class="paragraph">
+                    「一開始我跟他說要跟他簽合約，他也說好沒問題，他也說他是個合法協會。等到拿到我所有的個人資料之後，他才一句話說我們是做口碑的，我們不簽合約。」楊佳文表示，在與婚姻仲介溝通過程中，對方一再出爾反爾，先是口頭承諾會替他嚴格篩選相親對象，若媒合發生爭議將提供全額賠償，卻在他要求訂定合約時轉變態度拒絕簽署，改口自稱是「正在準備合法立案」的媒合協會，甚至試圖冒用楊佳文的個人資料向政府申請立案，「他是一個老狐狸，他一直講說他的客人每個都娶得非常好，因為他會嚴格把關。」前後不一的言行雖使楊佳文心生懷疑，但因對方連哄帶騙的話術，讓他繼續進行媒合流程。
+                </div>
+                <div class="paragraph">
+                    楊佳文表示自己直至入境越南相親，意外發現仲介隱瞞女方已有伴侶的事實後，才確信他已受騙。「（相親的）女孩子一開始我也沒有勉強她，我也會請翻譯跟她講，可是翻譯也是他們（非法跨國婚媒）的人啊，他想要賺你錢，就算今天女生不喜歡你，他也會說女生喜歡你。」楊佳文氣憤控訴，女方在婚禮當天用中文羞辱自己，稱他「又老又胖又醜」，然仲介方卻假藉「異國文化」、「開玩笑」之名規避責任。
+                </div>
+                <img class="paragraph-img" src="./image/跨國婚姻-2.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">楊佳文訴說自己受非法仲介詐財的經過，並表示自己對跨國婚姻媒合已心生畏懼。　圖／劉信秀攝</p>
+                <div class="paragraph">
+                    楊佳文也提及，起初與仲介協調媒合費用約為新台幣28萬元，在他三次前往越南辦理成婚手續的過程中，仲介卻逐次增加收費項目，最終支付金額高達60萬新台幣。在他決定放棄媒合、打算向仲介申請賠償時，見其言詞閃爍、程序拖沓，才知自己為這段婚姻所投注的金錢，早已付諸流水。非法跨國婚姻仲介的種種荒誕行徑，讓楊佳文決定尋求法律途徑，對其提起告訴。
+                </div>
+                <div class="paragraph">
+                    事實上，類似楊佳文的案例層出不窮。若民眾上網搜尋跨國婚媒資訊，通常會找到未遵循規定立案的非法仲介，他們並未向政府申請成正式跨國婚姻媒合協會。而通過合法立案的婚媒協會，全台不過34家。
+                </div>
+                <div class="subtitle">費用程序透明化　合法婚媒有保障</div>
+                <div class="paragraph">
+                    全台34家合法的跨國婚姻媒合協會，皆為核准成立的非營利社團法人。協會須備妥「收費項目一覽表」、「工作人員名冊」等多項文件，向移民署申請從事跨國境婚姻媒合許可，並經書面審查、獲發許可證，才能成為移民署正式公告的「許可從事跨國境婚姻媒合團體」。
+                </div>
+                <img class="paragraph-img" src="./image/跨國婚姻-3.png">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    據《財團法人及非營利社團法人從事跨國境婚姻媒合許可及管理辦法》規定，由政府立案的合法協會可懸掛附有移民署認證字號之招牌，但不得以照片、影片或其他形式刊登廣告。　圖／涂葦慈攝</p>
+                <div class="paragraph">
+                    台灣合法跨國婚媒協會主要媒合台灣男性與外籍女性，其中，外籍女性以來自越南、中國居多，她們透過家鄉的「媒人」引薦，將其個人資料送往台灣婚媒協會，獲得參加相親的機會。而欲媒合的台灣男性則會直接與協會聯繫，諮詢相關流程及收費細節，在雙方達成共識後展開一連串媒合程序。
+                </div>
+                <div class="paragraph">
+                    從事跨國婚姻媒合逾十年的陳俊輝表示，婚媒協會在查證期間會要求受媒合當事人提供個資，包含住處外觀、工作識別證及存摺影本。為避免糾紛，雙方會簽訂契約保障彼此權益。隨後再到當事人家中進行事前訪問，確認資料是否與實際情形相符。協會除善盡查證義務，也在過程中粗淺了解其為人及對跨國婚姻的態度。「有些客戶娶個老婆回來，他會認為我是花錢去換回來的，把女性給商品化。」陳俊輝指出，若碰到此類家庭，協會有權與當事人解約。準備就緒後，協會將安排當事人前往國外，經過相親、結婚和配偶入境面談等程序，和妻子在台展開新生活。
+                </div>
+                <img class="paragraph-img" src="./image/跨國婚姻-4.png">
+                <img class="paragraph-img" src="./image/跨國婚姻-5.png">
+                <div class="paragraph">
+                    然而，若在結婚前男女任一方悔婚，合法婚媒協會也會明文規範處理辦法。經營跨國婚媒協會將近二十年的郭明宗表示，協會將於第一時間瞭解狀況並居中協調，若協調失敗，悔婚方須賠償另一人。若任一方在結婚後悔婚，就涉及到離婚手續問題，郭明宗說明：「離婚一定是兩個當事人（同意），你只要有一個人不願意離婚，那個就很麻煩，就是一定要打官司。」他分享過去經手的案例，男方上午簽署結婚手續，下午便提出離婚，「我們就傻了，也不知道怎麼處理啊！因為我們不能叫她離婚，我們可以勸她。人家都不要娶妳，妳現在不離婚那怎麼辦？所以我們只能這樣告訴她。」郭明宗補充，外籍配偶入境後，當事人與婚媒協會的契約即終止，後續離婚手續，協會僅能從旁予以協助。
+                </div>
+                <img class="paragraph-img" src="./image/跨國婚姻-6.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">經營合法跨國婚媒協會的郭明宗，道出協會在婚姻媒合過程中需面臨的各項挑戰。　圖／徐佳渝攝</p>
+                <div class="paragraph">
+                    曾透過合法婚媒協會尋找伴侶的Kelvin（化名）表示，協會在相親之前完整呈現男女資料給當事人雙方彼此，因此兩人對另一方的背景都很熟悉。「他（合法婚媒協會）會把我這邊所有查證的資料給我老婆看，他也會把越南仲介查到的所有資料拿給我看，雙方都看過也都認可才開始交往。」他也提到，即使與老婆結婚超過一年，協會仍會定期打電話拜訪，詢問婚姻近況，盡到關心媒合當事人的責任。
+                </div>
+                <div class="paragraph">
+                    儘管合法婚媒協會訂定完善契約並遵從法律，仍有許多受害者因無法接觸合法協會，落入非法跨國婚姻仲介的圈套。這些不按常理出牌的非法婚仲，在媒合程序中漠視當事人權利，也使欲尋此道結婚的民眾，成了非法婚仲眼中的待宰肥羊。
+                </div>
+                <img class="paragraph-img" src="./image/跨國婚姻-7.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">合法協會除善盡媒合責任，亦會在媒合成功後定期進行家訪，或辦理相關活動協助新移民適應台灣生活。　圖／徐佳渝攝</p>
+                <div class="subtitle">非法婚仲廣告氾濫　擠壓合法協會生存空間</div>
+                <div class="paragraph">
+                    目前違法跨國婚媒廣告仍充斥於網路，非法婚仲曝光度大於合法婚媒協會的現象，不斷擠壓合法協會的生存空間。根據《入出國及移民法》第58條規定，為避免跨國婚姻媒合遭物化、商品化，任何人不得散布、播送或刊登跨國婚媒廣告。因此，欲透過合法協會尋找對象的民眾，只能利用移民署網站的「跨國境婚姻媒合資訊專區」，找到「許可從事跨國婚姻媒合團體」名冊，聯繫各家婚媒協會，才能降低媒合風險。但現今網路發達，民眾過度依賴搜尋引擎，容易聯繫上非法婚仲，不僅媒合程序缺乏保障，還常不小心掉入由話術織成的騙財陷阱。
+                </div>
+                <div class="paragraph">
+                    「廣告失控，政府也管不了。」郭明宗無奈地說，「你看（網路上）打個中國新娘、外籍新娘、越南新娘，（搜尋結果）一大堆，但是進去看沒有一家是合法協會。」他感嘆，過去十幾年已多次向政府反應非法跨國婚仲廣告泛濫，但情況仍未改善。陳俊輝則表示「我覺得不廣告是好事，路遙知馬力，你真的好的協會，他絕對能夠存在很久。」他認為，合法婚媒協會之所以能夠長存，就是因為和客戶沒有糾紛，因此不怕遭政府開單或撤照。
+                </div>
+                <div class="paragraph">
+                    從事合法跨國婚姻媒合協會多年的吳德昌表示，據移民署規定，合法協會每年須接受服務品質鑑定、參與官方研習座談會，並辦理語言課程、機車培訓等講座，非法婚仲卻不受相關法律規範，「我們的所有協會，三十幾家，做不到一成的業績。」郭明宗也指出，2016年，合法協會曾與立法院召開公聽會，當時他推估越南籍女性媒合總數中，合法跨國婚媒僅佔8％，顯示合法跨國婚媒協會的業務，受廣告限制影響之大。「大家都不能廣告也是一種公平競爭，最怕的是他們違法的，他們可以廣告阿，我們守法的，我們就不能廣告，這是最可怕的。」
+                </div>
+                <div class="paragraph">
+                    對於目前廣告氾濫的問題，郭明宗僅盼望政府加強取締非法廣告的跨國媒合團體。「既然法律規定不能廣告，你總是要有一個方法讓他們也不能廣告。」吳德昌質疑，移民署以網站IP位於國外為由，不詳加查緝，縱容刊登廣告的非法婚仲。
+                </div>
+                <div class="subtitle">非法仲介爭議頻傳　合法婚媒籲政府嚴查</div>
+                <div class="paragraph">
+                    「（移民署）就是放任，不去碰不想抓。」協助許多媒合當事人進行刑事訴訟的律師王啓任認為，非法跨國婚仲之所以在網路平台猖獗，使民眾無法接觸合法婚媒協會資訊，原因出在主管機關視而不見的態度。「你現在去網路上問說哪裡有越南新娘，可以收到一百多個訊息，很多非法仲介會搶著來，超級無敵好抓，就真的是不抓。」他表示，查緝方面的技術性問題其實很好排除，主管機關的態度才是癥結所在。對此，移民署移民事務組回覆，非法跨國婚仲將網站IP設於他國，造成查緝困難，除須與當地電信機關申請相關紀錄，也涉及兩國法律及規範，因此需要時間克服。
+                </div>
+                <div class="paragraph">
+                    根據移民署資料統計，2014至2018年間，共有53起「違法散佈跨國婚媒廣告」案例，法律規定可處罰鍰範圍為新台幣10萬至50萬元，但實際平均每件裁處金額卻僅有八萬一千元。曾針對「非法跨國婚姻媒合爭議」召開記者會的立法委員徐永明指出，《入出國及移民法》賦予主管機關在裁罰金額上較寬鬆的決定權，但移民署卻因比例原則僅給予較輕懲處，讓非法婚仲仍可獲得更大利益，他說明：「我們（政府）比較缺乏懲罰性的概念，就是說不只是處罰，也是要讓所有人知道說，這個事情的成本很高。」
+                </div>
+                <div class="paragraph">
+                    徐永明認為，應提高跨國婚媒協會違反《入出國及移民法》的罰鍰案件裁罰基準，透過較嚴苛的懲處杜絕非法跨國婚仲，並建立「違法廣告檢舉獎金制度」，鼓勵民眾檢舉、提供相關資訊，以提升政府查緝效能。移民署移民事務組表示，已研擬增列該制度，相關法令將於近期推動。針對裁罰過輕的質疑，移民署則公告回覆，相關單位皆依法行政，裁罰時也會斟酌當事人的經濟能力、違法事項，經審查會判定後，裁減一定比例之罰金。
+                </div>
+                <div class="paragraph">
+                    「這個招牌擦不亮，對我們有影響。一般人看到，就是你一堆人被騙，我們是合法協會，沒有辦法只能承受，也不能說跟我無關。」郭明宗認為，唯有剔除非法跨國婚仲，才能提升跨國婚媒整體品質，降低受媒合當事人遭詐騙的疑慮，並改善大眾觀感。陳俊輝也呼籲：「我們這些領許可證的業者，等於是移民署培訓出來的學生。移民署還是要加把勁，讓他的學生在這個道路上，能夠走好走穩，幫助更多社會大眾。」他提到，台灣目前仍有民眾需藉跨國婚姻媒合尋找結婚對象，政府應建立完善的法律配套措施，才能保障受媒合當事人及合法婚媒協會的權益。
+                </div>
+                <img class="paragraph-img" src="./image/跨國婚姻-8.png">
+                <div
+                    style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
+                </div>
+
+            </div>
+            <!--about sellers-->
+            <!--<div class="mobile-block">-->
+            <div class="seller-block">
+                <div class="seller">
+                    <div class="seller-header">關於賣家</div>
+                </div>
+                <div class="circular--landscape">
+                    <img class=".circular--landscape img" src="./image/Teddy.jpg">
+                </div>
+                <div class="seller-name">Teddy Huang</div>
+                <div>
+                    <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+                        src="./icon/placeholder.svg">
+                    <div class="seller-country">台灣</div>
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
+                        src="./icon/Star-white.png">
+                </div>
+                <div class="seller-date" style="margin-top: 123px;">上架日期：2019/01/02</div>
+                <div class="seller-date" style="margin-top: -10px;">共同賣家：劉信秀、涂葦慈</div>
+                <div class="seller-date" style="margin-top: -10px;">蕭佳宜、徐佳渝</div>
+                <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
+                    src="./icon/curve.png">
+                <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                    src="./icon/curve.png">
+                <div class="seller" style="margin-top: 40px; margin-left: 44px;">
+                    強力推薦
+                </div>
+                <img class="next-img" src="./image/water-1.png">
+                <div class="blue-block">
+                    <div class="blue-block-word">視覺化專題報導</div>
+                </div>
+                <div class="orange-block">
+                    <div class="orange-block-word">85折</div>
+                </div>
+                <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                <div class="original-price">NT$3,999</div>
+                <div class="new-price">NT$2,888</div>
+            </div>
+            <div class="share-sticky">
+                <div class="orange-share">
+                    <div class="orange-share-text">好物不分享？</div>
+                    <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
+                        src="./icon/share-white.png">
+                </div>
+                <div class="blue-share">
+                    <div class="blue-share-text">FB Share起來！</div>
+                    <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
+                        src="./icon/facebook.svg">
+                    <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
+                        src="./icon/question-triangle.png">
+                    <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--猜你喜歡-->
+
+    <div class="flex-container-guessyoulike">
+        <p>猜你喜歡
+        </p>
+    </div>
+
+    <!--輪播區-->
+
+    <div class="news-carousel">
+        <p style="margin-top: 0px;">新聞聯播區（尚在研究技能中）</p>
+    </div>
+
+    <!--footer-->
+
+    <div class="flex-container-footer">
+        <img class="Logo3" src="./image/Logo3@4x-8.png">
+        <div class="title-footer">
+            <div class="know-us">
+                <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                        style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                </span>
+            </div>
+            <p style="display: inline-block;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+            <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+            <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+            <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+            <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+            <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+        </div>
+        <div class="copyright">
+            <span>© 2020 資恩荼報 All rights reserved</span>
+        </div>
+    </div>
+</body>
+
+</html>
