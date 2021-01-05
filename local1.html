@@ -237,12 +237,16 @@
         }
 
         .abbreviation-block {
-            margin-left: 70px;
             width: 650px;
             background-color: #3DA6D3;
-            display: inline-block;
-            margin-top: 10px;
+            display: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
             border-radius: 10px;
+        }
+
+        a.abbreviation-a:hover +.abbreviation-block {
+            display: block;
         }
 
         .abbreviation {
@@ -259,7 +263,6 @@
             margin-right: auto;
             background-color: #3DA6D3;
         }
-
 
         h1 {
             font-family: Noto Sans TC;
@@ -691,16 +694,16 @@
                 <img class="paragraph-img" src="./image/farm02.png">
                 <div class="paragraph">
                     《農業用地興建農舍辦法》規定，欲興建農舍者須先取得農民身分，且持有土地面積不得小於0.25公頃。法律也明定，每人名下僅能有一戶農舍，且面積不得超過農地總面積百分之十。而非農民身份者若想擁有農舍，可經「老農配建」管道
-                    <div class="abbreviation-circle">
-                        <div class="abbreviation-triangle"></div>
+                    <a class="abbreviation-a">
+                        <div class="abbreviation-circle">
+                            <div class="abbreviation-triangle"></div>
+                        </div>
+                    </a>
+                    <div class="abbreviation-block">
+                        <div class="abbreviation">
+                            2000年1月28日《農業發展條例》修正前，農民所持有的農地適用舊法規，不論土地面積大小皆可興建農舍。因此買方可購買老農農地，並以老農名義申請建照及農舍使用執照，待取得執照後再進行所有權移轉。
+                        </div>
                     </div>
-                </div>
-                <div class="abbreviation-block">
-                    <div class="abbreviation">
-                        2000年1月28日《農業發展條例》修正前，農民所持有的農地適用舊法規，不論土地面積大小皆可興建農舍。因此買方可購買老農農地，並以老農名義申請建照及農舍使用執照，待取得執照後再進行所有權移轉。
-                    </div>
-                </div>
-                <div class="paragraph" style="margin-top: -20px;">
                     ，或向持有農舍使用執照逾五年者購買。
                 </div>
                 <img class="paragraph-img" src="./image/farm03.png">
