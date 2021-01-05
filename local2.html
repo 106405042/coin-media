@@ -162,9 +162,12 @@
             background-color: #f1f1f1;
             margin-left: 75px;
             display: flex;
+            flex-direction: row;
+            align-items: stretch;
             flex-wrap: wrap;
+            margin-bottom: 200px;
         }
-
+        
         .body-block {
             width: 800px;
             background-color: #FFFFFF;
@@ -282,6 +285,14 @@
             color: #4A4949;
             margin-left: 60px;
             background-color: #ffffff
+        }
+
+        .nick-block {
+            width: 440px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
 
         .seller-block {
@@ -462,14 +473,12 @@
         }
 
         .share-sticky {
-            width: 485px;
-            margin-left: 930px;
-            margin-top: 50px;
+            margin-top: 100px;
             display: inline-block;
             position: sticky;
             top: 50%;
             bottom: auto;
-            transform: translateY(-10%);
+            transform: translateY(-15%);
         }
 
         .orange-share {
@@ -806,6 +815,7 @@
             </div>
             <!--about sellers-->
             <!--<div class="mobile-block">-->
+            <div class="nick-block">
             <div class="seller-block">
                 <div class="seller">
                     <div class="seller-header">關於賣家</div>
@@ -864,6 +874,7 @@
                         src="./icon/question-triangle.png">
                     <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
                 </div>
+            </div>
             </div>
         </div>
     </div>
