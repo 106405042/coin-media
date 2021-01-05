@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+
+        }
+
+        .header {
+            margin: 20px 65px 20px 160px
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .header>span {
+            font-size: 20px;
+            line-height: 40px;
+            margin-right: 30px;
+            font-weight: 400;
+            color: #4f4f4f;
+        }
+
+        .round_header {
+            background-color: #FA9D1F;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 28px;
+            margin-left: 2px;
+            vertical-align: text-top
+        }
+
+        .thumbnail {
+            width: 1280px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>.first_image_block {
+            width: 700px;
+            height: 550px;
+            margin-top: 60px;
+            margin-left: 60px
+        }
+
+        .thumbnail>.second_block {
+            display: inline-block;
+            margin-left: 70px;
+        }
+
+        .title {
+            color: #262626;
+            font-size: 35px;
+            font-weight: 700;
+            width: 360px;
+        }
+
+        .price {
+            color: #FA9D1F;
+            font-size: 40px;
+            font-weight: 700;
+            width: 230px;
+            margin-left: 22px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .murmur {
+            margin-left: 22px;
+            width: 350px;
+        }
+
+        .murmur>.block {
+            width: 320px;
+        }
+
+        .round {
+            background-color: #FA9D1F;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+        }
+
+        .discription {
+            margin-top: 0px;
+            margin-left: 30px;
+            font-size: 18px;
+            color: #4f4f4f;
+        }
+
+        .button_shop {
+            width: 330px;
+            height: 55px;
+            background-color: #FA9D1F;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        .button_shop>img {
+            background-color: #FA9D1F;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .button_shop>p {
+            background-color: #FA9D1F;
+            color: #f1f1f1;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+
+        }
+
+        .button_save {
+            width: 330px;
+            height: 50px;
+            border: 3px #FA9D1F solid;
+            margin: auto;
+            margin-top: 25px;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .button_save>img {
+            background-color: #ffffff;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 25px;
+        }
+
+        .button_save>p {
+            background-color: #ffffff;
+            color: #FA9D1F;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+
+        .desktop-block {
+            width: 1440px;
+            background-color: #f1f1f1;
+            margin-left: 75px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .body-block {
+            width: 800px;
+            background-color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 25px;
+        }
+
+        .paragraph {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 30px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff
+        }
+
+        .subtitle {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 25px;
+        }
+
+        .paragraph-img {
+            width: 650px;
+            height: auto;
+            padding-top: 30px;
+            margin-left: 70px;
+            background-color: #ffffff;
+        }
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #1F88BF;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+            position: relative;
+            top: 7.5px;
+            left: 2px;
+        }
+
+        .abbreviation-triangle {
+            background-color: #ffffff;
+            border-right: 5px solid #ffffff;
+            border-left: 5px solid #ffffff;
+            border-top: 8px solid #1F88BF;
+            display: inline-block;
+            position: relative;
+            top: -9.5px;
+            left: 4.5px;
+            transform: rotate(30deg);
+        }
+
+        .abbreviation-block {
+            margin-left: 70px;
+            width: 650px;
+            background-color: #3DA6D3;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .abbreviation {
+            width: 600px;
+            font-family: Noto Sans TC;
+            color: #ffffff;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #3DA6D3;
+        }
+
+
+        h1 {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 40px;
+            color: #4A4949;
+            margin-left: 60px;
+            background-color: #ffffff
+        }
+
+        .seller-block {
+            width: 440px;
+            height: 963px;
+            background-color: #ffffff;
+            position: relative;
+            margin-left: 40px
+        }
+
+        .seller {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff
+        }
+
+        .seller-header {
+            width: 380px;
+            margin-left: 35px;
+            padding: 35px 0 22px 9px;
+            border-bottom: 3px solid #FFB736;
+            background-color: #ffffff
+        }
+
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: 30px;
+            margin-left: 31px;
+            position: absolute;
+
+        }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            margin-left: -20%;
+        }
+
+        .seller-name {
+            font-size: 24px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            width: 214px;
+            margin-top: 30px;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .seller-country {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 40px;
+            display: inline-block;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 70px;
+            background-color: #ffffff
+        }
+
+        .seller-date {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .next-img {
+            width: 400px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .blue-block {
+            background-color: #1F88BF;
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 20px;
+        }
+
+        .blue-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #1f88bf
+        }
+
+        .orange-block {
+            background-color: #FA9D1F;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 258.81px;
+
+
+        }
+
+        .orange-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #FA9D1F
+        }
+
+        .next-title {
+            font-size: 24px;
+            color: #808080;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 350px;
+            margin: 270px 0 0 50px;
+            background-color: #ffffff
+        }
+
+        .original-price {
+            font-size: 22px;
+            color: #4A4949;
+            line-height: 44px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 99px;
+            margin: 5px 0 0 150px;
+            text-decoration: line-through;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .new-price {
+            font-size: 30px;
+            color: #F57F01;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 142px;
+            margin-left: 20px;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .share-sticky {
+            width: 485px;
+            margin-left: 930px;
+            margin-top: 50px;
+            display: inline-block;
+            position: sticky;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-10%);
+        }
+
+        .orange-share {
+            background-color: #FA9D1F;
+            width: 225px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 50px 0 26px 229px;
+        }
+
+        .orange-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 145px;
+            position: fixed;
+            background-color: #FA9D1F
+        }
+
+        .blue-share {
+            background-color: #3DA6D3;
+            width: 250px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 0 0 0 204px;
+        }
+
+        .blue-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 180px;
+            position: fixed;
+            background-color: #3DA6D3;
+        }
+
+        .flex-container-guessyoulike {
+            width: 1440px;
+            background-color: #f1f1f1;
+            align-content: center;
+            display: flex;
+        }
+
+        .flex-container-guessyoulike>p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            color: #4A4949;
+            margin: 0px;
+            padding-left: 669px;
+        }
+
+        .flex-container-footer {
+            width: 1440px;
+            background-color: #e5e5e5;
+            display: inline-block;
+            margin-top: 0px;
+        }
+
+        .news-carousel {
+            width: 1440px;
+            height: 479px;
+            background-color: #f1f1f1;
+            margin-top: 0px;
+        }
+
+        .copyright {
+            margin-left: 247px;
+            margin-top: 8px;
+            background-color: #e5e5e5;
+        }
+
+        .copyright>span {
+            font-weight: 400px;
+            color: #808080;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 50px;
+            display: inline-block;
+            background-color: #e5e5e5;
+        }
+
+        .Logo3 {
+            width: 322px;
+            height: 161px;
+            margin-left: 247px;
+            margin-top: 69px;
+            background-color: #e5e5e5;
+        }
+
+        .know-us {
+            background-color: #f57f01;
+            width: 75px;
+            margin-top: 10px;
+        }
+
+        .know-us>span {
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 6px;
+            margin-bottom: 20px;
+
+        }
+
+        .know-us>a {
+            color: #ffffff;
+        }
+
+        .title-footer {
+            display: inline-block;
+            margin-left: 105px;
+            background-color: #e5e5e5;
+        }
+
+        .title-footer>p {
+            color: #808080;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .you-are-also-browsing {
+            width: 1440px;
+            height: 100px;
+            background-color: #F57F01;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .you-are-also-browsing>span {
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            background-color: #F57F01;
+            padding-left: 519px;
+            padding-top: 19px;
+            display: inline-block;
+
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="website" style="width:1440px">
+        <div class=header>
+            <div class=logo>
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+            </div>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <div class="round_header"></div>
+            <span>校園熱銷</span>
+            <span>文化小物</span>
+            <span>時代精品</span>
+            <span>在地嚴選</span>
+            <span>海外直送</span>
+        </div>
+        <div class=thumbnail style="background-color:#ffffff">
+            <div class=first_image_block style="background-color:#ffffff">
+                <img style="width:700px;height:auto" src="./image/farm01.png">
+            </div>
+            <div class=second_block style="background-color:#ffffff">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">在地嚴選
+                </p>
+                <p class=title style="background-color:#ffffff">劃破蘭陽田地線</p>
+                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px; margin-bottom: -10px;">千棟農舍陰影下的生活 </p>
+                <p class=price style="background-color:#ffffff">NT$3250</p>
+                <div class="murmur" style="background-color:#ffffff">
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
+                    </div>
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
+                    </div>
+                </div>
+                <div class=button_shop>
+                    <img src="./icon/Group.png">
+                    <p>加入購物車</p>
+                </div>
+                <div class=button_save>
+                    <img src="./icon/small-bookmark 1.png">
+                    <p>收藏商品</p>
+                </div>
+            </div>
+        </div>
+        <div style="height:50px"></div>
+        <!--paragraph-->
+        <div class="desktop-block">
+            <div class="body-block">
+                <h1>
+                    商品介紹
+                </h1>
+                <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
+                <div class="paragraph">
+                    「我小時候每天從羅東騎腳踏車到宜蘭，十公里的距離看不到幾棟房子，路上都是漠漠水田，非常美麗。」從小在宜蘭長大的李寶蓮，道出兒時家鄉印象。而隨雪山隧道通車、台北通往宜蘭所需時間縮短，越來越多人選擇至宜蘭興建農舍。一幢幢農舍深嵌在綠油油的農田間，成為宜蘭既和諧又衝突的景象。
+                </div>
+                <!--subtitle-->
+                <div class="subtitle">農舍取得規範寬鬆　民眾為田園夢大興農舍</div>
+                <div class="paragraph">
+                    宜蘭縣政府統計，2016年宜蘭縣已有8484棟農舍，和2006年雪隧開通時的2611棟相比，十年間農舍數量成長超過兩倍。監察院2018年「宜蘭農舍案調查報告」更指出，2017年宜蘭縣農牧戶口數僅2萬8123戶，政府在2000至2018年間卻核發高達6138件農舍使用執照，相較彰化、雲林等農業大縣，農牧戶口數雖都超過七萬人，農舍使用執照數卻不到3000件。
+                </div>
+                <img class="paragraph-img" src="./image/farm02.png">
+                <div class="paragraph">
+                    《農業用地興建農舍辦法》規定，欲興建農舍者須先取得農民身分，且持有土地面積不得小於0.25公頃。法律也明定，每人名下僅能有一戶農舍，且面積不得超過農地總面積百分之十。而非農民身份者若想擁有農舍，可經「老農配建」管道
+                    <div class="abbreviation-circle" style="display: inline-block;">
+                        <div class="abbreviation-triangle"></div>
+                    </div>
+                    ，或向持有農舍使用執照逾五年者購買。
+                </div>
+                
+                <img class="paragraph-img" src="./image/farm03.png">
+                <div class="paragraph">
+                    宜蘭不動產業者張雅音分析，許多人購買農舍，是期望自主設計居住空間、追求更高居住品質，實現田園生活夢想。現住於宜蘭縣員山鄉自家農舍的陳勝樂表示，許多宜蘭人年輕時前往台北發展，退休返鄉後欲購買農舍，改善家人的生活與居住環境，「身為一個農民的孩子，你會想讓爸媽過好一點的生活，這是天經地義的。」
+                </div>
+                <div class="paragraph">
+                    「我們這邊離台北太近了，有點像後花園。早期從台北下來買很便宜，一千多萬就很漂亮很大間。」張雅音補充，地價和交通吸引外地民眾購買宜蘭農地、農舍，加上規範寬鬆，造成農舍數量過多，成為有心人士哄抬地價的手段。
+                </div>
+                <div class="subtitle">農舍引炒地風氣　農田頻繁過戶成亂象</div>
+                <div class="paragraph">
+                    「農地如果只是農作物在移轉，其實根本沒有獲利，如果農地是做農業使用，他基本上幾乎沒有什麼炒作空間可言。」國立政治大學地政學系助理教授戴秀雄說明，作為農業用途的農地並無法在轉售中增值，然而農舍可為土地帶來附加價值，許多人便藉由交易獲利。
+                </div>
+                <div class="paragraph">
+                    2018年宜蘭縣宜蘭地政事務所統計，購買宜蘭一公頃的農地至少須3600萬元新台幣。「都會區大量人口想要來宜蘭圓一個田園夢，就蓋了豪華別墅，那漸漸成為趨勢之後，房仲當然就起來了，地價就被炒起來了。」宜蘭在地青年農夫方子維無奈地說道，居高不下的地價導致欲從事農業工作者買不起農地，也讓土地閒置，無法發揮生產價值。
+                </div>
+                <img class="paragraph-img" src="./image/farm04.png">
+                <div class="subtitle">政策頻改致地價擺盪　農舍興建數量下降</div>
+                <div class="paragraph">
+                    近年來，宜蘭農舍成長數已趨緩，2018年宜蘭縣縣政統計通報指出，農舍核發使用執照已自2014年674件，逐年遞減至2017年194件。而農舍興建數量下降的關鍵，為搖擺不定的政策，及其引發的地價波動。
+                </div>
+                <img class="paragraph-img" src="./image/farm05.png">
+                <div class="paragraph">
+                    2015年行政院農業委員會函釋全台各地方政府「興建農舍經營計畫書」，規定農舍應配置於農地邊界及臨接道路，以保留農地最大耕地面積（後簡稱「臨界臨路」）。在時任宜蘭縣縣長林聰賢推動下，臨界臨路有效抑制竄升的農舍交易量。前宜蘭縣農業處處長楊文全坦言，購買農舍者多重視風水，該規範因此降低民眾興建豪華農舍意願。2017年繼任代理縣長吳澤成，有鑑違規農舍遍布，拆除三棟重大違規農舍，試圖抑止農舍數量濫長。
+                </div>
+                <div class="paragraph">
+                    然而後上任的代理縣長陳金德，於2018年訂定「宜蘭縣農業用地申請興建農舍審查作業要點」，放寬農委會規定，使農舍興建位置不再須臨界臨路，此舉不僅違反中央政府規定，遭監察院要求改進，更讓低迷的農舍市場死灰復燃。今年3月，農委會擬修訂《農業用地興建農舍辦法》，將臨界臨路規範提升至中央法律位階，嚴加控管農舍興建。規範朝令夕改，影響民眾買賣農舍意願，使土地價值捉摸不定，導致新建農舍數量減緩。
+                </div>
+                <img class="paragraph-img" src="./image/farm06.png">
+                <div class="subtitle">田園生活不若想像　農舍屋主與在地居民難和平共存</div>
+                <div class="paragraph">
+                    宜蘭農舍氾濫造成的傷害，似乎無法隨著農舍增長量的減緩而復原。自小在宜蘭長大的石學儒，赴台北求學前，和務農的家人居住在宜蘭一幢農舍裡，將近19年。他觀察到雪隧落成後三四年間，自家附近方圓一公里內，多了五棟用途不一且非農用的農舍，「有點可惜，農舍代表當地的經濟有在發展，但就人文社會的背景來看農舍，我認為過多農舍為鄉村注入了太多文明，破壞鄉村原有的風情。」石學儒感嘆。
+                </div>
+                <div class="paragraph">
+                    自農舍如雨後春筍般矗立於宜蘭田野間，除地景不復以往，在地居民的日常也有所變化。方子維表示，宜蘭農舍大多無人常住，表面看似燈火通明，實際只是屋主的防盜措施，「我覺得就算有人回來，好像也不太跟村子裏的人打招呼，就會懷疑為什麼現在的農村變這樣，關係不是這麼地親近。」
+                </div>
+                <div class="paragraph">
+                    「早期他們買的時候，都買很大間很漂亮，可能當度假用，偶爾來一下，可是等他一個禮拜、兩個禮拜來的時候，草都長很高，很麻煩顧。」張雅音表示，不少屋主購買農舍後並不清楚如何照顧農地，也不甚了解農民生活。曾文昌舉例，「我有朋友搬來宜蘭，才發現原來農田會噴農藥，我說你住農業區當然噴農藥。」他進而提到，農民早起耕作，常影響以度假為目的、居住於農舍的民眾，雙方甚至會產生衝突，「他（屋主）會覺得，你們幹嘛那麼早起床？噴肥機很大聲，你不能十點再噴嗎？」農舍屋主與農民截然不同的生活型態，使雙方無法在同一片土地上和平共存。
+                </div>
+                <img class="paragraph-img" src="./image/farm07.png">
+                <div class="paragraph">
+                    「他會叫你這個曳引機不能停在這邊，馬路都是泥巴，很骯髒啊！」對賴青松而言，農舍的意義非同小可，他也曾與農舍屋主發生爭執，但他道出農舍存在，本就源於農民工作與生活的密不可分，「農夫的生活跟工作連在一起，他需要地方洗菜、包水果、堆飼料。」政大地政系教授賴宗裕也提到，《農業發展條例》開放興建農舍的初衷，是將其認定為「農業生產不可分離的設施」，農民可放置農用機具，便利務農。然而，放眼望去，今日散落在蘭陽平原上的水泥建築，已背離當年《農發條例》第18條開放農地興建農舍的立法意旨。
+                </div>
+                <img class="paragraph-img" src="./image/farm08.png">
+                <div class="subtitle">兼顧國土計畫與居住品質　學者盼集中農舍復土地機能</div>
+                <div class="paragraph">
+                    「從嚴格角度看，耕地讓你蓋房子本來就是不應該的事。」戴秀雄表示，此舉打破政府國土規劃權，內政部營建署訂定國土計畫，明確區分農業用地和住宅區，目的在限制個人對土地的支配權，避免不同性質的土地相互干擾。
+                </div>
+                <img class="paragraph-img" src="./image/farm09.png">
+                <div class="paragraph">
+                    戴秀雄以德國為例，他說明，當地農業用地及住宅用地分野明顯。「除非做國土計畫前你就在那，否則就算你有多餘人口超出原本房子負荷，你都不能加蓋，你要自己想辦法找住宅用地。」他提到台灣的國土計畫起步晚於德國，《農發條例》第18條又開放耕地可興建農舍，導致以住宅功能為主的農舍散布田野間。
+                </div>
+                <img class="paragraph-img" src="./image/farm10.png">
+                <div class="paragraph">
+                    戴秀雄認為，抑制農舍濫長的根本之道，在於直接廢除《農發條例》第18條，禁止人民在農地興建農舍。他也建議政府參考國外鄉村國土計畫，讓重視居住品質者集中居住，發展「農村聚落」。他說明，發展農村聚落能恢復農業區完整機能，並兼顧重視居住品質者的需求，「如果農村聚落發展完善，你房子要蓋多漂亮，我覺得都再說。重點是（農舍）不要無規劃性的亂散。」
+                </div>
+                <div class="subtitle">「農村不能沒有農業，可是它也不是只有農業。」</div>
+                <div class="paragraph">
+                    宜蘭農村地區矗立大量非農用農舍已成事實，但方子維堅信，「農村不能沒有農業，可是它也不是只有農業，每個人生活在這裡，有一個平衡在吧！」蘭陽平原上，種下秧苗與種下夢想的人們各自生活，「我不會責怪他們。」就如石學儒所言，包容或許是讓眾人在這片土地上和諧共處的良方。
+                </div>
+
+                <div
+                    style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
+                </div>
+
+            </div>
+            <!--about sellers-->
+            <!--<div class="mobile-block">-->
+            <div class="seller-block">
+                <div class="seller">
+                    <div class="seller-header">關於賣家</div>
+                </div>
+                <div class="circular--landscape">
+                    <img class=".circular--landscape img" src="./image/Teddy.jpg">
+                </div>
+                <div class="seller-name">Teddy Huang</div>
+                <div>
+                    <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+                        src="./icon/placeholder.svg">
+                    <div class="seller-country">台灣</div>
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
+                        src="./icon/Star-fill.png">
+                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
+                        src="./icon/Star-white.png">
+                </div>
+                <div class="seller-date" style="margin-top: 123px;">上架日期：2019/06/28</div>
+                <div class="seller-date" style="margin-top: -10px;">共同賣家：劉信秀、涂葦慈</div>
+                <div class="seller-date" style="margin-top: -10px;">徐佳渝</div>
+                <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
+                    src="./icon/curve.png">
+                <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                    src="./icon/curve.png">
+                <div class="seller" style="margin-top: 40px; margin-left: 44px;">
+                    強力推薦
+                </div>
+                <img class="next-img" src="./image/water-1.png">
+                <div class="blue-block">
+                    <div class="blue-block-word">視覺化專題報導</div>
+                </div>
+                <div class="orange-block">
+                    <div class="orange-block-word">85折</div>
+                </div>
+                <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                <div class="original-price">NT$3,999</div>
+                <div class="new-price">NT$2,888</div>
+            </div>
+            <div class="share-sticky">
+                <div class="orange-share">
+                    <div class="orange-share-text">好物不分享？</div>
+                    <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
+                        src="./icon/share-white.png">
+                </div>
+                <div class="blue-share">
+                    <div class="blue-share-text">FB Share起來！</div>
+                    <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
+                        src="./icon/facebook.svg">
+                    <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
+                        src="./icon/question-triangle.png">
+                    <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--猜你喜歡-->
+
+    <div class="flex-container-guessyoulike">
+        <p>猜你喜歡
+        </p>
+    </div>
+
+    <!--輪播區-->
+
+    <div class="news-carousel">
+        <p style="margin-top: 0px;">新聞聯播區（尚在研究技能中）</p>
+    </div>
+
+    <!--footer-->
+
+    <div class="flex-container-footer">
+        <img class="Logo3" src="./image/Logo3@4x-8.png">
+        <div class="title-footer">
+            <div class="know-us">
+                <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                        style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                </span>
+            </div>
+            <p style="display: inline-block;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+            <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+            <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+            <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+            <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+            <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+        </div>
+        <div class="copyright">
+            <span>© 2020 資恩荼報 All rights reserved</span>
+        </div>
+    </div>
+</body>
+
+</html>
