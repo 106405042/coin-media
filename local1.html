@@ -162,7 +162,10 @@
             background-color: #f1f1f1;
             margin-left: 75px;
             display: flex;
+            flex-direction: row;
+            align-items: stretch;
             flex-wrap: wrap;
+            margin-bottom: 50px;
         }
 
         .body-block {
@@ -267,6 +270,14 @@
             color: #4A4949;
             margin-left: 60px;
             background-color: #ffffff
+        }
+
+        .nick-block {
+            width: 440px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
 
         .seller-block {
@@ -447,14 +458,12 @@
         }
 
         .share-sticky {
-            width: 485px;
-            margin-left: 930px;
-            margin-top: 50px;
+            margin-top: 100px;
             display: inline-block;
             position: sticky;
             top: 50%;
             bottom: auto;
-            transform: translateY(-10%);
+            transform: translateY(-15%);
         }
 
         .orange-share {
@@ -640,7 +649,8 @@
                 <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">在地嚴選
                 </p>
                 <p class=title style="background-color:#ffffff">劃破蘭陽田地線</p>
-                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px; margin-bottom: -10px;">千棟農舍陰影下的生活 </p>
+                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px; margin-bottom: -10px;">
+                    千棟農舍陰影下的生活 </p>
                 <p class=price style="background-color:#ffffff">NT$3250</p>
                 <div class="murmur" style="background-color:#ffffff">
                     <div class="block" style="background-color:#ffffff">
@@ -759,65 +769,70 @@
             </div>
             <!--about sellers-->
             <!--<div class="mobile-block">-->
-            <div class="seller-block">
-                <div class="seller">
-                    <div class="seller-header">關於賣家</div>
+            <div class="nick-block">
+                <div class="seller-block">
+                    <div class="seller">
+                        <div class="seller-header">關於賣家</div>
+                    </div>
+                    <div class="circular--landscape">
+                        <img class=".circular--landscape img" src="./image/Teddy.jpg">
+                    </div>
+                    <div class="seller-name">Teddy Huang</div>
+                    <div>
+                        <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+                            src="./icon/placeholder.svg">
+                        <div class="seller-country">台灣</div>
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
+                            src="./icon/Star-white.png">
+                    </div>
+                    <div class="seller-date" style="margin-top: 123px;">上架日期：2019/06/28</div>
+                    <div class="seller-date" style="margin-top: -10px;">共同賣家：劉信秀、涂葦慈</div>
+                    <div class="seller-date" style="margin-top: -10px;">徐佳渝</div>
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
+                        src="./icon/curve.png">
+                    <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                        src="./icon/curve.png">
+                    <div class="seller" style="margin-top: 40px; margin-left: 44px;">
+                        強力推薦
+                    </div>
+                    <img class="next-img" src="./image/water-1.png">
+                    <div class="blue-block">
+                        <div class="blue-block-word">視覺化專題報導</div>
+                    </div>
+                    <div class="orange-block">
+                        <div class="orange-block-word">85折</div>
+                    </div>
+                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                    <div class="original-price">NT$3,999</div>
+                    <div class="new-price">NT$2,888</div>
                 </div>
-                <div class="circular--landscape">
-                    <img class=".circular--landscape img" src="./image/Teddy.jpg">
+
+                <div class="share-sticky">
+                    <div class="orange-share">
+                        <div class="orange-share-text">好物不分享？</div>
+                        <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
+                            src="./icon/share-white.png">
+                    </div>
+                    <div class="blue-share">
+                        <div class="blue-share-text">FB Share起來！</div>
+                        <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
+                            src="./icon/facebook.svg">
+                        <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
+                            src="./icon/question-triangle.png">
+                        <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
+                    </div>
                 </div>
-                <div class="seller-name">Teddy Huang</div>
-                <div>
-                    <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
-                        src="./icon/placeholder.svg">
-                    <div class="seller-country">台灣</div>
-                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
-                        src="./icon/Star-fill.png">
-                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
-                        src="./icon/Star-fill.png">
-                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
-                        src="./icon/Star-fill.png">
-                    <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
-                        src="./icon/Star-fill.png">
-                    <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
-                        src="./icon/Star-white.png">
-                </div>
-                <div class="seller-date" style="margin-top: 123px;">上架日期：2019/06/28</div>
-                <div class="seller-date" style="margin-top: -10px;">共同賣家：劉信秀、涂葦慈</div>
-                <div class="seller-date" style="margin-top: -10px;">徐佳渝</div>
-                <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
-                    src="./icon/curve.png">
-                <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
-                    src="./icon/curve.png">
-                <div class="seller" style="margin-top: 40px; margin-left: 44px;">
-                    強力推薦
-                </div>
-                <img class="next-img" src="./image/water-1.png">
-                <div class="blue-block">
-                    <div class="blue-block-word">視覺化專題報導</div>
-                </div>
-                <div class="orange-block">
-                    <div class="orange-block-word">85折</div>
-                </div>
-                <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
-                <div class="original-price">NT$3,999</div>
-                <div class="new-price">NT$2,888</div>
             </div>
-            <div class="share-sticky">
-                <div class="orange-share">
-                    <div class="orange-share-text">好物不分享？</div>
-                    <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
-                        src="./icon/share-white.png">
-                </div>
-                <div class="blue-share">
-                    <div class="blue-share-text">FB Share起來！</div>
-                    <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
-                        src="./icon/facebook.svg">
-                    <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
-                        src="./icon/question-triangle.png">
-                    <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
-                </div>
-            </div>
+            
+
         </div>
     </div>
 
