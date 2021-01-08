@@ -164,15 +164,18 @@
             margin-left: 10px;
             font-weight: 700;
         }
-
+        
         .desktop-block {
             width: 1440px;
             background-color: #f1f1f1;
             margin-left: 75px;
             display: flex;
+            flex-direction: row;
+            align-items: stretch;
             flex-wrap: wrap;
+            margin-bottom: 100px;
         }
-
+        
         .body-block {
             width: 800px;
             background-color: #FFFFFF;
@@ -232,27 +235,30 @@
             background-color: #ffffff;
             border-bottom: 1px solid #D0D0D0;
         }
-
+        
         .abbreviation-circle {
             width: 20px;
             height: 20px;
             border: 1px solid #1F88BF;
             border-radius: 50%;
             display: inline-block;
-            background-color: #ffffff
+            background-color: #ffffff;
+            position: relative;
+            top: 7.5px;
+            left: 2px;
         }
 
         .abbreviation-triangle {
+            background-color: #ffffff;
             border-right: 5px solid #ffffff;
             border-left: 5px solid #ffffff;
             border-top: 8px solid #1F88BF;
             display: inline-block;
-            margin: 1px 5px 5px 5px;
-            transform: rotate(30deg);
-            background-color: #ffffff
+            position: relative;
+            top: -9.5px;
+            left: 4.5px;
         }
-
-
+        
         h1 {
             font-family: Noto Sans TC;
             font-style: normal;
@@ -262,6 +268,14 @@
             color: #4A4949;
             margin-left: 60px;
             background-color: #ffffff
+        }
+        
+        .nick-block {
+            width: 440px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
         }
 
         .seller-block {
@@ -387,8 +401,6 @@
             position: absolute;
             display: inline-block;
             margin: 210px 0 0 258.81px;
-
-
         }
 
         .orange-block-word {
@@ -440,19 +452,17 @@
             display: inline-block;
             background-color: #ffffff
         }
-
+        
         .share-sticky {
-            width: 485px;
-            margin-left: 930px;
-            margin-top: 50px;
+            margin-top: 100px;
             display: inline-block;
             position: sticky;
             top: 50%;
             bottom: auto;
-            transform: translateY(-10%);
+            transform: translateY(-15%);
         }
 
-        .orange-share {
+          .orange-share {
             background-color: #FA9D1F;
             width: 225px;
             height: 51px;
@@ -499,7 +509,7 @@
             position: fixed;
             background-color: #3DA6D3;
         }
-
+        
        /*輪播區的修正部分（以下請連同footer的CSS一起覆蓋）
         /*以下為子頁底部輪播區的CSS套件*/
 
@@ -956,18 +966,19 @@
             </div>
             <!--about sellers-->
             <!--<div class="mobile-block">-->
-            <div class="seller-block">
-                <div class="seller">
-                    <div class="seller-header">關於賣家</div>
-                </div>
-                <div class="circular--landscape">
-                    <img class=".circular--landscape img" src="./image/Teddy.jpg">
-                </div>
-                <div class="seller-name">Teddy Huang</div>
-                <div>
-                    <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+            <div class="nick-block">
+                <div class="seller-block">
+                    <div class="seller">
+                        <div class="seller-header">關於賣家</div>
+                    </div>
+                    <div class="circular--landscape">
+                        <img class=".circular--landscape img" src="./image/Teddy.jpg">
+                    </div>
+                    <div class="seller-name">Teddy Huang</div>
+                    <div>
+                        <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
                         src="./icon/placeholder.svg">
-                    <div class="seller-country">台灣</div>
+                        <div class="seller-country">台灣</div>
                     <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
                         src="./icon/Star-fill.png">
                     <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
@@ -1015,6 +1026,7 @@
                     <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
                 </div>
             </div>
+                </div>
         </div>
     </div>
 
