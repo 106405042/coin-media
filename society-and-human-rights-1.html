@@ -161,29 +161,29 @@
             font-weight: 700;
             margin-left:10px;
         }
-        .button_save >.save_icon {
-            width:19px;
-            height:29px;
+         .button_save>.save_icon {
+            width: 20px;
+            height: 30px;
             background-image: url(./icon/small-bookmark\ 1.png);
             background-color: transparent;
             margin: auto;
-            margin-right:10px
+            margin-right: 10px
         }
-        .button_save:active > .save_icon {
-            width:20px;
-            height:30px;
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
+            width: 20px;
+            height: 30px;
             background-image: url(./icon/white_add-bookmark1.png);
             background-color: transparent;
-        }
-
-        .button_save:active{
-            background-color:#FA9D1F;
-            color:  #ffffff;
-        }
-
-        .button_save:active > p{
-            background-color: transparent;
-            color:  #ffffff;
         }
         .desktop-block {
             width: 1440px;
@@ -204,16 +204,6 @@
             margin-left: 25px;
         }
         
-         .body-block>h1 {
-            font-size: 28px;
-            color: #4A4949;
-            line-height: 40px;
-            font-family: 'Noto Sans TC', sans-serif;
-            font-style: normal;
-            font-weight: bold;
-            background-color: #ffffff;
-            margin: 20px 0px 20px 70px;
-        }
 
         .paragraph {
             width: 650px;
@@ -876,7 +866,7 @@
                 </p>
             </div>
             <div class=second_block style="background-color:#ffffff">
-                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">時代精品
                 </p>
                 <p class=title style="background-color:#ffffff">說好的幸福呢？　戳破非法跨國婚姻仲介的粉紅泡泡 </p>
                 <p class=price style="background-color:#ffffff">NT$5,799</p>
@@ -1024,7 +1014,7 @@
                     <div class="seller-date" style="margin-top: -10px;">蕭佳宜、徐佳渝</div>
                     <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
                         src="./icon/curve.png">
-                    <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: -6px;background-color: #ffffff"
                         src="./icon/curve.png">
                     <div class="seller" style="margin-top: 40px; margin-left: 44px;">
                         強力推薦
@@ -1170,8 +1160,17 @@
             <span>© 2020 資恩荼報 All rights reserved</span>
         </div>
     </div>
-
-    <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
+    <!-- 載入 jquery 套件-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 </body>
 
 </html>
