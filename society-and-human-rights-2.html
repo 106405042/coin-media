@@ -61,7 +61,7 @@
         .thumbnail>.first_image_block {
             width: 700px;
             height: 550px;
-            margin-top: 60px;
+            margin-top: 110px;
             margin-left: 60px
         }
 
@@ -139,7 +139,7 @@
 
         }
 
-        .button_save {
+          .button_save {
             width: 330px;
             height: 50px;
             border: 3px #FA9D1F solid;
@@ -149,21 +149,47 @@
             display: flex;
         }
 
-        .button_save>img {
-            background-color: #ffffff;
-            margin-left: 90px;
-            margin: auto;
-            margin-right: 25px;
+        .button_save:hover {
+            cursor: pointer;
         }
 
+
         .button_save>p {
-            background-color: #ffffff;
+            background-color: transparent;
             color: #FA9D1F;
             font-size: 24px;
             margin: auto;
-            margin-left: 10px;
             font-weight: 700;
+            margin-left: 10px;
         }
+
+        .button_save>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/small-bookmark\ 1.png);
+            background-color: transparent;
+            margin: auto;
+            margin-right: 10px
+        }
+
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/white_add-bookmark1.png);
+            background-color: transparent;
+        }
+
+
 
         .desktop-block {
             width: 1440px;
@@ -294,15 +320,16 @@
         }
 
 
-        h1 {
-            font-family: Noto Sans TC;
+.body-block>h1 {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
             font-style: normal;
             font-weight: bold;
-            font-size: 28px;
-            line-height: 40px;
-            color: #4A4949;
-            margin-left: 60px;
-            background-color: #ffffff
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            margin-top: 20px
         }
 
         .nick-block {
@@ -872,17 +899,11 @@
             <span>校園熱銷</span>
             <span>文化小物</span>
             <span>時代精品</span>
-            <span>在地嚴選</span>
-            <span>海外直送</span>
-        </div>
-        <div class=thumbnail style="background-color:#ffffff">
-            <div class=first_image_block style="background-color:#ffffff">
-                <img style="width:700px;height:auto" src="./image/陪跑-1.jpg">
                 <p style="color: #4f4f4f;background-color:#ffffff">兩名陪跑員牽著視障馬拉松選手，引導他在賽事中跑步的方向，圖為他們跑向終點的前一刻。　圖／黃郁期攝
                 </p>
             </div>
             <div class=second_block style="background-color:#ffffff">
-                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">社會人權
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">時代精品
                 </p>
                 <p class=title style="background-color:#ffffff">陪跑員相伴　視障者征服馬拉松</p>
                 <p class=price style="background-color:#ffffff">NT$1,899</p>
@@ -900,10 +921,9 @@
                     <img src="./icon/Group.png">
                     <p>加入購物車</p>
                 </div>
-                <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
+                <div class="button_save">
+                    <div class="save_icon"></div>
                     <p>收藏商品</p>
-                </div>
             </div>
         </div>
         <div style="height:50px"></div>
@@ -1034,10 +1054,9 @@
                     <img src="./icon/Group.png">
                     <p>加入購物車</p>
                 </div>
-                <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
+                <div class="button_save">
+                    <div class="save_icon"></div>
                     <p>收藏商品</p>
-                </div>
             </div>
         </div>
         <div style="height:50px"></div>
@@ -1110,7 +1129,7 @@
                     <div class="seller-date" style="margin-top: 123px;">上架日期：2019/01/02</div>
                     <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
                         src="./icon/curve.png">
-                    <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: -6px;background-color: #ffffff"
                         src="./icon/curve.png">
                     <div class="seller" style="margin-top: 40px; margin-left: 44px;">
                         強力推薦
@@ -1256,8 +1275,17 @@
             <span>© 2020 資恩荼報 All rights reserved</span>
         </div>
     </div>
-
-    <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
+    <!-- 載入 jquery 套件-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 </body>
 
 </html>
