@@ -139,7 +139,7 @@
 
         }
 
-        .button_save {
+       .button_save {
             width: 330px;
             height: 50px;
             border: 3px #FA9D1F solid;
@@ -148,23 +148,43 @@
             background-color: #ffffff;
             display: flex;
         }
-
-        .button_save>img {
-            background-color: #ffffff;
-            margin-left: 90px;
-            margin: auto;
-            margin-right: 25px;
+        .button_save:hover{
+            cursor: pointer;
         }
 
+
         .button_save>p {
-            background-color: #ffffff;
+            background-color:transparent;
             color: #FA9D1F;
             font-size: 24px;
             margin: auto;
-            margin-left: 10px;
             font-weight: 700;
+            margin-left:10px;
+        }
+        .button_save >.save_icon {
+            width:20px;
+            height:30px;
+            background-image: url(./icon/small-bookmark\ 1.png);
+            background-color: transparent;
+            margin: auto;
+            margin-right:10px
+        }
+        .button_save:active > .save_icon {
+            width:20px;
+            height:30px;
+            background-image: url(./icon/white_add-bookmark1.png);
+            background-color: transparent;
         }
 
+        .button_save:active{
+            background-color:#FA9D1F;
+            color:  #ffffff;
+        }
+
+        .button_save:active > p{
+            background-color: transparent;
+            color:  #ffffff;
+        }
         .desktop-block {
             width: 1440px;
             background-color: #f1f1f1;
@@ -182,6 +202,17 @@
             padding-top: 20px;
             padding-bottom: 60px;
             margin-left: 25px;
+        }
+        
+         .body-block>h1 {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff;
+            margin: 20px 0px 20px 70px;
         }
 
         .paragraph {
@@ -841,7 +872,7 @@
         <div class=thumbnail style="background-color:#ffffff">
             <div class=first_image_block style="background-color:#ffffff">
                 <img style="width:700px;height:auto" src="./image/跨國婚姻-1.png">
-                <p style="color: #4f4f4f;background-color:#ffffff">跨國婚媒團體違法在網上刊登廣告，主打「政府立案」、「成功率最高」等字眼，藉此吸引欲媒合民眾。　圖／截自網路
+                <p style="color: #4f4f4f;background-color:#ffffff;margin-top:16px;">跨國婚媒團體違法在網上刊登廣告，主打「政府立案」、「成功率最高」等字眼，藉此吸引欲媒合民眾。　圖／截自網路
                 </p>
             </div>
             <div class=second_block style="background-color:#ffffff">
