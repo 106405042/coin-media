@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <style>
         * {
             background-color: #f1f1f1;
@@ -529,6 +536,197 @@
             background-color: #3DA6D3;
         }
 
+        /*輪播區的修正部分（以下請連同footer的CSS一起覆蓋）
+        /*以下為子頁底部輪播區的CSS套件*/
+
+        body {
+            background: #f1f1f1;
+        }
+
+        h2 {
+            color: #696969;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            margin: 40px 70px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            background-color: transparent;
+        }
+
+        h2::after {
+            content: "";
+            width: 875px;
+            position: absolute;
+            margin: 0 auto;
+            height: 1px;
+            border-radius: 1px;
+            background: #d4d4d4;
+            left: 0;
+            right: 0;
+            bottom: 14px;
+            margin-left: 60px;
+        }
+
+        h2 span {
+            display: inline-block;
+            padding: 0 25px;
+            background: #f1f1f1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel {
+            margin: 0 auto;
+            padding: 0 68px;
+        }
+
+        .carousel .carousel-item {
+            text-align: center;
+            height: 160px;
+        }
+
+        .carousel .carousel-item .img-box {
+            background: #fff;
+            padding: 9px;
+            box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-box>img {
+            height: 187.03px
+        }
+
+        .carousel .carousel-item img {
+            margin: 0 auto;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 68px;
+            background: none;
+        }
+
+        .carousel-control-prev i,
+        .carousel-control-next i {
+            font-size: 28px;
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            margin-top: -85px;
+            z-index: 5;
+            left: 0;
+            right: 0;
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+        }
+
+        .carousel-indicators {
+            bottom: -40px;
+        }
+
+        .carousel-indicators li,
+        .carousel-indicators li.active {
+            width: 10px;
+            height: 10px;
+            border: none;
+            border-radius: 50%;
+            margin: 1px 4px;
+            box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-indicators li {
+            background: #999;
+            border-color: transparent;
+        }
+
+        .carousel-indicators li.active {
+            background: #555;
+        }
+
+        .carousel-caption {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            color: #808080;
+            margin-bottom: -110px;
+            margin-left: -30px;
+            bottom: auto;
+            text-align: left;
+            right: 5%;
+        }
+
+        .carousel-caption>h5 {
+            background-color: transparent;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 35px;
+            color: #808080;
+        }
+
+        .yuchi-adjustment-0 {
+            padding-top: 60px;
+            margin-right: 175px;
+        }
+
+        .yuchi-adjustment-1 {
+            height: 600px;
+
+        }
+
+        .yuchi-adjustment-2 {
+            background-color: transparent;
+            padding-bottom: 80px;
+            height: 350px;
+            width: 900px;
+            margin-left: 50px;
+        }
+
+        .yuchi-adjustment-3-circle {
+            padding-bottom: 0px;
+
+        }
+
+        .yuchi-adjustment-4 {    
+            width: 35px;
+            height: 35px;
+            margin-bottom: 80px;
+            margin-left: 15px;
+            padding-bottom: 20px;
+        }
+
+        .yuchi-adjustment-5 {
+            margin-right: 320px;
+        }
+
+        .yuchi-adjustment-6 {
+            margin-left: 15px;
+        }
+
+        .yuchi-adjustment-7 {
+            height: 600px;
+        }
+
+        .yuchi-adjustment-8 {
+            margin-left: 320px;
+            width: 250px;
+        }
+
+        .yuchi-adjustment-9 {
+            width: 1440px;
+        }
+
+        .yuchi-adjustment-10 {
+            margin-right: 530px;
+            margin-bottom: 50px;
+        }
+
+
+        /*以上為子頁底部輪播區的CSS套件*/
+        /*以下開始為修正後footer套件*/
+
         .flex-container-guessyoulike {
             width: 1440px;
             background-color: #f1f1f1;
@@ -546,11 +744,11 @@
             padding-left: 669px;
         }
 
-        .flex-container-footer {
+        .my-flex-container-footer {
             width: 1440px;
             background-color: #e5e5e5;
             display: inline-block;
-            margin-top: 0px;
+            margin-top: 100px;
         }
 
         .news-carousel {
@@ -560,13 +758,15 @@
             margin-top: 0px;
         }
 
-        .copyright {
-            margin-left: 247px;
-            margin-top: 8px;
+
+        .my-copyright {
+            padding-left: 247px;
+            margin-top: 0px;
+            margin-bottom: 20px;
             background-color: #e5e5e5;
         }
 
-        .copyright>span {
+        .my-copyright>span {
             font-weight: 400px;
             color: #808080;
             font-size: 20px;
@@ -576,39 +776,39 @@
             background-color: #e5e5e5;
         }
 
-        .Logo3 {
+        .my-Logo3 {
             width: 322px;
             height: 161px;
             margin-left: 247px;
-            margin-top: 69px;
+            margin-top: 90px;
             background-color: #e5e5e5;
         }
 
-        .know-us {
+        .my-know-us {
             background-color: #f57f01;
             width: 75px;
-            margin-top: 10px;
+            margin-top: 50px;
         }
 
-        .know-us>span {
+        .my-know-us>span {
             font-size: 16px;
             color: #ffffff;
             margin-left: 6px;
-            margin-bottom: 20px;
-
+            margin-bottom: 70px;
+            padding-bottom: 20px;
         }
 
-        .know-us>a {
+        .my-know-us>a {
             color: #ffffff;
         }
 
-        .title-footer {
+        .my-title-footer {
             display: inline-block;
-            margin-left: 105px;
+            padding-left: 105px;
             background-color: #e5e5e5;
         }
 
-        .title-footer>p {
+        .my-title-footer>p {
             color: #808080;
             font-size: 16px;
             line-height: 20px;
@@ -632,8 +832,17 @@
             padding-left: 519px;
             padding-top: 19px;
             display: inline-block;
-
         }
+
+        .my-repair {
+            display: flex;
+            vertical-align: center;
+            background-color: #e5e5e5;
+        }
+
+        /*以上為修正後footer套件*/
+        /*輪播區的修正部分（以上請覆蓋）*/
+
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
@@ -879,40 +1088,119 @@
         </div>
     </div>
 
-    <!--猜你喜歡-->
-
-    <div class="flex-container-guessyoulike">
-        <p>猜你喜歡
-        </p>
-    </div>
-
-    <!--輪播區-->
+   <!--輪播區修正部分（以下請把原本「猜你喜歡」、「輪播區」、「footer」一起覆蓋）-->
+    <!--新輪播區-->
 
     <div class="news-carousel">
-        <p style="margin-top: 0px;">新聞聯播區（尚在研究技能中）</p>
+        <div class="container-xl yuchi-adjustment-1">
+            <div class="row">
+                <div class="col-md-9 yuchi-adjustment-0">
+                    <h2><span class="yuchi-adjustment-8">猜你喜歡</span></h2>
+                    <div id="myCarousel" class="carousel slide yuchi-adjustment-9" data-ride="carousel"
+                        data-interval="0">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators yuchi-adjustment-10">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner yuchi-adjustment-2">
+                            <div class="carousel-item active yuchi-adjustment-7">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿千人揉茶.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>千人揉茶飄香　推廣台灣茶葉文化</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿穆斯林.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>摘下穆斯林標籤：我是我，獨一無二</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿書車.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>華夏推行動書車　喚醒華僑滇緬回憶</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿陪跑員.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>陪跑員相伴　視障者征服馬拉松</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿跨國婚姻.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>說好的幸福呢？　戳破非法跨國婚姻仲介的粉紅泡泡</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿自來水.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>自來水普及面臨挑戰　屏東用水轉型的交叉路口</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+
+                        <a class="carousel-control-prev yuchi-adjustment-6" href="#myCarousel" data-slide="prev">
+                            <div class="yuchi-adjustment-3-circle">
+                                <i class="fa fa-chevron-left yuchi-adjustment-4">
+                                </i>
+                            </div>
+                        </a>
+                        <a class="carousel-control-next yuchi-adjustment-5" href="#myCarousel" data-slide="next">
+                            <div class="yuchi-adjustment-3-circle">
+                                <i class="fa fa-chevron-right yuchi-adjustment-4">
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--footer-->
 
-    <div class="flex-container-footer">
-        <img class="Logo3" src="./image/Logo3@4x-8.png">
-        <div class="title-footer">
-            <div class="know-us">
-                <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
-                        style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
-                </span>
+    <div class="my-flex-container-footer">
+        <div class="my-repair">
+            <img class="my-Logo3" src="./image/Logo3@4x-8.png">
+            <div class="my-title-footer">
+                <div class="my-know-us">
+                    <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                            style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                    </span>
+                </div>
+                <p style="display: inline-block; padding-top: 10px;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+                <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+                <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+                <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+                <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+                <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
             </div>
-            <p style="display: inline-block;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
-            <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
-            <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
-            <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
-            <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
-            <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
         </div>
-        <div class="copyright">
+        <div class="my-copyright">
             <span>© 2020 資恩荼報 All rights reserved</span>
         </div>
     </div>
+
+    <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
 </body>
 
 </html>
