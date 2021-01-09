@@ -483,6 +483,8 @@
             background-color: #3DA6D3;
         }
 
+        /*以下開始為修正後footer套件*/
+
         .flex-container-guessyoulike {
             width: 1440px;
             background-color: #f1f1f1;
@@ -500,27 +502,29 @@
             padding-left: 669px;
         }
 
-        .flex-container-footer {
-            min-width: 1440px;
+        .my-flex-container-footer {
+            width: 1440px;
             background-color: #e5e5e5;
             display: inline-block;
-            margin-top: 0px;
+            margin-top: 100px;
         }
 
         .news-carousel {
-            min-width: 1440px;
+            width: 1440px;
             height: 479px;
             background-color: #f1f1f1;
             margin-top: 0px;
         }
 
-        .copyright {
-            margin-left: 247px;
-            margin-top: 8px;
+
+        .my-copyright {
+            padding-left: 247px;
+            margin-top: 0px;
+            margin-bottom: 20px;
             background-color: #e5e5e5;
         }
 
-        .copyright>span {
+        .my-copyright>span {
             font-weight: 400px;
             color: #808080;
             font-size: 20px;
@@ -530,39 +534,39 @@
             background-color: #e5e5e5;
         }
 
-        .Logo3 {
+        .my-Logo3 {
             width: 322px;
             height: 161px;
             margin-left: 247px;
-            margin-top: 69px;
+            margin-top: 90px;
             background-color: #e5e5e5;
         }
 
-        .know-us {
+        .my-know-us {
             background-color: #f57f01;
             width: 75px;
-            margin-top: 10px;
+            margin-top: 50px;
         }
 
-        .know-us>span {
+        .my-know-us>span {
             font-size: 16px;
             color: #ffffff;
             margin-left: 6px;
-            margin-bottom: 20px;
-
+            margin-bottom: 70px;
+            padding-bottom: 20px;
         }
 
-        .know-us>a {
+        .my-know-us>a {
             color: #ffffff;
         }
 
-        .title-footer {
+        .my-title-footer {
             display: inline-block;
-            margin-left: 105px;
+            padding-left: 105px;
             background-color: #e5e5e5;
         }
 
-        .title-footer>p {
+        .my-title-footer>p {
             color: #808080;
             font-size: 16px;
             line-height: 20px;
@@ -587,6 +591,14 @@
             padding-top: 19px;
             display: inline-block;
         }
+
+        .my-repair {
+            display: flex;
+            vertical-align: center;
+            background-color: #e5e5e5;
+        }
+
+        /*以上為修正後footer套件*/
     </style>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
@@ -633,7 +645,7 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="../期末作業/image/tea01.jpg" class="d-block w-100" alt="../期末作業/image/tea01.jpg">
+                            <img src="./image/tea01.jpg" class="d-block w-100" alt="./image/tea01.jpg">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF">
                                 <p style="background-color: #FFFFFF"> 參與活動的民眾依照主辦單位的規劃坐在草地上，享受一起揉茶的樂趣。　圖／黃郁期攝
@@ -641,7 +653,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="../期末作業/image/tea02.jpg" class="d-block w-100" alt="../期末作業/image/tea02.jpg">
+                            <img src="./image/tea02.jpg" class="d-block w-100" alt="./image/tea02.jpg">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF;">
                                 <p style="background-color: #FFFFFF">
@@ -650,7 +662,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="../期末作業/image/tea03.jpg" class="d-block w-100" alt="../期末作業/image/tea03.jpg">
+                            <img src="./image/tea03.jpg" class="d-block w-100" alt="./image/tea03.jpg">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF">
                                 <p style="background-color: #FFFFFF">「千人揉茶」活動的參加民眾分布年齡非常廣，現場的小孩們在竹簍裡把玩新鮮的茶葉。　圖／黃郁期攝
@@ -658,7 +670,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="../期末作業/image/tea04.jpg" class="d-block w-100" alt="../期末作業/image/tea04.jpg">
+                            <img src="./image/tea04.jpg" class="d-block w-100" alt="./image/tea04.jpg">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF">
                                 <p style="background-color: #FFFFFF">主要由大葉大學及大同技術學院學生們負責策展的茶業生活應用館入口。　圖／黃郁期攝
@@ -666,7 +678,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="../期末作業/image/tea05.jpg" class="d-block w-100" alt="../期末作業/image/tea05.jpg">
+                            <img src="./image/tea05.jpg" class="d-block w-100" alt="./image/tea05.jpg">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF">
                                 <p style="background-color: #FFFFFF">大葉大學食品暨應用生物科技學系學生正在向民眾介紹花茶以及調茶的相關知識。　圖／黃郁期攝
@@ -958,25 +970,29 @@
 
         <!--footer-->
 
-        <div class="flex-container-footer">
-            <img class="Logo3" src="./image/Logo3@4x-8.png">
-            <div class="title-footer">
-                <div class="know-us">
-                    <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
-                            style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
-                    </span>
+        <div class="my-flex-container-footer">
+            <div class="my-repair">
+                <img class="my-Logo3" src="./image/Logo3@4x-8.png">
+                <div class="my-title-footer">
+                    <div class="my-know-us">
+                        <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                                style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                        </span>
+                    </div>
+                    <p style="display: inline-block; padding-top: 10px;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+                    <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+                    <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+                    <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+                    <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+                    <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
                 </div>
-                <p style="display: inline-block;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
-                <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
-                <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
-                <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
-                <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
-                <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
             </div>
-            <div class="copyright">
+            <div class="my-copyright">
                 <span>© 2020 資恩荼報 All rights reserved</span>
             </div>
         </div>
+
+        <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
     </div>
 </body>
 
