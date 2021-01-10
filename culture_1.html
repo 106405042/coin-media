@@ -61,7 +61,7 @@
         .thumbnail>.first_image_block {
             width: 700px;
             height: 550px;
-            margin-top: 60px;
+            margin-top:110px;
             margin-left: 60px
         }
 
@@ -83,7 +83,7 @@
             font-weight: 700;
             width: 230px;
             margin-left: 22px;
-            margin-top: 50px;
+            margin-top: 30px;
             margin-bottom: 30px;
         }
 
@@ -118,7 +118,7 @@
             height: 55px;
             background-color: #FA9D1F;
             margin: auto;
-            margin-top: 50px;
+            margin-top: 30px;
             display: flex;
         }
 
@@ -149,20 +149,44 @@
             display: flex;
         }
 
-        .button_save>img {
-            background-color: #ffffff;
-            margin-left: 90px;
-            margin: auto;
-            margin-right: 25px;
+        .button_save:hover {
+            cursor: pointer;
         }
 
+
         .button_save>p {
-            background-color: #ffffff;
+            background-color: transparent;
             color: #FA9D1F;
             font-size: 24px;
             margin: auto;
-            margin-left: 10px;
             font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .button_save>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/small-bookmark\ 1.png);
+            background-color: transparent;
+            margin: auto;
+            margin-right: 10px
+        }
+
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/white_add-bookmark1.png);
+            background-color: transparent;
         }
 
         .desktop-block {
@@ -880,8 +904,7 @@
             <div class=second_block style="background-color:#ffffff">
                 <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">文化小物
                 </p>
-                <p class=title style="background-color:#ffffff">摘下穆斯林標籤：</p>
-                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px;margin-bottom: -10px;">
+                <p class=title style="background-color:#ffffff">摘下穆斯林標籤：
                     我是我，獨一無二 </p>
                 <p class=price style="background-color:#ffffff">NT$3480</p>
                 <div class="murmur" style="background-color:#ffffff">
@@ -899,7 +922,7 @@
                     <p>加入購物車</p>
                 </div>
                 <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
+                    <div class="save_icon"></div>
                     <p>收藏商品</p>
                 </div>
             </div>
@@ -984,9 +1007,6 @@
                 </div>
                 <div class="subtitle">聲聲惦麥加　祈禱空間在政大
                 </div>
-
-
-
                 <div class="paragraph">
                     清晨四五點的鬧鈴響起，這時的我們仍在沉沉睡夢中，但全世界的穆斯林卻已俐落起身，開始洗淨身體，或在家裡，或前往清真寺，打起精神，虔誠地朝麥加的方向禱告，這便是穆斯林的日常。</div>
                 <div class="paragraph">
@@ -1110,8 +1130,7 @@
                             src="./icon/Star-fill.png">
                     </div>
                     <div class="seller-date" style="margin-top: 123px;">上架日期：2019/05/31</div>
-                    <div class="seller-date" style="margin-top: -10px;">共同賣家：游九思、許雅筑、吳卓玲</div>
-                    <div class="seller-date" style="margin-top: -10px;">徐湘芸、林傑立、陳貞蓁、彭勝緯</div>
+                    <div class="seller-date" style="margin-top: -10px;">共同賣家：游九思、許雅筑、吳卓玲、徐湘芸、林傑立、陳貞蓁、彭勝緯</div>
                     <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
                     src="./icon/curve.png">
                 <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: -6px;background-color: #ffffff"
@@ -1248,12 +1267,12 @@
                             style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
                     </span>
                 </div>
-                <p style="display: inline-block; padding-top: 10px;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
-                <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
-                <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
-                <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
-                <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
-                <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+         <p style="display: inline-block; padding-top: 10px;">法賢小人養成人力資源總監　｜　李宜恬</p>
+                <p style="display: inline-block; padding-left: 70px;">企業精神領袖兼顧問　｜　李法賢</p>
+                <p style="margin-top: 0px;">日出而作日出而息技術總監　｜　鄭鈺宣</p>
+                <p>可憐沒人愛企業形象代言人　｜　楊沛霓</p>
+                <p>不想再領基本時薪設計總監  ｜　于恆生</p>
+                <p>寫文寫摳左右互搏業務總監　｜　黃郁期</p>
             </div>
         </div>
         <div class="my-copyright">
