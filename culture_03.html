@@ -482,6 +482,114 @@
             background-color: #3DA6D3;
         }
 
+         /*以下為置底三張圖*/
+
+         .guess {
+            color: #696969;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            margin: 40px 70px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            background-color: transparent;
+
+        }
+
+        .guess::after {
+            content: "";
+            width: 825px;
+            position: absolute;
+            margin: 0 auto;
+            height: 1px;
+            border-radius: 1px;
+            background: #d4d4d4;
+            left: 0;
+            right: 0;
+            bottom: 14px;
+            margin-left: 275px;
+        }
+
+        .guess span {
+            display: inline-block;
+            padding: 0 25px;
+            background: #f1f1f1;
+            position: relative;
+            z-index: 2;
+            margin-left: 80px;
+        }
+
+        .img-box>img {
+            height: 187.03px
+        }
+
+
+        .three-image {
+            padding-left: 20px;
+            width: 940px;
+            margin-left: 282px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .img-box {
+            height: 205.03px;
+            width: 279.98px;
+        }
+
+
+        .image-box>img {
+            height: 187.03px;
+            background: #fff;
+            padding: 9px;
+            box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.4);
+        }
+
+        .container-three-images {
+            width: 1440px
+        }
+
+        .three-image-title-box>.my-h5 {
+            background-color: transparent;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 35px;
+            color: #808080;
+            display: inline-block;
+        }
+
+        .title-box {
+            width: 270px;
+            display: inline-block;
+        }
+
+        .title-box>.my-h5 {
+            background-color: transparent;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 35px;
+            color: #808080;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .title-box-1 {
+            margin-left: 320px;
+        }
+
+        .title-box-2 {
+            margin-left: 40px;
+        }
+
+        .title-box-3 {
+            margin-left: 35px;
+        }
+
         /*以下開始為修正後footer套件*/
 
         .flex-container-guessyoulike {
@@ -950,17 +1058,28 @@
             </div>
         </div>
 
-        <!--猜你喜歡-->
-
-        <div class="flex-container-guessyoulike">
-            <p>猜你喜歡
-            </p>
+        <!--沒有輪播區的底部-->
+    <div class="container-three-images">
+        <h2 class="guess"><span>猜你喜歡</span></h2>
+        <div class="three-image">
+            <div class="image-box"><img src="./image/子頁輪播圖＿千人揉茶.png">
+            </div>
+            <div class="image-box"><img src="./image/子頁輪播圖＿自來水.png">
+            </div>
+            <div class="image-box"><img src="./image/子頁輪播圖＿陪跑員.png">
+            </div>
         </div>
 
-        <!--輪播區-->
-
-        <div class="news-carousel">
-            <p style="margin-top: 0px;">新聞聯播區（尚在研究技能中）</p>
+        <div class="three-image-title-box">
+            <div class="title-box title-box-1">
+                <h5 class="my-h5">千人揉茶飄香　推廣台灣茶葉文化</h5>
+            </div>
+            <div class="title-box title-box-2">
+                <h5 class="my-h5">摘下穆斯林標籤：我是我，獨一無二</h5>
+            </div>
+            <div class="title-box title-box-3">
+                <h5 class="my-h5">華夏推行動書車　喚醒華僑滇緬回憶</h5>
+            </div>
         </div>
 
         <!--footer-->
