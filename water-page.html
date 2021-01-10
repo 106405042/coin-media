@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            /*background-color: #f1f1f1;*/
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+
+        }
+
+        body.my-body {
+            background-color: #f1f1f1;
+        }
+
+        .header {
+            margin: 20px 65px 20px 160px
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .header>span {
+            font-size: 20px;
+            line-height: 40px;
+            margin-right: 30px;
+            font-weight: 400;
+            color: #4f4f4f;
+        }
+
+        .round_header {
+            background-color: #FA9D1F;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 28px;
+            margin-left: 2px;
+            vertical-align: text-top
+        }
+
+        .thumbnail {
+            width: 1280px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>.first_image_block {
+            width: 700px;
+            height: 550px;
+            margin-top: 60px;
+            margin-left: 60px
+        }
+
+        .thumbnail>.second_block {
+            display: inline-block;
+            margin-left: 70px;
+        }
+
+        .title {
+            color: #262626;
+            font-size: 35px;
+            font-weight: 700;
+            width: 360px;
+        }
+
+        .price {
+            color: #FA9D1F;
+            font-size: 40px;
+            font-weight: 700;
+            width: 230px;
+            margin-left: 22px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .old-price {
+            font-size: 22px;
+            color: #4A4949;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: -50px;
+            text-decoration: line-through;
+            display: inline-block;
+            background-color: #ffffff;
+        }
+
+        .murmur {
+            margin-left: 22px;
+            width: 350px;
+        }
+
+        .murmur>.block {
+            width: 320px;
+        }
+
+        .round {
+            background-color: #FA9D1F;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+        }
+
+        .discription {
+            margin-top: 0px;
+            margin-left: 30px;
+            font-size: 18px;
+            color: #4f4f4f;
+        }
+
+        .button_shop {
+            width: 330px;
+            height: 55px;
+            background-color: #FA9D1F;
+            margin: auto;
+            margin-top: 40px;
+            display: flex;
+        }
+
+        .button_shop>img {
+            background-color: #FA9D1F;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .button_shop>p {
+            background-color: #FA9D1F;
+            color: #f1f1f1;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+
+        }
+
+        .button_save {
+            width: 330px;
+            height: 50px;
+            border: 3px #FA9D1F solid;
+            margin: auto;
+            margin-top: 25px;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .button_save>img {
+            background-color: #ffffff;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 25px;
+        }
+
+        .button_save>p {
+            background-color: #ffffff;
+            color: #FA9D1F;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+
+        .desktop-block {
+            width: 1440px;
+            background-color: #f1f1f1;
+            margin-left: 75px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+        }
+
+        .body-block {
+            width: 800px;
+            background-color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 25px;
+        }
+
+        .paragraph-1 {
+            width: 350px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 25px;
+            margin-left: auto;
+        }
+
+        .subtitle {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 25px;
+        }
+
+
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #1F88BF;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+            position: relative;
+            top: 3px;
+            left: 1px;
+        }
+
+        .abbreviation-triangle {
+            background-color: #ffffff;
+            border-right: 5px solid #ffffff;
+            border-left: 5px solid #ffffff;
+            border-top: 8px solid #1F88BF;
+            display: inline-block;
+            position: relative;
+            top: -4.5px;
+            left: 4px;
+        }
+
+        .abbreviation-block {
+            width: 600px;
+            background-color: #3DA6D3;
+            display: none;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 20px;
+        }
+
+        a.abbreviation-a:visited+.abbreviation-block {
+            display: block;
+        }
+
+
+        a.abbreviation-a:hover+.abbreviation-block {
+            display: block;
+        }
+
+        .abbreviation {
+            width: 550px;
+            font-family: Noto Sans TC;
+            color: #ffffff;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #3DA6D3;
+        }
+
+
+        .h1 {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 40px;
+            color: #262626;
+            width: 1440px;
+        }
+
+        .flex-container-guessyoulike {
+            width: 1440px;
+            background-color: #f1f1f1;
+            align-content: center;
+            display: flex;
+        }
+
+        .flex-container-guessyoulike>p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            color: #4A4949;
+            margin: 0px;
+            padding-left: 669px;
+        }
+
+        .flex-container-footer {
+            width: 1440px;
+            background-color: #e5e5e5;
+            display: inline-block;
+            margin-top: 0px;
+        }
+
+        .news-carousel {
+            width: 1440px;
+            height: 479px;
+            background-color: #f1f1f1;
+            margin-top: 0px;
+        }
+
+        .copyright {
+            margin-left: 247px;
+            margin-top: 8px;
+            background-color: #e5e5e5;
+        }
+
+        .copyright>span {
+            font-weight: 400px;
+            color: #808080;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 50px;
+            display: inline-block;
+            background-color: #e5e5e5;
+        }
+
+        .Logo3 {
+            width: 322px;
+            height: 161px;
+            margin-left: 247px;
+            margin-top: 69px;
+            background-color: #e5e5e5;
+        }
+
+        .know-us {
+            background-color: #f57f01;
+            width: 75px;
+            margin-top: 10px;
+        }
+
+        .know-us>span {
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 6px;
+            margin-bottom: 20px;
+
+        }
+
+        .know-us>a {
+            color: #ffffff;
+        }
+
+        .title-footer {
+            display: inline-block;
+            margin-left: 105px;
+            background-color: #e5e5e5;
+        }
+
+        .title-footer>p {
+            color: #808080;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .you-are-also-browsing {
+            width: 1440px;
+            height: 100px;
+            background-color: #F57F01;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .you-are-also-browsing>span {
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            background-color: #F57F01;
+            padding-left: 519px;
+            padding-top: 19px;
+            display: inline-block;
+
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    </style>
+    </style>
+</head>
+
+<body class="my-body">
+    <div class="website" style="width:1440px">
+        <div class=header>
+            <div class=logo>
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+            </div>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <div class="round_header"></div>
+            <span>校園熱銷</span>
+            <span>文化小物</span>
+            <span>時代精品</span>
+            <span>在地嚴選</span>
+            <span>海外直送</span>
+        </div>
+        <div class=thumbnail style="background-color:#ffffff">
+            <div class=first_image_block style="background-color:#ffffff">
+                <img style="width:700px;height:auto; margin-top: 70px;" src="./image/water01.png">
+            </div>
+            <div class=second_block style="background-color:#ffffff">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">精選企劃
+                </p>
+                <p class=title style="background-color:#ffffff">自來水普及面臨挑戰</p>
+                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px; margin-bottom: -10px;">
+                    屏東用水轉型的交叉路口 </p>
+                <p class=price style="background-color:#ffffff">NT$2888</p>
+                <p class=old-price>NT$3,999</p>
+                <div class="murmur" style="background-color:#ffffff">
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
+                    </div>
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
+                    </div>
+                </div>
+                <div class=button_shop>
+                    <img src="./icon/Group.png">
+                    <p>加入購物車</p>
+                </div>
+                <div class=button_save>
+                    <img src="./icon/small-bookmark 1.png">
+                    <p>收藏商品</p>
+                </div>
+            </div>
+        </div>
+        <div style="height:50px"></div>
+        <!--paragraph-->
+        <img style="width:1440px;height:auto" src="./image/water01.png">
+        <div style="background-color: #ECDEFF; width: 1440px; height: 700px; margin-top: -10px; position: relative;">
+            <img style="width: 400px; margin-top: 100px; margin-left: 300px;" src="./image/water02.png">
+            <div
+                style="width: 400px; height :250px; background-color: #ffffff; opacity:0.5; display: inline-block; position: absolute; top: 200px;">
+            </div>
+            <p class="paragraph-1" style="display: inline-block; position: absolute; left: 730px; margin-top: 210px;">
+                轉開水龍頭便有水自來，沿管線流出的沁涼卻可能不全然是自來水。居住於台灣國境之南的屏東縣居民，平日生活用水多取自地下，飲用水則為礦泉水，或來自路旁的一座小加水站。1970年代起，政府開始推動使用自來水，直至今日，屏東縣自來水普及率僅達52.7%，遠低於全台平均（94.02%），在地下水受汙染、現代人重視用水品質的當今，屏東居民的用水習慣顯然受到挑戰。
+            </p>
+        </div>
+        <div>
+            <img style="width:1440px; height: auto; display: inline-block; position: relative;"
+                src="./image/water03.JPG">
+            <div
+                style="width:1450px; height :220px; background-color: #ffffff; opacity:0.5; display: inline-block; position: absolute; top: 2550px; left: 0;">
+            </div>
+            <p class="h1" style="display: inline-block; position: absolute; left: 250px; margin-top: 300px;">
+                居民慣用地下水　屏東自來水普及率難提升</p>
+        </div>
+        <div style="background-color: #D0ECFA; width: 1440px; height: 500px; margin-top: -300px; position: relative;">
+            <img style="width: 300px; margin-top: 30px; margin-left: 350px;" src="./image/water04.jpg">
+            <div
+                style="width: 420px; height :150px; background-color: #ffffff; opacity:0.5; display: inline-block; position: absolute; top: 180px; margin-left: 40px;">
+            </div>
+            <p class="paragraph-1"
+                style="display: inline-block; width: 380px; position: absolute; left: 715px; margin-top: 210px;">
+                台灣自來水公司（以下簡稱自來水公司）每半年統計全台各縣市自來水供水普及率，長久以來，屏東縣自來水普及率遠低於其他縣市。</p>
+        </div>
+        <div style="background-color: #4cc1ec; width: 1440px; height: 500px; position: relative;">
+            <img style="width: 300px; margin-top: 30px; margin-left: 350px;" src="./image/water05.jpg">
+            <div
+                style="width: 430px; height :190px; background-color: #ffffff; opacity:0.5; display: inline-block; position: absolute; top: 180px; margin-left: 40px;">
+            </div>
+            <p class="paragraph-1"
+                style="display: inline-block; width: 380px; position: absolute; left: 720px; margin-top: 200px;">
+                此外，屏東縣也是全台各鄉鎮自來水普及率差距最大的縣市。縣內33個鄉鎮市中，恆春、東港、新園及車城的普及率超過90%，潮州、里港、鹽埔等八個鄉鎮普及程度卻未達5%。其中，位於屏東北部的九如鄉，自來水普及率甚至為0%，完全沒有任何家戶裝設自來水。
+            </p>
+        </div>
+        <div style="background-color: #ffffff; width: 1440px; height: 250px; position: relative;">
+            <p class="paragraph-1"
+                style="display: inline-block; width: 600px; position: absolute; left: 400px; margin-top: 50px;">
+                屏東地區的自來水建設，起步並不晚於台灣其他縣市。然而，自來水公司第七區管理處副處長邱憲龍表示，屏東居民多習慣直接抽取地下水作為生活用水，認為沒有付費裝設自來水的必要，「當時候的地下水，它可能水質比較好，那民眾覺得，第一個不用錢，那第二，它取之不盡、用之不竭。」除自來水外，民眾能選擇使用當地豐沛的地下水，因此相較於其他縣市，屏東地區自來水普及率在數十年間並無明顯成長。
+            </p>
+        </div>
+        <div style="background-color: #D0ECFA; width: 1440px; height: 1200px; position: relative;">
+            <img style="width: 700px; margin-top: 30px; margin-left: 330px;" src="./image/water06.jpg">
+            <img style="width: 700px; margin-top: 40px; margin-left: 330px;" src="./image/water07.jpg">
+        </div>
+        <div>
+            <img style="width:1440px; height: auto; display: inline-block; position: relative;"
+                src="./image/water08.JPG">
+            <div
+                style="width:1450px; height :220px; background-color: #ffffff; opacity:0.5; display: inline-block; position: absolute; top: 5650px; left: 0;">
+            </div>
+            <p class="h1" style="display: inline-block; position: absolute; left: 220px; margin-top: 300px;">
+                優質地下水不再　受檢驗自來水成民眾新選擇</p>
+        </div>
+        <div style="background-color: #ffffff; width: 1440px; height: 1200px; position: relative; margin-top: -300px;">
+            <img style="width: 900px; height: 1050px; margin-top: 30px; margin-left: 250px;" src="./image/water09.png">
+            <div class="paragraph-1"
+                style="display: inline-block; width: 600px; position: absolute; left: 400px; margin-top: 100px;">
+                直至2012年，有不肖業者於屏東縣萬丹鄉堆放大量「爐渣」
+                <a class="abbreviation-a">
+                    <div class="abbreviation-circle">
+                        <div class="abbreviation-triangle"></div>
+                    </div>
+                </a>
+                <div class="abbreviation-block">
+                    <div class="abbreviation">
+                        爐渣是煉鋼、煉鐵廠燃燒煤、鐵砂、金屬礦物之後剩下來的殘留物。由於爐渣會產生高度的重金屬危害，所以按照環保署《廢棄物清理法》規定，鐵鋼廠產生的爐渣廢棄物必須經過專業的安定性質處理。
+                    </div>
+                </div>
+                ，導致地下水源遭到汙染，民眾漸對地下水質產生疑慮，也開始意識到裝設自來水的重要，邱憲龍提到，「也是從那時候開始，民眾慢慢瞭解，地下水不是安全的，它也有可能被汙染。」此外，根據行政院環境保護署「土壤及地下水汙染整治網」公告，2018年屏東縣共有11處「土壤地下水汙染場址」，汙染源包含重金屬及有機汙染物，顯示屏東地區地下水質已不再安全。
+                <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 25px;">
+                    「早期這邊地下水非常的乾淨、都沒有雜質，現在它上面都有一層黑黑的垢，然後開始有一點點味道。」住在屏東縣南州鄉近五十年的倪榮城，形容家中地下水使用狀況。他表示，地下水中的雜質易殘留於家裡的洗衣機濾網，短時間內乾淨的濾網便會被染成黑色，必須頻繁更換。此外，倪榮城家中的水管也經常受異物阻塞，若未定期疏通，會造成浴廁水龍頭出水量小。基於衛生考量，他決定安裝自來水，以確保家中用水乾淨無虞。
+                </p>
+                <div class="paragraph-1" style="display: inline-block; width: 600px;margin-top: 20px;">
+                    邱憲龍表示，自來水公司所使用的原水
+                    <a class="abbreviation-a">
+                        <div class="abbreviation-circle">
+                            <div class="abbreviation-triangle"></div>
+                        </div>
+                    </a>
+                    <div class="abbreviation-block">
+                        <div class="abbreviation">
+                            原水取自天然水體或蓄水水體，如河流、湖泊、池塘或地下蓄水層等，作為供水水源。
+                        </div>
+                    </div>
+                    ，應符合飲用水水質標準，才得以被取用、淨化。而經淨水場過濾處理的自來水，須通過60多項水質檢驗，才能被分送至各家戶。他也補充，各縣市環保局會定期檢測自來水水質，「（環保局）他幾乎每個月都會定點、定時的去採樣，檢驗看送出去給用戶端的清水，到底有沒有符合水質標準。」經過自來水公司和環保局的層層把關，民眾的用水安全才得以獲得保障。
+                </div>
+                <p class="h1" style="display: inline-block; font-size: 30px; margin-left: -40px; margin-top: 70px;">
+                    政府推補助盼普及自來水　民眾接水意願成設置關鍵</p>
+                <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 10px;">
+                    「早期這邊地下水非常的乾淨、都沒有雜質，現在它上面都有一層黑黑的垢，然後開始有一點點味道。」住在屏東縣南州鄉近五十年的倪榮城，形容家中地下水使用狀況。他表示，地下水中的雜質易殘留於家裡的洗衣機濾網，短時間內乾淨的濾網便會被染成黑色，必須頻繁更換。此外，倪榮城家中的水管也經常受異物阻塞，若未定期疏通，會造成浴廁水龍頭出水量小。基於衛生考量，他決定安裝自來水，以確保家中用水乾淨無虞。
+                </p>
+                <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 15px;">
+                    政府偕同自來水公司宣導後，各鄉鎮行政機關調查當地民眾接水意願，若同意接水戶數高於該鄉鎮總戶數六成，自來水公司將規劃開發各地水源、設置淨水設備及管線鋪設工程。然而，屏東縣因各鄉鎮村里地下水量、水質狀況不同，因此居民安裝自來水意願差異大。
+                </p>
+            </div>
+            <div style="width: 1440px; margin-top: 100px;">
+                <img style="width: 100%; height: 700px; display: inline-block; position: relative;"
+                    src="./image/water10.JPG">
+                <div
+                    style="width:1450px; height :220px; background-color: #ffffff; opacity:0.5; display: inline-block; position: absolute; top: 1400px; left: 0;">
+                </div>
+                <p class="h1" style="display: inline-block; position: absolute; left: 150px; margin-top: 300px;">
+                    屏東鄉鎮用水觀念不一　各地自來水推動進度落差大</p>
+            </div>
+            <div>
+                <script>
+                    (function () {
+                        var namespace = '__twreporterEmbeddedData';
+                        var pkg = 'dual-channel';
+                        if (typeof window != 'undefined') {
+                            if (!window.hasOwnProperty(namespace)) {
+                                window[namespace] = {};
+                            }
+                            if (window[namespace] && !window[namespace].hasOwnProperty(pkg)) {
+                                window[namespace][pkg] = [];
+                            }
+                            if (Array.isArray(window[namespace][pkg])) {
+                                var data = { "chapters": [{ "id": "772737467", "label": "屏東鄉鎮用水觀念不一　自來水推動進度落差大", "content": [{ "id": "chapter-772737467-section-1", "content": [{ "type": "header-two", "content": ["屏東鄉鎮用水觀念不一　自來水推動進度落差大"] }, { "type": "header-two", "content": ["潮州鎮九塊里"] }, { "type": "paragraph", "content": ["民眾接水意願低　里長：只能慢慢推動\n\n根據「104年屏東縣潮州鎮接水意願調查結果」，潮州鎮九塊里居民接水意願僅8.07%，為潮州鎮意願最低的村里。目前九塊里居民的生活用水，多由里內公用的簡易水塔供應，里內管理處會定期清洗水塔並檢驗水質。九塊里里長潘陳瑱圓表示，「吃我們水都會肥，來住我們九塊里很幸福欸。」她指出，現階段里民相當信任九塊里地下水質，對需按月收費的自來水接受度並不高。\n\n然而，潘陳瑱圓坦言，自己也會擔心未來地下水質不再，「當然那個地下水，久而久之也是怕會變質，我也是喜歡說，有安裝（自來水）比較好。」她認為，安裝自來水較能保障用水品質，但居民用水習慣難以在短期內改變，「現在真的沒辦法行動，只有慢慢推動。（等到）那個潮州鎮21里嘛，大部分差不多都在使用自來水，這樣我們的里民他們會慢慢接受。」"] }] }, { "id": "chapter-772737467-section-2", "content": [{ "type": "header-two", "content": ["里港鄉三廍村"] }, { "type": "paragraph", "content": ["用水習慣難改　村民不願花錢裝設自來水管線\n\n位於屏東縣里港鄉的三廍村，各家戶皆自行鑿井、長期抽取地下水。三廍村居民龔秋梅指出，現今住戶多安於現狀，且認為花錢安裝自來水管相當麻煩，「有的人會覺得說，我現在有水喝、有水用，幹嘛要多餘去做這些事情？他們就是會排斥。」她也補充，政府提供的補助對部分民眾而言吸引力不足，因此仍抗拒以自來水取代地下水，「沒有免費的話，其實有一部份的人可能就不會有意願。」\n\n然而，龔秋梅認為使用地下水仍非長久之計，「我們這裡石灰質很重，那個成天在水管裡面，我們還要請人家去清啊。」她表示，當地地下水含有豐富的石灰質，因此改用淨化過的自來水，能免去家戶清理管線的麻煩。"] }] }, { "id": "chapter-772737467-section-3", "content": [{ "type": "header-two", "content": ["九如鄉玉泉村"] }, { "type": "paragraph", "content": ["憂農藥汙地下水質　玉泉村逾半數同意接水 \n\n坐落於屏東縣九如鄉的玉泉村，村民長年以地下水作為主要用水來源。「你看現在很多務農的，他們都還是有在噴農藥，農藥噴久了，土壤還是會有汙染，那個農藥下去，水源不是也會受到汙染嗎？」玉泉村村長周綉苡認為，當地農業用藥恐影響地下水品質，安裝自來水更能確保村民用水的安全。「現在我們已經開始在申請，玉泉這邊也是五、六成的村民有同意接自來水。」她提到，自來水公司將在玉泉村設置淨水場，抽取並過濾當地地下水作為九如鄉未來供水的水源。"] }] }, { "id": "chapter-772737467-section-4", "content": [{ "type": "header-two", "content": ["潮州鎮檨子里"] }, { "type": "paragraph", "content": ["泥沙阻塞管線　檨子里接水意願破九成\n\n潮州鎮檨子里與鄰近的興美里共用一座簡易水塔將近六十年，管線已近一甲子未曾清洗，造成嚴重阻塞，「那都沒有清過，都是髒的東西卡在裡面，根本沒有水進來我們檨子里。」檨子里里長潘雄村提及，水電工切除部分管線後，發現主要管線內積有大量泥沙，僅剩一枚銅板寬的空間讓水流通，導致里內供水不穩。當時潘雄村便拿著管線，向檨子里民推廣自來水的重要性，「你看看！我們潮州鎮的水質就是這麼髒，我們的水質這樣不改善的話，你們身體就不好。」經過潘雄村的說明，目前里內接水意願已突破九成，而從淨水場接至檨子里的自來水管線工程，也將在近年完成。"] }] }] }], "embeddedItems": [[["\u003Cpicture\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: portrait)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002F9bmccpj0j0wlrn1\u002Fpeople-1.png?dl=0\" \u002F\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: landscape)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002F9bmccpj0j0wlrn1\u002Fpeople-1.png?dl=0\" \u002F\u003E\u003Cimg alt=\"\" src=https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002F9bmccpj0j0wlrn1\u002Fpeople-1.png?dl=0\" style=\"width:100%;height:100%\" \u002F\u003E\u003C\u002Fpicture\u003E\n\n\n", "fadeIn"], ["\u003Cpicture\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: portrait)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fsm7ipbakek6inlw\u002Fpeople-2.jpg?dl=0\" \u002F\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: landscape)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fsm7ipbakek6inlw\u002Fpeople-2.jpg?dl=0\" \u002F\u003E\u003Cimg alt=\"\" src=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fsm7ipbakek6inlw\u002Fpeople-2.jpg?dl=0\" style=\"width:100%;height:100%\" \u002F\u003E\u003C\u002Fpicture\u003E\n\n\n", "fadeIn"], ["\u003Cpicture\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: portrait)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fxuw5qss62zh4hgn\u002Fpeople-3.jpg?dl=0\" \u002F\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: landscape)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fxuw5qss62zh4hgn\u002Fpeople-3.jpg?dl=0\" \u002F\u003E\u003Cimg alt=\"\" src=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fxuw5qss62zh4hgn\u002Fpeople-3.jpg?dl=0\" style=\"width:100%;height:100%\" \u002F\u003E\u003C\u002Fpicture\u003E\n\n\n", "fadeIn"], ["\u003Cpicture\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: portrait)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fa3oyyy2n7w342vy\u002Fpeople-4.jpg?dl=0\" \u002F\u003E\u003Csource type=\"image\u002Fsvg+xml\" media=\"(orientation: landscape)\" srcset=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fa3oyyy2n7w342vy\u002Fpeople-4.jpg?dl=0\" \u002F\u003E\u003Cimg alt=\"\" src=\"https:\u002F\u002Fdl.dropboxusercontent.com\u002Fs\u002Fa3oyyy2n7w342vy\u002Fpeople-4.jpg?dl=0\" style=\"width:100%;height:100%\" \u002F\u003E\u003C\u002Fpicture\u003E\n\n", "fadeIn"]]], "isFullWidth": undefined, "uuid": "85cb0cc1-6443-49d6-a027-b11d73c70337" };
+                                window[namespace][pkg].push(data);
+                            }
+                        }
+                    })()
+                </script>
+                <div id=85cb0cc1-6443-49d6-a027-b11d73c70337></div>
+
+                <script type="text/javascript" crossorigin
+                    src="https://unpkg.com/@twreporter/dual-channel@2.1.2-rc.3/dist/main.7aad321840e7ae014aa8.bundle.js"></script>
+            </div>
+
+            <img style="width: 650px; margin-top: 30px; margin-left: 100px;" src="./image/water11.JPG">
+            <div
+                style="width: 355px; height :130px; background-color: #FCF6CC; opacity:0.5; display: inline-block; margin-left: 40px; position: absolute; margin-top: 170px;">
+            </div>
+            <p class="paragraph-1"
+                style="color: #262626; display: inline-block; width: 300px; margin-top: 200px; position: absolute; margin-left: 70px; ">
+                潘雄村說：「我們一定要接自來水廠，不能再接那個水塔，水質又沒有過濾，那個髒得要命，我們已經受那個苦了。」
+            </p>
+            <div style="width: 1440px; margin-top: 50px;">
+                <img style="width: 1440px; height: auto; display: inline-block; position: relative;"
+                    src="./image/water12.JPG">
+                <p class="h1" style="display: inline-block; position: absolute; left: 150px; margin-top: 200px;">
+                    屏東自來水建設遍地開花</p>
+                <p class="h1" style="display: inline-block; position: absolute; left: 350px; margin-top: 300px;">
+                    各鄉鎮供水戶數顯著成長</p>
+            </div>
+            <div
+                style="background-color: #ffffff; width: 1440px; height: 1500px; position: relative; margin-top: -400px;">
+                <img style="width: 900px; height: 1400px; margin-top: 30px; margin-left: 250px;"
+                    src="./image/water09.png">
+                <div style="display: inline-block; position: absolute; width: 600px; left: 400px; margin-top: 100px;">
+                    <p class="paragraph-1"  style="display: inline-block; width: 600px; margin-top: 5px;">
+                        自來水公司在現階段接水意願超過六成的鄉鎮，鋪設自來水管線，「目前比較積極進行的是萬丹鄉和潮州鎮。」邱憲龍提到，萬丹鄉頂新淨水場現已竣工，當地1萬5000家戶中已有8000戶使用自來水，而潮州鎮潮新淨水場也將於今年八月完工，目前鎮內1萬9000家戶中，已有2000戶開始使用自來水。相較於2018年底，兩鄉鎮自來水供水戶數皆成長1000餘戶，「其它後續還有九如鄉、內埔鄉、麟洛鄉……。他們的（使用自來水）意願也都超過六成，水公司也都在陸續規劃中。」
+                    </p>
+                    <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 25px;">
+                        「如果意願沒有達到60%，鄉鎮區人口數已經不是很多，那我還在這個鄉鎮去鑿井、去做這些工程，不但投入成本，還包括整個管理都會造成很大困擾。」為避免資源浪費，自來水公司訂下六成的意願門檻，但邱憲龍也提到，有些鄉鎮使用自來水意願雖未達標，其中部分村里用水意願仍高，「這些地區其實我們（自來水公司）都會評估，如果可以有鄰近的延伸管線供水，我們都會來協助。」
+                    </p>
+                    <p class="h1" style="display: inline-block; font-size: 30px; margin-left: 5px; margin-top: 50px;">
+                        居民憂灌溉水源遭影響　阻自來水建設進度</p>
+                    <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 10px;">
+                        政府推廣自來水普及的同時，卻有部分居民擔憂，自來水公司以地下水作為水源，將導致當地農業灌溉用水不足。「像南州鄉那邊，原本有兩口井要作為自來水公司的水源，就因為地方擔心會影響他們的灌溉水，所以那個水源設置就先擱置了。」對此邱憲龍說明，地方縣市政府會限制自來水公司的抽取水量，防止地下水位過低，此外，自來水公司抽取的地下水層與一般民眾不同，因此並不影響灌溉用水，「一般來講取用地下水層深度為兩百公尺，民眾一般使用他們鑽取的水井，大概不會超過五十公尺。」
+                    </p>
+                    <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 15px;">
+                        邱憲龍也提到，民眾多半希望自來水公司將當地地下水源淨化為自來水後，僅供該鄉鎮使用，「像九如鄉居民也要求我們，未來設置的淨水場，不能將水提供至鄰近鄉鎮使用。」他表示，若要提升自來水普及率，自來水公司須於各鄉鎮開發地下水源並設置淨水場，「如果今天自來水公司在這個鄉鎮內沒有鑿井，就沒有水源，可能在這個鄉鎮裡面用水（自來水）就會很麻煩。」
+                    </p>
+                    <p class="h1" style="display: inline-block; font-size: 30px; margin-left: 5px; margin-top: 50px;">
+                        水公司尋穩定水源　人工湖蓄地下水成解方</p>
+                    <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 10px;">
+                        為消除民眾顧慮，尋找穩定水源成為自來水公司須面臨的課題。邱憲龍表示，「屏南地區只依靠一個牡丹水庫，其實也不夠，而屏北地區的（自來水）水源大部分都是用地下水。」他進一步說明，近來部分地區居民超抽地下水，造成枯水期地下水位較往年低，引發水源枯竭問題，因此，涵養地下水成為當務之急。
+                    </p>
+                    <p class="paragraph-1" style="display: inline-block; width: 600px; margin-top: 10px;">
+                        2018年6月，屏東縣政府完成大潮州人工湖第一期工程，盼藉此補注屏東地區地下水資源。國立屏東科技大學工學院院長、長年研究地下水的丁澈士提到，大潮州人工湖位於沖積扇扇頂，地質透水性佳，「我們可以把山區3000到4000毫米這樣比較多的降雨量，在出山口的地方把它收集，經過透水性很好的地層把它收納到地底下，形成所謂的地下水庫。」他表示，大潮州人工湖能將洪水轉存為地下水，減緩屏東平原低窪地淹水情形，也補充自來水公司或家戶平時抽取的水源，達到「洪水資源化」的成效。
+                    </p>
+                </div>
+                <div style="background-color: #D0ECFA; width: 1440px; height: 500px; margin-top: 50px; position: relative;">
+                    <img style="width: 200px; margin-top: 80px; margin-left: 600px;" src="./image/water13.png">
+                    <p class="paragraph-1"
+                        style="color:#262626; font-size: 18px; width: 600px; display: inline-block; position: absolute; left: 430px; margin-top: 300px;">
+                        「我就跟他講說，將來為了我們的子孫，我們一定要用自來水廠的水。」潘雄村堅定地說。政府為保障民眾的用水健康，積極推動自來水普及。然而，民眾長年積累的用水習慣，似乎難以在一朝一夕間改變。所幸的是，村里長挨家挨戶宣導自來水益處，居民也逐漸敞開心房、接受新觀念。屏東平原上的人們在自來水普及路途上，並非停滯不前。</p>
+                </div>
+            </div>
+
+            <!--猜你喜歡-->
+            <div class="flex-container-guessyoulike" style="margin-top: 600px;">
+                <p>猜你喜歡
+                </p>
+            </div>
+
+            <!--輪播區-->
+
+            <div class="news-carousel">
+                <p style="margin-top: 0px;">新聞聯播區（尚在研究技能中）</p>
+            </div>
+
+            <!--footer-->
+            <div class="flex-container-footer">
+                <img class="Logo3" src="./image/Logo3@4x-8.png">
+                <div class="title-footer">
+                    <div class="know-us">
+                        <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                                style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                        </span>
+                    </div>
+                    <p style="display: inline-block;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+                    <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+                    <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+                    <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+                    <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+                    <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+                </div>
+                <div class="copyright">
+                    <span>© 2020 資恩荼報 All rights reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
