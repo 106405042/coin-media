@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--子頁底部輪播區的CSS和JavaScript套件-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+
+        }
+
+        .header {
+            margin: 20px 65px 20px 160px
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .header>span {
+            font-size: 20px;
+            line-height: 40px;
+            margin-right: 30px;
+            font-weight: 400;
+            color: #4f4f4f;
+        }
+
+        .round_header {
+            background-color: #FA9D1F;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 28px;
+            margin-left: 2px;
+            vertical-align: text-top
+        }
+
+        .thumbnail {
+            width: 1280px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>.first_image_block {
+            width: 700px;
+            height: 550px;
+            margin-top: 110px;
+            margin-left: 60px
+        }
+
+        .thumbnail>.second_block {
+            display: inline-block;
+            margin-left: 70px;
+        }
+
+        .title {
+            color: #262626;
+            font-size: 35px;
+            font-weight: 700;
+            width: 380px;
+        }
+
+        .price {
+            color: #FA9D1F;
+            font-size: 40px;
+            font-weight: 700;
+            width: 230px;
+            margin-left: 22px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .murmur {
+            margin-left: 22px;
+            width: 350px;
+        }
+
+        .murmur>.block {
+            width: 320px;
+        }
+
+        .round {
+            background-color: #FA9D1F;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+        }
+
+        .discription {
+            margin-top: 0px;
+            margin-left: 30px;
+            font-size: 18px;
+            color: #4f4f4f;
+        }
+
+        .button_shop {
+            width: 330px;
+            height: 55px;
+            background-color: #FA9D1F;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .button_shop>img {
+            background-color: #FA9D1F;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .button_shop>p {
+            background-color: #FA9D1F;
+            color: #f1f1f1;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+
+        }
+
+        .button_save {
+            width: 330px;
+            height: 50px;
+            border: 3px #FA9D1F solid;
+            margin: auto;
+            margin-top: 25px;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .button_save:hover {
+            cursor: pointer;
+        }
+
+
+        .button_save>p {
+            background-color: transparent;
+            color: #FA9D1F;
+            font-size: 24px;
+            margin: auto;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .button_save>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/small-bookmark\ 1.png);
+            background-color: transparent;
+            margin: auto;
+            margin-right: 10px
+        }
+
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/white_add-bookmark1.png);
+            background-color: transparent;
+        }
+
+        .desktop-block {
+            width: 1440px;
+            background-color: #f1f1f1;
+            margin-left: 75px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+        }
+
+        .body-block {
+            width: 800px;
+            background-color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 25px;
+        }
+
+
+        .paragraph {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 30px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff
+        }
+
+        .subtitle {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 25px;
+        }
+
+        .paragraph-img {
+            width: 650px;
+            height: auto;
+            padding-top: 30px;
+            margin-left: 70px;
+            background-color: #ffffff;
+        }
+
+        .paragraph-figcaption {
+            font-size: 14px;
+            color: #4f4f4f;
+            width: 650px;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: normal;
+            margin-left: 70px;
+            text-align: center;
+            margin-top: 5px;
+            line-height: 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #1F88BF;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+            position: relative;
+            top: 7.5px;
+            left: 2px;
+        }
+
+        .abbreviation-triangle {
+            background-color: #ffffff;
+            border-right: 5px solid #ffffff;
+            border-left: 5px solid #ffffff;
+            border-top: 8px solid #1F88BF;
+            display: inline-block;
+            position: relative;
+            top: -9.5px;
+            left: 4.5px;
+        }
+
+        .body-block>h1 {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff;
+            margin: 20px 0px 20px 70px;
+        }
+
+        .nick-block {
+            width: 440px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .seller-block {
+            width: 440px;
+            height: 963px;
+            background-color: #ffffff;
+            position: relative;
+            margin-left: 40px
+        }
+
+        .seller {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff
+        }
+
+        .seller-header {
+            width: 380px;
+            margin-left: 35px;
+            padding: 35px 0 22px 9px;
+            border-bottom: 3px solid #FFB736;
+            background-color: #ffffff
+        }
+
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: 30px;
+            margin-left: 31px;
+            position: absolute;
+
+        }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            margin-left: -20%;
+        }
+
+        .seller-name {
+            font-size: 24px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            width: 214px;
+            margin-top: 30px;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .seller-country {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 40px;
+            display: inline-block;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 70px;
+            background-color: #ffffff
+        }
+
+        .seller-date {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .next-img {
+            width: 400px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .blue-block {
+            background-color: #1F88BF;
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 20px;
+        }
+
+        .blue-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #1f88bf
+        }
+
+        .orange-block {
+            background-color: #FA9D1F;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 258.81px;
+        }
+
+        .orange-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #FA9D1F
+        }
+
+        .next-title {
+            font-size: 24px;
+            color: #808080;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 350px;
+            margin: 270px 0 0 50px;
+            background-color: #ffffff
+        }
+
+        .original-price {
+            font-size: 22px;
+            color: #4A4949;
+            line-height: 44px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 99px;
+            margin: 5px 0 0 150px;
+            text-decoration: line-through;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .new-price {
+            font-size: 30px;
+            color: #F57F01;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 142px;
+            margin-left: 20px;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .share-sticky {
+            margin-top: 100px;
+            display: inline-block;
+            position: sticky;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-15%);
+        }
+
+        .orange-share {
+            background-color: #FA9D1F;
+            width: 225px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 50px 0 26px 229px;
+        }
+
+        .orange-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 145px;
+            position: fixed;
+            background-color: #FA9D1F
+        }
+
+        .blue-share {
+            background-color: #3DA6D3;
+            width: 250px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 0 0 0 204px;
+        }
+
+        .blue-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 180px;
+            position: fixed;
+            background-color: #3DA6D3;
+        }
+
+        /*輪播區的修正部分（以下請連同footer的CSS一起覆蓋）
+        /*以下為子頁底部輪播區的CSS套件*/
+
+        body {
+            background: #f1f1f1;
+        }
+
+        h2 {
+            color: #696969;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            margin: 40px 70px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            background-color: transparent;
+        }
+
+        h2::after {
+            content: "";
+            width: 875px;
+            position: absolute;
+            margin: 0 auto;
+            height: 1px;
+            border-radius: 1px;
+            background: #d4d4d4;
+            left: 0;
+            right: 0;
+            bottom: 14px;
+            margin-left: 60px;
+        }
+
+        h2 span {
+            display: inline-block;
+            padding: 0 25px;
+            background: #f1f1f1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel {
+            margin: 0 auto;
+            padding: 0 68px;
+        }
+
+        .carousel .carousel-item {
+            text-align: center;
+            height: 160px;
+        }
+
+        .carousel .carousel-item .img-box {
+            background: #fff;
+            padding: 9px;
+            box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-box>img {
+            height: 187.03px
+        }
+
+        .carousel .carousel-item img {
+            margin: 0 auto;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 68px;
+            background: none;
+        }
+
+        .carousel-control-prev i,
+        .carousel-control-next i {
+            font-size: 28px;
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            margin-top: -85px;
+            z-index: 5;
+            left: 0;
+            right: 0;
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+        }
+
+        .carousel-indicators {
+            bottom: -40px;
+        }
+
+        .carousel-indicators li,
+        .carousel-indicators li.active {
+            width: 10px;
+            height: 10px;
+            border: none;
+            border-radius: 50%;
+            margin: 1px 4px;
+            box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-indicators li {
+            background: #999;
+            border-color: transparent;
+        }
+
+        .carousel-indicators li.active {
+            background: #555;
+        }
+
+        .carousel-caption {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            color: #808080;
+            margin-bottom: -110px;
+            margin-left: -30px;
+            bottom: auto;
+            text-align: left;
+            right: 5%;
+        }
+
+        .carousel-caption>h5 {
+            background-color: transparent;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 35px;
+            color: #808080;
+        }
+
+        .yuchi-adjustment-0 {
+            padding-top: 60px;
+            margin-right: 175px;
+        }
+
+        .yuchi-adjustment-1 {
+            height: 600px;
+
+        }
+
+        .yuchi-adjustment-2 {
+            background-color: transparent;
+            padding-bottom: 80px;
+            height: 350px;
+            width: 900px;
+            margin-left: 50px;
+        }
+
+        .yuchi-adjustment-3-circle {
+            padding-bottom: 0px;
+
+        }
+
+        .yuchi-adjustment-4 {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 80px;
+            margin-left: 15px;
+            padding-bottom: 20px;
+        }
+
+        .yuchi-adjustment-5 {
+            margin-right: 320px;
+        }
+
+        .yuchi-adjustment-6 {
+            margin-left: 15px;
+        }
+
+        .yuchi-adjustment-7 {
+            height: 600px;
+        }
+
+        .yuchi-adjustment-8 {
+            margin-left: 320px;
+            width: 250px;
+        }
+
+        .yuchi-adjustment-9 {
+            width: 1440px;
+        }
+
+        .yuchi-adjustment-10 {
+            margin-right: 530px;
+            margin-bottom: 50px;
+        }
+
+
+        /*以上為子頁底部輪播區的CSS套件*/
+        /*以下開始為修正後footer套件*/
+
+        .flex-container-guessyoulike {
+            width: 1440px;
+            background-color: #f1f1f1;
+            align-content: center;
+            display: flex;
+        }
+
+        .flex-container-guessyoulike>p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            color: #4A4949;
+            margin: 0px;
+            padding-left: 669px;
+        }
+
+        .my-flex-container-footer {
+            width: 1440px;
+            background-color: #e5e5e5;
+            display: inline-block;
+            margin-top: 100px;
+        }
+
+        .news-carousel {
+            width: 1440px;
+            height: 479px;
+            background-color: #f1f1f1;
+            margin-top: 0px;
+        }
+
+
+        .my-copyright {
+            padding-left: 247px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .my-copyright>span {
+            font-weight: 400px;
+            color: #808080;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 50px;
+            display: inline-block;
+            background-color: #e5e5e5;
+        }
+
+        .my-Logo3 {
+            width: 322px;
+            height: 161px;
+            margin-left: 247px;
+            margin-top: 90px;
+            background-color: #e5e5e5;
+        }
+
+        .my-know-us {
+            background-color: #f57f01;
+            width: 75px;
+            margin-top: 50px;
+        }
+
+        .my-know-us>span {
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 6px;
+            margin-bottom: 70px;
+        }
+
+        .my-know-us>a {
+            color: #ffffff;
+        }
+
+        .my-title-footer {
+            display: inline-block;
+            padding-left: 105px;
+            background-color: #e5e5e5;
+        }
+
+        .my-title-footer>p {
+            color: #808080;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .you-are-also-browsing {
+            width: 1440px;
+            height: 100px;
+            background-color: #F57F01;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .you-are-also-browsing>span {
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            background-color: #F57F01;
+            padding-left: 519px;
+            padding-top: 19px;
+            display: inline-block;
+        }
+
+        .my-repair {
+            display: flex;
+            vertical-align: center;
+            background-color: #e5e5e5;
+        }
+
+        /*以上為修正後footer套件*/
+        /*輪播區的修正部分（以上請覆蓋）*/
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="website" style="min-width:1440px">
+        <div class=header>
+            <div class=logo>
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+            </div>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <div class="round_header"></div>
+            <span>校園熱銷</span>
+            <span>文化小物</span>
+            <span>時代精品</span>
+            <span>在地嚴選</span>
+            <span>海外直送</span>
+        </div>
+        <div class=thumbnail style="background-color:#ffffff">
+            <div class=first_image_block style="background-color:#ffffff">
+                <img style="width:700px;height:auto" src="./image/education01.jpg">
+            </div>
+            <div class=second_block style="background-color:#ffffff">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">校園熱銷
+                </p>
+                <p class=title style="background-color:#ffffff">「我們還會見面嗎？」　淺談偏鄉教育資金問題</p>
+                <p class=price style="background-color:#ffffff">NT$3,740</p>
+                <div class="murmur" style="background-color:#ffffff">
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
+                    </div>
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
+                    </div>
+                </div>
+                <div class=button_shop>
+                    <img src="./icon/Group.png">
+                    <p>加入購物車</p>
+                </div>
+                <div class=button_save>
+                    <div class="save_icon"></div>
+                    <p>收藏商品</p>
+                </div>
+            </div>
+        </div>
+        <div style="height:50px"></div>
+        <!--paragraph-->
+        <div class="desktop-block">
+            <div class="body-block">
+                <h1>
+                    商品介紹
+                </h1>
+                <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
+                <div class="paragraph">
+                    「施比受更有福」是偏鄉教育團隊施筆獸計劃的主要精神，其中參與計劃的志工連恩柔，目前就讀於國立政治大學資訊管理學系一年級，高中時的她曾受過施筆獸計劃的幫助，找到未來的志向。如今她的角色從受惠者轉變為施惠者，投入施筆獸計劃，將自己所學回饋給家鄉，希望延續偏鄉教育的傳承。
+                </div>
+                <div class="subtitle">關於偏鄉教育，教育部做了什麼？</div>
+                <div class="paragraph">
+                    像連恩柔這樣回饋偏鄉的例子時常可見，近年來教育部也提高對偏鄉教育發展的重視，提出許多偏鄉教育補助供相關單位申請。根據行政院研考會101年的數位落差調查報告分析，應用電腦與網路的能力已成為重要的社會競爭條件，但國內民眾對於資訊的使用情形會因為地區都市化程度不同而有所差異。為了改善城鄉的資訊應用差異，教育部提出以 101 年至104年為一期的「偏鄉數位關懷計劃」，與七十七所大學、兩百四十八所國中小合作，提供資訊應用服務，幫助約三千位國中小學童。
+                </div>
+                <div class="paragraph">
+                    在「偏鄉數位關懷計劃 」結束後，教育部針對105年至108年繼續推出新一期政策執行方案「偏鄉數位應用推動計劃」。此方案源自行政院所訂定的「普及偏鄉數位應用計劃」施政方針，其中的子計劃數位學伴計劃，整合大專院校行政及教學單位的軟硬體資源，因應偏鄉地區國民中小學學童需求，提供線上即時陪伴與教學。同時，行政院也發布「網路溝通與優化政策」施政方針，訂定「網路分身計劃」，教育部依該計劃結合數位學伴計劃，推行「數位學伴2.0」；連恩柔同學所參與的施筆獸計劃，即是數位學伴2.0延伸出的創新模式計劃。
+                </div>
+                <img class="paragraph-img" src="./image/education02.png">
+                <div class="subtitle">四年一期的資金考驗</div>
+                <div class="paragraph">
+                    上述提到的「偏鄉數位關懷計劃（101~104年）」及「普及偏鄉數位應用計劃(105~108年)」皆涵蓋許多社區再造、偏鄉學童教學等子計劃，然而各項子計劃在大計劃時限屆滿後，其補助經費將被迫中止。以四年為一期的施政模式，致使許多計劃在漸上軌道之際，面臨持續經營的困難。而這樣的施政模式，歸因於行政院國家科學委員會和教育部的計劃往往以三到五年作為基期。施筆獸計劃主持人曾正男教授對此提出了他的觀點：「可惜的地方是，偏鄉計劃一開始一定是沒有信任感，必須要跟學校、學生及當地居民培養感情。大概做到第三年時，會是最知道要怎麼做的時候；第四年、第五年會是做得最順手的時候，然後你的經費停掉就沒有了。」然而這個政策的設計本身有他的困難與考量，「若將補助時間拉長，長期將資金投入無法持續進行的計劃，這可能造成另外一種浪費。」曾正男認為將計劃訂定為三到五年的時程，可能是教育部不得已的折衷。
+                </div>
+                <div class="subtitle">路不只一條，解方不只一種</div>
+                <div class="paragraph">
+                    曾正男所帶領的施筆獸計劃中，志工大多為政大學生及社會人士；他們以實體課後照顧、線上同步學習及非同步解題等方式，協助偏鄉地區學習困難的孩子。在計劃初期，曾正男早已意識到教育部補助計劃的限制，他當時便設立目標，只接受教育部三年的補助經費，而近期施筆獸計劃正在面臨經費來源轉變的困境。曾正男表示，目前已與有意願贊助計劃的企業洽談，未來期待受到更多社會企業及民營單位的關注，以獲得接受捐款的機會。但他也說明，「捐款並非長久之計，最好的方式，其實是一個由政大出來的衍生企業或是社會企業的方式。」曾正男認為有自己的盈利空間才能持續支持偏鄉教育的行動。
+                </div>
+                <div class="paragraph">
+                    除了發展成社會企業，許多偏鄉教育團隊也透過不同方式解決資金問題。2013年，由國立成功大學資訊工程系教授蘇文鈺所推動「Program the World」計劃（簡稱 PTW），希望透過陪伴教學與長期的規劃，讓孩童學習開發系統使用的「C語言」，並具備開發程式的能力。PTW計劃的經費除了來自蘇文鈺與妻子的存款外，同時在募資平台上發起「Program the world 兒童與少年程式教學計劃」提案，並接受企業贊助與私人捐款。對於教育部經費補助計劃，蘇文鈺也強調：「公家單位不管是政府的財團法人或是政府組織，如果他們想要贊助我們做我們想做的事情，我們才會接受。」他希望計劃在實施的過程中不會受到資金方的影響。
+                </div>
+                <div class="paragraph">
+                    另外，由國立成功大學校友張賀翔創立的Inspiring種籽計劃，是一個長期駐點在台南玉井層林國小的偏鄉教育團隊。種籽計劃的前任團長楊涴鈞說明，活動經費來自於團隊剛創立時的企業贊助。2016年時，種籽計劃曾在募資平台上提出「讚哪芒果－用芒果換教育」專案，成功獲得群眾募資，同時參與TiC100社會創業競賽及全國大專青年公共事務提案競賽，將競賽獎金用作團隊的活動支出。「在經費足夠的情況下，種籽計劃未來將專注在『做好教育』的目標。」楊涴鈞表示，種籽計劃規劃向成功大學申請經費，做相關的資金籌備。
+                </div>
+                <div class="paragraph">
+                    再者，國立政治大學的指南服務團，結合服務學習課程至偏遠地區及原住民部落提供社會服務。根據指南服務團指導老師王正偉提供的資料指出，指南服務團除了向教育部申請「教育優先區的志工服務經費」，也會向華儒基金會、漢儒基金會等社會公益團體申請補助。此類基金會與許多國內的大專院校合作，學生可以提出服務計劃申請補助，藉以鼓勵學生公益社團進行偏鄉服務。
+                </div>
+                <div class="paragraph">
+                    隨著電腦、網路的發展，除了學科能力外，城市與偏鄉在資訊科技上的落差愈來愈受到重視，教育部隨之推出計劃，希望能夠彌補區域之間的差距。然而受到經費補助的時間限制，許多偏鄉教育計劃的資金因此中斷，必須尋求其他資源。藉由Inspiring種籽計劃、指南服務團、PTW等發展多年的偏鄉教育團體所提供的經驗分享，除了發展成社會企業模式、接受企業贊助及私人捐款之外，偏鄉教育團體亦可善用募資平台，諸如「讚哪芒果 -用芒果換教育」、「Program the world 兒童與少年程式教學計劃」等專案，都能讓偏鄉教育團隊獲得資金，使計劃得以維持運作。
+                </div>
+                <div class="paragraph">
+                    「我相信人都是懂得感恩的，尤其是當我們有點能力的時候」曾正男提到，出身於花蓮的他，自己也是鄉下長大的孩子，當年透過偏鄉教育團體的幫助拓展眼界，進而決定投入施筆獸計劃。在「施」與「受」的循環中，將所得反饋給更多需要幫助的學童，如同曾正男與連恩柔，持續傳承偏鄉教育的精神。
+                </div>
+                <img class="paragraph-img" src="./image/education03.jpg">
+                <!--figcaption-->
+                <p class="paragraph-figcaption">
+                    施筆獸計劃主持人曾正男與偏鄉孩童共同呈現學習成果。　圖／徐品蓁攝</p>
+                <div
+                    style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
+                </div>
+
+            </div>
+            <!--about sellers-->
+            <!--<div class="mobile-block">-->
+            <div class="nick-block">
+                <div class="seller-block">
+                    <div class="seller">
+                        <div class="seller-header">關於賣家</div>
+                    </div>
+                    <div class="circular--landscape">
+                        <img class=".circular--landscape img" src="./image/Teddy.jpg">
+                    </div>
+                    <div class="seller-name">Teddy Huang</div>
+                    <div>
+                        <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+                            src="./icon/placeholder.svg">
+                        <div class="seller-country">台灣</div>
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
+                            src="./icon/Star-white.png">
+                    </div>
+                    <div class="seller-date" style="margin-top: 123px;">上架日期：2019/04/24</div>
+                    <div class="seller-date" style="margin-top: -10px;">共同賣家：劉信秀、涂葦慈</div>
+                    <div class="seller-date" style="margin-top: -10px;">蕭佳宜、徐佳渝</div>
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
+                        src="./icon/curve.png">
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: -6px;background-color: #ffffff"
+                        src="./icon/curve.png">
+                    <div class="seller" style="margin-top: 40px; margin-left: 44px;">
+                        強力推薦
+                    </div>
+                    <img class="next-img" src="./image/water-1.png">
+                    <div class="blue-block">
+                        <div class="blue-block-word">視覺化專題報導</div>
+                    </div>
+                    <div class="orange-block">
+                        <div class="orange-block-word">85折</div>
+                    </div>
+                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                    <div class="original-price">NT$9,999</div>
+                    <div class="new-price">NT$8,499</div>
+                </div>
+                <div class="share-sticky">
+                    <div class="orange-share">
+                        <div class="orange-share-text">好物不分享？</div>
+                        <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
+                            src="./icon/share-white.png">
+                    </div>
+                    <div class="blue-share">
+                        <div class="blue-share-text">FB Share起來！</div>
+                        <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
+                            src="./icon/facebook.svg">
+                        <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
+                            src="./icon/question-triangle.png">
+                        <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--輪播區修正部分（以下請把原本「猜你喜歡」、「輪播區」、「footer」一起覆蓋）-->
+    <!--新輪播區-->
+
+    <div class="news-carousel">
+        <div class="container-xl yuchi-adjustment-1">
+            <div class="row">
+                <div class="col-md-9 yuchi-adjustment-0">
+                    <h2><span class="yuchi-adjustment-8">猜你喜歡</span></h2>
+                    <div id="myCarousel" class="carousel slide yuchi-adjustment-9" data-ride="carousel"
+                        data-interval="0">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators yuchi-adjustment-10">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner yuchi-adjustment-2">
+                            <div class="carousel-item active yuchi-adjustment-7">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿千人揉茶.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>千人揉茶飄香　推廣台灣茶葉文化</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿穆斯林.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>摘下穆斯林標籤：我是我，獨一無二</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿書車.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>華夏推行動書車　喚醒華僑滇緬回憶</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿陪跑員.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>陪跑員相伴　視障者征服馬拉松</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿跨國婚姻.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>說好的幸福呢？　戳破非法跨國婚姻仲介的粉紅泡泡</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿自來水.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>自來水普及面臨挑戰　屏東用水轉型的交叉路口</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+
+                        <a class="carousel-control-prev yuchi-adjustment-6" href="#myCarousel" data-slide="prev">
+                            <div class="yuchi-adjustment-3-circle">
+                                <i class="fa fa-chevron-left yuchi-adjustment-4">
+                                </i>
+                            </div>
+                        </a>
+                        <a class="carousel-control-next yuchi-adjustment-5" href="#myCarousel" data-slide="next">
+                            <div class="yuchi-adjustment-3-circle">
+                                <i class="fa fa-chevron-right yuchi-adjustment-4">
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+
+    <div class="my-flex-container-footer">
+        <div class="my-repair">
+            <img class="my-Logo3" src="./image/Logo3@4x-8.png">
+            <div class="my-title-footer">
+                <div class="my-know-us">
+                    <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                            style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                    </span>
+                </div>
+                <p style="display: inline-block; padding-top: 10px;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+                <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+                <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+                <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+                <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+                <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+            </div>
+        </div>
+        <div class="my-copyright">
+            <span>© 2020 資恩荼報 All rights reserved</span>
+        </div>
+    </div>
+    <!-- 載入 jquery 套件-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
+</body>
+
+</html>
