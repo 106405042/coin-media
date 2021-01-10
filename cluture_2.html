@@ -52,7 +52,7 @@
         .thumbnail>.first_image_block {
             width: 700px;
             height: 550px;
-            margin-top: 60px;
+            margin-top: 110px;
             margin-left: 60px;
             background-color: transparent;
         }
@@ -131,7 +131,7 @@
 
         }
 
-        .button_save {
+    .button_save {
             width: 330px;
             height: 50px;
             border: 3px #FA9D1F solid;
@@ -164,24 +164,22 @@
             margin-right: 10px
         }
 
-        .button_save:active>.save_icon {
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
             width: 20px;
             height: 30px;
             background-image: url(./icon/white_add-bookmark1.png);
             background-color: transparent;
         }
-
-        .button_save:active {
-            background-color: #FA9D1F;
-            color: #ffffff;
-        }
-
-        .button_save:active>p {
-            background-color: transparent;
-            color: #ffffff;
-        }
-
-
 
         .desktop-block {
             width: 1440px;
@@ -207,8 +205,7 @@
             font-style: normal;
             font-weight: bold;
             background-color: #ffffff;
-            margin-bottom: 20px;
-            margin-top: 20px
+            margin: 20px 0px 20px 70px;
         }
 
         .paragraph {
@@ -744,7 +741,7 @@
 </head>
 
 <body>
-    <div class="website" style="width:1440px">
+    <div class="website" style="min-width:1440px">
         <div class=header>
             <div class=logo>
                 <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
@@ -772,14 +769,14 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="./image/1.停在新北市中和區華興街的「蘇格貓底行動書車」，在地居民前往翻閱書車裡的書。 圖／黃郁期攝.png" class="d-block w-100"
-                                alt="../期末作業/image/Canada01.jpg">
+                                alt="./image/1.停在新北市中和區華興街的「蘇格貓底行動書車」，在地居民前往翻閱書車裡的書。 圖／黃郁期攝.png">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF">
                                 <p style="background-color: #FFFFFF"> 停在新北市中和區華興街的「蘇格貓底行動書車」，在地居民前往翻閱書車裡的書。 圖／黃郁期攝</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="./image/2.book.png" class="d-block w-100" alt="../期末作業/image/Canada02.jpg">
+                            <img src="./image/2.book.png" class="d-block w-100" alt="./image/2.book.png">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF;">
                                 <p style="background-color: #FFFFFF">
@@ -789,7 +786,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src="./image/3.緬甸華僑於行動書車旁朗誦行動書車內的緬甸文書籍，圖中人物為緬甸歸僑協會理事長張標材。 圖／黃郁期攝.png"
-                                class="d-block w-100" alt="../期末作業/image/Canada03.jpg">
+                                class="d-block w-100" alt="./image/3.緬甸華僑於行動書車旁朗誦行動書車內的緬甸文書籍，圖中人物為緬甸歸僑協會理事長張標材。 圖／黃郁期攝.png">
                             <div class="carousel-caption d-none d-md-block"
                                 style="position:static;color:black;background-color: #FFFFFF">
                                 <p style="background-color: #FFFFFF">緬甸華僑於行動書車旁朗誦行動書車內的緬甸文書籍，圖中人物為緬甸歸僑協會理事長張標材。 圖／黃郁期攝
@@ -815,8 +812,7 @@
             <div class=second_block style="background-color:#ffffff">
                 <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">文化小物
                 </p>
-                <p class=title style="background-color:#ffffff">華夏推行動書車</p>
-                <p class=title style="background-color:#ffffff; margin-top: -35px; width: 400px;margin-bottom: -10px;">
+                <p class=title style="background-color:#ffffff">華夏推行動書車
                     喚醒華僑滇緬回憶 </p>
                 <p class=price style="background-color:#ffffff">NT$3480</p>
                 <div class="murmur" style="background-color:#ffffff">
@@ -834,7 +830,7 @@
                     <p>加入購物車</p>
                 </div>
                 <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
+                    <div class="save_icon"></div>
                     <p>收藏商品</p>
                 </div>
             </div>
@@ -1102,12 +1098,12 @@
                                     style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
                             </span>
                         </div>
-                        <p style="display: inline-block; padding-top: 10px;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
-                        <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
-                        <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
-                        <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
-                        <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
-                        <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+                <p style="display: inline-block; padding-top: 10px;">法賢小人養成人力資源總監　｜　李宜恬</p>
+                <p style="display: inline-block; padding-left: 70px;">企業精神領袖兼顧問　｜　李法賢</p>
+                <p style="margin-top: 0px;">日出而作日出而息技術總監　｜　鄭鈺宣</p>
+                <p>可憐沒人愛企業形象代言人　｜　楊沛霓</p>
+                <p>不想再領基本時薪設計總監  ｜　于恆生</p>
+                <p>寫文寫摳左右互搏業務總監　｜　黃郁期</p>
                     </div>
                 </div>
                 <div class="my-copyright">
@@ -1118,6 +1114,16 @@
             <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
 
         </div>
+                <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 
 
 </body>
