@@ -147,7 +147,6 @@
             font-weight: 700;
 
         }
-
         .button_save {
             width: 330px;
             height: 50px;
@@ -158,21 +157,47 @@
             display: flex;
         }
 
-        .button_save>img {
-            background-color: #ffffff;
-            margin-left: 90px;
-            margin: auto;
-            margin-right: 25px;
+        .button_save:hover {
+            cursor: pointer;
         }
 
+
         .button_save>p {
-            background-color: #ffffff;
+            background-color: transparent;
             color: #FA9D1F;
             font-size: 24px;
             margin: auto;
-            margin-left: 10px;
             font-weight: 700;
+            margin-left: 10px;
         }
+
+        .button_save>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/small-bookmark\ 1.png);
+            background-color: transparent;
+            margin: auto;
+            margin-right: 10px
+        }
+
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/white_add-bookmark1.png);
+            background-color: transparent;
+        }
+
+
 
         .desktop-block {
             width: 1440px;
@@ -547,6 +572,16 @@
 
     </style>
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 </head>
 
 <body class="my-body">
@@ -590,7 +625,7 @@
                     <p>加入購物車</p>
                 </div>
                 <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
+                    <div class="save_icon"></div>
                     <p>收藏商品</p>
                 </div>
             </div>
