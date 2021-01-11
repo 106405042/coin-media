@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--子頁底部輪播區的CSS和JavaScript套件-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+
+        }
+
+        .header {
+            margin: 20px 65px 20px 160px
+        }
+
+        .logo {
+            display: inline-block;
+        }
+
+        .header>span {
+            font-size: 20px;
+            line-height: 40px;
+            margin-right: 30px;
+            font-weight: 400;
+            color: #4f4f4f;
+        }
+
+        .round_header {
+            background-color: #FA9D1F;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 28px;
+            margin-left: 2px;
+            vertical-align: text-top
+        }
+
+        .thumbnail {
+            width: 1280px;
+            height: 700px;
+            margin-left: 100px;
+            margin-right: 80px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail>.first_image_block {
+            width: 700px;
+            height: 550px;
+            margin-top: 60px;
+            margin-left: 60px
+        }
+
+        .thumbnail>.second_block {
+            display: inline-block;
+            margin-left: 70px;
+        }
+
+        .title {
+            color: #262626;
+            font-size: 35px;
+            font-weight: 700;
+            width: 360px;
+        }
+
+        .price {
+            color: #FA9D1F;
+            font-size: 40px;
+            font-weight: 700;
+            width: 230px;
+            margin-left: 22px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
+        .murmur {
+            margin-left: 22px;
+            width: 350px;
+        }
+
+        .murmur>.block {
+            width: 320px;
+        }
+
+        .round {
+            background-color: #FA9D1F;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-top: 10px;
+            position: relative;
+            top: 20px;
+        }
+
+        .discription {
+            margin-top: 0px;
+            margin-left: 30px;
+            font-size: 18px;
+            color: #4f4f4f;
+        }
+
+        .button_shop {
+            width: 330px;
+            height: 55px;
+            background-color: #FA9D1F;
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+        }
+
+        .button_shop>img {
+            background-color: #FA9D1F;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .button_shop>p {
+            background-color: #FA9D1F;
+            color: #f1f1f1;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+
+        }
+
+        .button_save {
+            width: 330px;
+            height: 50px;
+            border: 3px #FA9D1F solid;
+            margin: auto;
+            margin-top: 25px;
+            background-color: #ffffff;
+            display: flex;
+        }
+
+        .button_save>img {
+            background-color: #ffffff;
+            margin-left: 90px;
+            margin: auto;
+            margin-right: 25px;
+        }
+
+        .button_save>p {
+            background-color: #ffffff;
+            color: #FA9D1F;
+            font-size: 24px;
+            margin: auto;
+            margin-left: 10px;
+            font-weight: 700;
+        }
+
+        .desktop-block {
+            width: 1440px;
+            background-color: #f1f1f1;
+            margin-left: 75px;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-bottom: 100px;
+        }
+
+        .body-block {
+            width: 800px;
+            background-color: #FFFFFF;
+            padding-top: 20px;
+            padding-bottom: 60px;
+            margin-left: 25px;
+        }
+
+        .paragraph {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 30px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff
+        }
+
+        .subtitle {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 60px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 25px;
+        }
+
+        .heading {
+            width: 650px;
+            font-family: Noto Sans TC;
+            color: #4A4949;
+            font-style: normal;
+            font-weight: 700;
+            padding-top: 35px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ffffff;
+            font-size: 18px;
+        }
+
+
+
+        .paragraph-img {
+            width: 650px;
+            height: auto;
+            padding-top: 30px;
+            margin-left: 70px;
+            background-color: #ffffff;
+        }
+
+        .paragraph-img-2 {
+            width: 650px;
+            height: auto;
+            margin-top: -5px;
+            margin-left: 70px;
+            background-color: #ffffff;
+        }
+
+        .paragraph-figcaption {
+            font-size: 14px;
+            color: #4f4f4f;
+            width: 650px;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: normal;
+            margin-left: 70px;
+            text-align: center;
+            margin-top: 5px;
+            line-height: 30px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #D0D0D0;
+        }
+
+        .abbreviation-circle {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #1F88BF;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #ffffff;
+            position: relative;
+            top: 7.5px;
+            left: 2px;
+        }
+
+        .abbreviation-triangle {
+            background-color: #ffffff;
+            border-right: 5px solid #ffffff;
+            border-left: 5px solid #ffffff;
+            border-top: 8px solid #1F88BF;
+            display: inline-block;
+            position: relative;
+            top: -9.5px;
+            left: 4px;
+        }
+
+        .abbreviation-block {
+            margin-left: 70px;
+            width: 650px;
+            background-color: #3DA6D3;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .abbreviation {
+            width: 600px;
+            font-family: Noto Sans TC;
+            color: #ffffff;
+            font-style: normal;
+            font-weight: normal;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 60px;
+            line-height: 35px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #3DA6D3;
+        }
+
+        .body-block>h1 {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff;
+            margin: 20px 0px 20px 70px;
+        }
+
+        .nick-block {
+            width: 440px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .seller-block {
+            width: 440px;
+            height: 963px;
+            background-color: #ffffff;
+            position: relative;
+            margin-left: 40px
+        }
+
+        .seller {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            background-color: #ffffff
+        }
+
+        .seller-header {
+            width: 380px;
+            margin-left: 35px;
+            padding: 35px 0 22px 9px;
+            border-bottom: 3px solid #FFB736;
+            background-color: #ffffff
+        }
+
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-top: 30px;
+            margin-left: 31px;
+            position: absolute;
+
+        }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            margin-left: -20%;
+        }
+
+        .seller-name {
+            font-size: 24px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            width: 214px;
+            margin-top: 30px;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .seller-country {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 40px;
+            display: inline-block;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 70px;
+            background-color: #ffffff
+        }
+
+        .seller-date {
+            font-size: 20px;
+            color: #808080;
+            line-height: 50px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            margin-left: 150px;
+            background-color: #ffffff
+        }
+
+        .next-img {
+            width: 400px;
+            height: auto;
+            margin-top: 30px;
+            margin-left: 20px;
+            position: absolute;
+            display: inline-block;
+        }
+
+        .blue-block {
+            background-color: #1F88BF;
+            width: 250px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 20px;
+        }
+
+        .blue-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #1f88bf
+        }
+
+        .orange-block {
+            background-color: #FA9D1F;
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            display: inline-block;
+            margin: 210px 0 0 258.81px;
+
+
+        }
+
+        .orange-block-word {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+            background-color: #FA9D1F
+        }
+
+        .next-title {
+            font-size: 24px;
+            color: #808080;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 350px;
+            margin: 270px 0 0 50px;
+            background-color: #ffffff
+        }
+
+        .original-price {
+            font-size: 22px;
+            color: #4A4949;
+            line-height: 44px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 99px;
+            margin: 5px 0 0 150px;
+            text-decoration: line-through;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .new-price {
+            font-size: 30px;
+            color: #F57F01;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            width: 142px;
+            margin-left: 20px;
+            display: inline-block;
+            background-color: #ffffff
+        }
+
+        .share-sticky {
+            margin-top: 100px;
+            display: inline-block;
+            position: sticky;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-15%);
+        }
+
+        .orange-share {
+            background-color: #FA9D1F;
+            width: 225px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 50px 0 26px 229px;
+        }
+
+        .orange-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 145px;
+            position: fixed;
+            background-color: #FA9D1F
+        }
+
+        .blue-share {
+            background-color: #3DA6D3;
+            width: 250px;
+            height: 51px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 0 0 0 204px;
+        }
+
+        .blue-share-text {
+            font-size: 24px;
+            color: #f1f1f1;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 22px;
+            margin-top: 4px;
+            display: inline;
+            width: 180px;
+            position: fixed;
+            background-color: #3DA6D3;
+        }
+
+        /*輪播區的修正部分（以下請連同footer的CSS一起覆蓋）
+        /*以下為子頁底部輪播區的CSS套件*/
+
+        body {
+            background: #f1f1f1;
+        }
+
+        h2 {
+            color: #696969;
+            font-size: 35px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            margin: 40px 70px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            background-color: transparent;
+        }
+
+        h2::after {
+            content: "";
+            width: 875px;
+            position: absolute;
+            margin: 0 auto;
+            height: 1px;
+            border-radius: 1px;
+            background: #d4d4d4;
+            left: 0;
+            right: 0;
+            bottom: 14px;
+            margin-left: 60px;
+        }
+
+        h2 span {
+            display: inline-block;
+            padding: 0 25px;
+            background: #f1f1f1;
+            position: relative;
+            z-index: 2;
+        }
+
+        .carousel {
+            margin: 0 auto;
+            padding: 0 68px;
+        }
+
+        .carousel .carousel-item {
+            text-align: center;
+            height: 160px;
+        }
+
+        .carousel .carousel-item .img-box {
+            background: #fff;
+            padding: 9px;
+            box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-box>img {
+            height: 187.03px
+        }
+
+        .carousel .carousel-item img {
+            margin: 0 auto;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 68px;
+            background: none;
+        }
+
+        .carousel-control-prev i,
+        .carousel-control-next i {
+            font-size: 28px;
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            margin-top: -85px;
+            z-index: 5;
+            left: 0;
+            right: 0;
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+        }
+
+        .carousel-indicators {
+            bottom: -40px;
+        }
+
+        .carousel-indicators li,
+        .carousel-indicators li.active {
+            width: 10px;
+            height: 10px;
+            border: none;
+            border-radius: 50%;
+            margin: 1px 4px;
+            box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-indicators li {
+            background: #999;
+            border-color: transparent;
+        }
+
+        .carousel-indicators li.active {
+            background: #555;
+        }
+
+        .carousel-caption {
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-weight: bold;
+            color: #808080;
+            margin-bottom: -110px;
+            margin-left: -30px;
+            bottom: auto;
+            text-align: left;
+            right: 5%;
+        }
+
+        .carousel-caption>h5 {
+            background-color: transparent;
+            font-family: Noto Sans TC;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 35px;
+            color: #808080;
+        }
+
+        .yuchi-adjustment-0 {
+            padding-top: 60px;
+            margin-right: 175px;
+        }
+
+        .yuchi-adjustment-1 {
+            height: 600px;
+
+        }
+
+        .yuchi-adjustment-2 {
+            background-color: transparent;
+            padding-bottom: 80px;
+            height: 350px;
+            width: 900px;
+            margin-left: 50px;
+        }
+
+        .yuchi-adjustment-3-circle {
+            padding-bottom: 0px;
+
+        }
+
+        .yuchi-adjustment-4 {
+            width: 35px;
+            height: 35px;
+            margin-bottom: 80px;
+            margin-left: 15px;
+            padding-bottom: 20px;
+        }
+
+        .yuchi-adjustment-5 {
+            margin-right: 320px;
+        }
+
+        .yuchi-adjustment-6 {
+            margin-left: 15px;
+        }
+
+        .yuchi-adjustment-7 {
+            height: 600px;
+        }
+
+        .yuchi-adjustment-8 {
+            margin-left: 320px;
+            width: 250px;
+        }
+
+        .yuchi-adjustment-9 {
+            width: 1440px;
+        }
+
+        .yuchi-adjustment-10 {
+            margin-right: 530px;
+            margin-bottom: 50px;
+        }
+
+
+        /*以上為子頁底部輪播區的CSS套件*/
+        /*以下開始為修正後footer套件*/
+
+        .flex-container-guessyoulike {
+            width: 1440px;
+            background-color: #f1f1f1;
+            align-content: center;
+            display: flex;
+        }
+
+        .flex-container-guessyoulike>p {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            color: #4A4949;
+            margin: 0px;
+            padding-left: 669px;
+        }
+
+        .my-flex-container-footer {
+            width: 1440px;
+            background-color: #e5e5e5;
+            display: inline-block;
+            margin-top: 100px;
+        }
+
+        .news-carousel {
+            width: 1440px;
+            height: 479px;
+            background-color: #f1f1f1;
+            margin-top: 0px;
+        }
+
+
+        .my-copyright {
+            padding-left: 247px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .my-copyright>span {
+            font-weight: 400px;
+            color: #808080;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 50px;
+            display: inline-block;
+            background-color: #e5e5e5;
+        }
+
+        .my-Logo3 {
+            width: 322px;
+            height: 161px;
+            margin-left: 247px;
+            margin-top: 90px;
+            background-color: #e5e5e5;
+        }
+
+        .my-know-us {
+            background-color: #f57f01;
+            width: 75px;
+            margin-top: 50px;
+        }
+
+        .my-know-us>span {
+            font-size: 16px;
+            color: #ffffff;
+            margin-left: 6px;
+            margin-bottom: 70px;
+            padding-bottom: 20px;
+        }
+
+        .my-know-us>a {
+            color: #ffffff;
+        }
+
+        .my-title-footer {
+            display: inline-block;
+            padding-left: 105px;
+            background-color: #e5e5e5;
+        }
+
+        .my-title-footer>p {
+            color: #808080;
+            font-size: 16px;
+            line-height: 20px;
+            background-color: #e5e5e5;
+        }
+
+        .you-are-also-browsing {
+            width: 1440px;
+            height: 100px;
+            background-color: #F57F01;
+            margin-top: 60px;
+            margin-bottom: 100px;
+        }
+
+        .you-are-also-browsing>span {
+            color: #f1f1f1;
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 65px;
+            background-color: #F57F01;
+            padding-left: 519px;
+            padding-top: 19px;
+            display: inline-block;
+        }
+
+        .my-repair {
+            display: flex;
+            vertical-align: center;
+            background-color: #e5e5e5;
+        }
+
+        /*以上為修正後footer套件*/
+        /*輪播區的修正部分（以上請覆蓋）*/
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="website" style="width:1440px">
+        <div class=header>
+            <div class=logo>
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+            </div>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <div class="round_header"></div>
+            <span>校園熱銷</span>
+            <span>文化小物</span>
+            <span>時代精品</span>
+            <span>在地嚴選</span>
+            <span>海外直送</span>
+        </div>
+        <div class=thumbnail style="background-color:#ffffff">
+            <div class=first_image_block style="background-color:#ffffff">
+                <img style="width:700px;height:auto" src="./image/1.祈禱室中潛心禮拜的于麗娜。.jpg">
+                <p style="color: #4f4f4f;background-color:#ffffff">祈禱室中潛心禮拜的于麗娜。（圖／彭勝緯攝）</p>
+            </div>
+            <div class=second_block style="background-color:#ffffff">
+                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">文化小物
+                </p>
+                <p class=title style="background-color:#ffffff">宿苦誰人知？</p>
+                <p class=title style="background-color:#ffffff; margin-top: -25px; width: 400px;margin-bottom: -10px;">
+                    老舊宿舍建安眉角多</p>
+
+                <p class=title style="background-color:#ffffff; margin-top: 0px; width: 400px;margin-bottom: -10px;">
+                    環境、設備影響住宿心理</p>
+
+                <p class=price style="background-color:#ffffff">NT$3480</p>
+                <div class="murmur" style="background-color:#ffffff">
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
+                    </div>
+                    <div class="block" style="background-color:#ffffff">
+                        <div class="round"></div>
+                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
+                    </div>
+                </div>
+                <div class=button_shop>
+                    <img src="./icon/Group.png">
+                    <p>加入購物車</p>
+                </div>
+                <div class=button_save>
+                    <img src="./icon/small-bookmark 1.png">
+                    <p>收藏商品</p>
+                </div>
+            </div>
+        </div>
+        <div style="height:50px"></div>
+        <!--paragraph-->
+        <div class="desktop-block">
+            <div class="body-block">
+                <h1>
+                    商品介紹
+                </h1>
+                <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
+                <div class="paragraph">
+                    你是否也曾對宿舍鐵製寢具鏽蝕，或是潮溼導致的壁癌而感到困擾？山上及莊外宿舍老舊，諸多住宿生在《學聲宿舍經驗調查》問卷中抱怨連連，占地狹小的自強和莊外宿舍，加上空間擁擠，物理環境與心理條件都讓學生們感到不舒適。雖然過去興建宿舍時，建築法規僅要求結構穩定，但現今學生的生活品質和需求也應積極考量。
+                </div>
+                <!--subtitle-->
+                <div class="subtitle">住宿生揮之不去的困擾　濕氣嚴重恐影響建安 </div>
+                <div class="paragraph">
+                    「一打開房門，我就會聞到一股霉味。」來自馬來西亞的黃雪瀅遠赴台灣讀書，卻遇到非常不愉快的住宿經驗。「莊九已經潮溼到一週就要換一次克潮靈，而且還沒什麼效果。」她更抱怨滑鼠墊還因此發霉，對宿舍潮溼程度頗有微詞。
+                </div>
+                <div class="paragraph">
+                    如下頁所示，第28期《政大學聲》宿舍經驗與設備不足處調查問卷至截止前，共蒐集了349份學生老舊舍區住宿經驗樣本，樣本中涵納許多住宿生對宿舍的抱怨與建議。349份住宿經驗樣本中，有74%的樣本一致指出，「宿舍過於潮溼」是影響住宿生活經驗的一大因素。
+                </div>
+                <div class="paragraph">
+                    環境潮溼也使會計二許駿鋒非常困擾，居住自六舍的他表示，桌子後方的牆壁上，出現一片壁癌。雖然對生活的影響程度不大，但他仍會由於為避免觸碰壁癌，導致生活空間受限。東南二邱禹淮則不滿地抱怨，他鐵床旁的牆壁有半面都是壁癌，而且範圍很寬，從他的頭到腳都有，令他不勝其擾，「一背對牆壁就會沾到壁癌，覺得觀感很不好。」宿舍反潮問題頻繁，造成發霉、壁癌等問題，恐有害健康，也讓學生對宿舍產生負面觀感。
+                </div>
+                <div class="paragraph">
+                    事實上，由於政大位處於山區，天氣潮溼多雨，宿舍滲水問題頻傳，嚴重者不僅影響學生生活品質，更可能引發反潮、白華等壁癌問題層出，且當反潮、白華等壁癌問題發生在樑柱時，甚至恐影響建物結構安全。</div>
+                <div class="paragraph">大眾所熟知的「壁癌」，事實上只是廣義的建築環境潮溼問題，其下可再細分為：滲水、反潮，白華（牆壁油漆脫落產生白色碎屑），三者屬於不同程度的壁癌問題。</div>
+                <img class="paragraph-img" src="./image/宿舍圖表1.png">
+
+                <div class="paragraph">
+                    「基本上，只有當白華發生在樑柱時，才容易影響結構安全，在牆壁上的就是醜、影響美觀。」建築師游仁君如此解釋，他也提到，即使壁癌不危害住宿安全，也可能會影響學生心理健康，降低生活品質。</div>
+                <div class="paragraph">
+                    游仁君指出，未做好防潮防水措施的情況下，若雨水經由天台和外牆滲入牆面，容易導致屋內牆壁發生反潮（造成油漆剝落），且當滲入的水份過多，可能將碳酸鈣帶出牆面，乾燥後便會形成白色結晶，附著於牆面、頂板，即為「白華」，經手一觸碰，可見明顯的白色粉末脫落。
+                </div>
+                <img class="paragraph-img" src="./image/宿舍圖表2.png">
+
+
+                <div class="subtitle">在白華問題如臨大敵　防水工程當優先處理</div>
+                <div class="paragraph">
+                    本次專題特別邀請，於勤益科大景觀系擔任講師的建築師游仁君，走訪部分校內宿舍，針對自強五到九舍以及莊外宿舍，進行初步的建物安全審查。游仁君表示，除了幾個重點區域外，宿舍寢室內外和公共空間，雖然出現不少反潮、白華現象，但大致不影響結構安全。
+                </div>
+                <div class="paragraph">
+                    游仁君走訪自強九舍四樓時特別指出，頂板（屋頂）上可見大量白華結晶，及屋頂發霉、漏水等跡象，他對此重申：「頂板的漏水，也是會造成結構安全受影響的潛在因素。」</div>
+                <div class="paragraph">
+                    「生命會找到自己的出路，水也會找到它的出路。」游仁君半開玩笑地解釋，通常滲水來源多
+                    集中於同一處，白華會沿著牆面的裂縫，慢慢沾染覆蓋到其他地方，只要水源不被斷絕，白華就會不斷產生。因此，他建議校方可以增設屋頂及外牆防水層，延長建築壽命，並提醒：「自九屋頂防水層可能要優先考慮進行。」
+                    事實上，自強九舍過去的確曾因屋頂漏水，發生過天花板塌陷事件。據《政大之聲》2017年11月8日報導，時任住宿組對此解釋，坍塌主因出於其礦棉材質天花板容易吸水，膨脹過重導致塌陷。報導中也提及，多名學生反應，學校處理方式為「漏一間補一間」，並未進行整體翻修，安全仍有疑慮。
+                </div>
+                <div class="paragraph">
+                    事實上，自強九舍過去的確曾因屋頂漏水，發生過天花板塌陷事件。據《政大之聲》2017年11月8日報導，時任住宿組對此解釋，坍塌主因出於其礦棉材質天花板容易吸水，膨脹過重導致塌陷。報導中也提及，多名學生反應，學校處理方式為「漏一間補一間」，並未進行整體翻修，安全仍有疑慮。
+                </div>
+                <div class="paragraph">
+                    距自強九舍天花板坍塌案已經過四學期，總務處營繕組長林慶泓對此回應，自強九舍屋頂防水工程已在今年6月開標、預計將於今年7月進行，並預計在新學期開學前完工，「這次就是要針對屋頂漏水問題做全面性的更新。」
+                </div>
+                <div class="paragraph">
+                    除自強九舍四樓寢室天花板外，游仁君也點出九舍通往安九食堂樓梯處，此處上方樑柱出現大片白華。游仁君解釋，嚴重可能腐蝕鋼筋，降低結構物的耐久性，但目測現情形較輕微，實際狀況仍需校方進行更詳細的檢查。
+                </div>
+                <img class="paragraph-img" src="./image/stuv edit2-6.jpg">
+                <div class="paragraph">
+                    針對其他隨處可見的白華，游仁君提到，這些白華主要仍多位於牆壁，或出現在連接兩棟宿舍的伸縮縫周圍，如自強五六舍，因相連處需保留空隙，故產生積水，雖兩者不危害建築結構安全，但仍會影響美觀及學生生活品質。
+                </div>
+
+                <div class="paragraph">
+                    「定期清除白華，並且重新粉刷牆壁。」游仁君建議校方，若經費允許，可以在完成外牆防水工程後，於內牆塗一層防壁癌塗料，能更有效避免白華問題。
+                </div>
+
+                <div class="paragraph">
+                    學務處住宿組長古素幸則對此回應，校方近年也正陸續規劃與進行宿舍全面油漆工程，如103
+                    、104學年度，莊敬九舍與自強九舍已分別花費四、五百萬元進行全棟油漆工程，可兼具美化效果與功能性，「油漆雖然是美觀，但一樣可以讓建物維持使用狀況。」
+
+                </div>
+
+                <img class="paragraph-img" src="./image/宿舍圖表3.png">
+
+
+                <div class="subtitle">風雨飄搖幾十餘年 　「環境老舊、擁擠」影響住宿心理</div>
+
+                <div class="heading">宿舍老舊成考驗　牆壁、頂板裂痕頻現</div>
+
+                <div class="paragraph">
+                    在第28期《政大學聲》宿舍經驗與設備不足處調查問卷中，許多住宿生也反應學校宿舍因老舊浮現諸多問題，如：「宿舍整體太老舊，空間過於窄小。」、「覺得應該要整修了，過度老舊。」、「浴室廁所等硬體設備老舊、髒亂且多年未整修……，門與紗窗門都非常老舊，每次進出寢室都發出極大聲響。」
+                </div>
+                <div class="paragraph">
+                    宿舍設備老舊不僅妨礙美觀，也與建物安全息息相關。事實上，2011年莊敬外舍曾於半年內，發生兩起水泥天花板坍塌意外。林慶泓對此解釋，事發後請技師檢測，「（坍塌）主因就是建物太老舊了。」古素幸也回應，學校宿舍老舊問題確實存在，且住宿組會優先從屋齡最高的建物優先進行大規模翻修。
+                </div>
+                <div class="paragraph">
+                    以落成屋齡而言，莊敬三舍落成迄今50年，為政大現存屋齡最高的宿舍，其次則為莊敬二舍、莊敬一舍。針對這些舍區，學校陸續於98與101年進行大型整修。此外，除莊敬九舍、自強九舍與十舍，其餘政大所有學生宿舍，屋齡皆超過30年。（可詳見P22附表「宿舍資訊及近年整建工程」）
+                </div>
+                <div class="paragraph">
+                    針對政大宿舍屋齡普遍偏高的現象，林慶泓說明，學校建築物的使用年限均為五十年。屋齡逾
+                    五十年的建物，校方會先請技師評估整體樑柱與結構狀況，判斷是否適合繼續使用，再決定拆除與否。
+
+                </div>
+                <div class="paragraph">
+                    儘管屋齡並非檢視建物狀況的唯一標準，然宿舍建置至今幾十餘年的歲月中，牆壁、頂板不乏出現許多裂痕與斑駁問題。游仁君對此解釋，台灣位於地震帶上，老舊建築牆壁出現裂痕屬正常現象，且依照當時建物安全標準，宿舍只要樑柱上沒有45度角裂縫，即符合規定。
+                </div>
+                <div class="paragraph">
+                    隨著年代更迭，建築法規愈來愈嚴格，但游仁君表示：「用現在的法律去要求過去建築物其實不合理。」現行宿舍符合當時建物安全標準，並未發現有直接影響結構穩定性的樑柱裂縫，然校方仍需定期檢查，並更換硬體設備，保障學生住宿品質。
+                </div>
+
+                <img class="paragraph-img" src="./image/宿舍圖表4.png">
+
+
+
+                <div class="heading">寢具鏽蝕成問題　高耗損設備應定期更換</div>
+
+                <div class="paragraph">
+                    除潮溼問題外，349份問卷樣本中也有高達74%指出，「鐵製寢具鏽蝕」也是影響住宿生活的另一大主因，事實上，政大年代久遠而未經大幅翻修的宿舍，如莊敬外舍及自強五到九舍，都是搭配鐵製寢具。然而，隨著使用時間拉長，鐵床生鏽的案例層出不窮。
+
+                </div>
+
+                <div class="paragraph">
+                    「我的鐵床欄杆都是生鏽的，每次爬上去時都要先站在椅子上，才不會接觸到鏽斑。」居住於自強九舍的社會一陳欣汝解釋，為了避免觸及鐵鏽，上床前都得經歷一番波折。她認為，木製寢具是宿舍的必要條件，但自九卻是鐵床鐵椅，「入學前看到學校網頁的莊一圖片，都是木製寢具，沒想到自九卻沒有。」讓她頗失望。
+
+                </div>
+                <div class="paragraph">
+                    傳院一詹蕎也提到，自己在自強九舍寢室的鐵床欄杆有鏽蝕問題，為此自己便索性以軟墊包住生鏽處，既不會讓皮膚接觸到鏽蝕，又有止滑效果。「如果說宿舍要改進的地方，那就是要換寢具，」詹蕎語氣堅定、又帶些無奈地說，「上面有生鏽痕跡，而且感覺寢具已經被使用很長一段時間。」
+
+                </div>
+                <div class="paragraph">
+                    黃雪瀅也分享道，她冬天睡覺時習慣使用暖被，但意想不到的是，暖被一碰到鐵床欄杆上的鐵
+                    鏽，就會馬上變成黃色，讓她覺得寢具生鏽情況頗為氾濫。
+
+                </div>
+                <div class="paragraph">
+                    儘管宿舍寢具鏽蝕問題看似普遍，且造成住宿生困擾，但鐵製寢具的使用，實際上需追溯回早年各大專院校興建宿舍時，普遍採用鋼製或鐵製寢具，以替代與牆相連的水泥床。古素幸對此坦言：「當時的趨勢為什麼喜歡用這個？就跟辦公桌一樣，因為耐用啊。」
+
+                </div>
+                <div class="paragraph">
+                    古素幸提到，而近年各大專院校新落成的宿舍，則多採用木製寢具，「因此政大新落成或翻修的舍區，如莊敬一舍、自強十舍，也都會選用木製家具。」至於現存舍區的鐵製寢具是否會規劃更換？古素幸則解釋，莊外宿舍由於位處捷運環狀線預計通過的路線上，將在110年拆除，因此並無採購新寢具的計畫；而自強宿舍則預計在新宿舍指南山莊落成後，進行全面性整修，「我們會縮減每間居住人數，家具也會重新買，就不會再用鋼製寢具了。」
+                </div>
+                <div class="paragraph">
+                    除鐵製寢具外，游仁君提及，考量學生的住宿安全及生活品質，即使建築物未滿使用年限，內部設施仍會因年久未更替而造成毀損，因此應定期更換，「門窗、寢具等消耗性物品頂多撐20年，至於防水層大概每隔10年就需要重新加裝。」
+                </div>
+
+                <img class="paragraph-img" src="./image/stuv edit2-14.jpg">
+
+
+
+
+
+                <div class="heading">自五至八舍人均空間僅1.134坪　「過於擁擠」恐壓迫生活品質</div>
+
+                <div class="paragraph">
+                    「雖然一個宿舍房間的面積採光量是夠的，如光線明亮且通風良好，但要分享給四個人就顯得不足。」游仁君環顧自強七舍的寢室後對此說明，即使宿舍的物理環境符合正常建築規範，但學生的心理需求仍不一定能被滿足。
+                </div>
+                <div class="paragraph">
+                    占地狹小，擁擠的空間造成人均資源稀少，加上設備和建築外觀看似老舊，皆導致學生心理上感到不舒適。許駿鋒抱怨道：「感覺學校在2人房內塞了4個人，像被關在4人監獄。」他進一步補充，睡下鋪時，因為上鋪同學的體型較壯，總會被他爬上床的聲響吵醒。雖然醒來後會繼續睡著、不至於因此失眠，但許駿鋒認為，宿舍狹小的空間配置已影響到他的生活。
+
+                </div>
+                <div class="paragraph">
+                    此外，宿舍空間狹小也讓學生連生活用具都放不下。黃雪瀅即提及，莊六的寢室空間狹窄，衣櫃放不進所有衣服，行李箱也沒有地方可以放置，對她造成很大的困擾。由此可見，寢室人均空間不足的問題，不只對學生產生心理上的壓迫，也讓他們連基本的起居必備品都無處放置。
+
+                </div>
+                <div class="paragraph">
+                    不過，也有同學對宿舍空間抱持正面的想法。財管四陳昱凱即表示，雖然住學校宿舍需要與室友平分屋內空間，但也能享有交誼廳等公共空間，「自己享受到的空間跟外面租屋處比起來還是算大，價格又便宜許多。」
+
+                </div>
+                <div class="paragraph">
+                    古素幸回應時則坦言，學校最初想先解決數量的問題，讓更多學生能使用宿舍，才因此忽略了居住品質，「民國七十幾年在蓋宿舍時，就是先衝『量』，當時不覺得『質』是重要的。」
+                    而隨著宿舍陸續落成後，近年住宿組已開始將住宿舒適度納入考量，因此預計在指南山莊宿舍落成後，長年遭詬病空間狹隘的自強新生舍區，也可能朝縮減寢室人數的方向做整建，將四人房改為三人或兩人房，以改善學生的住宿品質。
+                    
+                </div>
+
+                <img class="paragraph-img" src="./image/stuv edit2-20.jpg">
+
+
+
+                <div class="subtitle">法規非唯一審視標準　校方仍需肩負檢修責任</div>
+
+
+                <div class="paragraph">
+                    從《學聲》的問卷中，可得知宿舍設備年久或環境影響建物的狀況，引發學生諸多不滿，特別是潮溼環境下，宿舍牆壁上清晰可見的大片白華、反潮。
+                </div>
+                <div class="paragraph">
+                    綜觀宿舍現況，從與建築師走訪的過程中，發現部分區域不停會有碎屑脫落外，連帶使學生的生活品質受到影響，自九四樓的住宿生甚至需要承擔屋頂會不會坍塌的風險。有鑑於學生住宿
+                    安全，所幸，校方今年也計畫加裝自九屋頂防水層，也將油漆粉刷工程提上日程。
+                    
+                </div>
+                <div class="paragraph">
+                    事實上，隨著年代更迭，宿舍興建的建築法規至今也有所改變，過去對於建物要求僅達結構穩固即可；而今日隨著安全意識提高，建物要求漸長，由新法去審視老舊宿舍，難免有其限制。
+                </div>
+                <div class="paragraph">
+                    法規並非唯一審視宿舍現況的標準，更重要的是，校方仍應持續積極檢查、修繕或整建宿舍，
+                    並盡力服膺現行制度。此外，校方也需隨著不同時代重新考量、檢視學生住宿需求，將住宿舒適度納入考量，肩負起維護及改善責任。
+                    
+                    
+                </div>
+                <img class="paragraph-img" src="./image/stuv edit2-16.jpg">
+
+
+                <div
+                    style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
+                </div>
+
+
+
+
+            </div>
+            <!--about sellers-->
+            <!--<div class="mobile-block">-->
+            <div class="nick-block">
+                <div class="seller-block">
+                    <div class="seller">
+                        <div class="seller-header">關於賣家</div>
+                    </div>
+                    <div class="circular--landscape">
+                        <img class=".circular--landscape img" src="./image/Clare Lee.jpg">
+                    </div>
+                    <div class="seller-name">Clare Lee</div>
+                    <div>
+                        <img style="margin-top: 80px; margin-left:150px; width: 30px; height: 30px; display: inline-block; position: absolute;background-color: #ffffff"
+                            src="./icon/placeholder.svg">
+                        <div class="seller-country">台灣</div>
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 227px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 263px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 300px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30pxx; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 335px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                        <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
+                            src="./icon/Star-fill.png">
+                    </div>
+                    <div class="seller-date" style="margin-top: 123px;">上架日期：2019/05/31</div>
+                    <div class="seller-date" style="margin-top: -10px;">共同賣家：許靜之、徐湘芸</div>
+                    <div class="seller-date" style="margin-top: -10px;">林亭、江張源、陳雅婷</div>
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
+                        src="./icon/curve.png">
+                    <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: -6px;background-color: #ffffff"
+                        src="./icon/curve.png">
+                    <div class="seller" style="margin-top: 40px; margin-left: 44px;">
+                        強力推薦
+                    </div>
+                    <img class="next-img" src="./image/water-1.png">
+                    <div class="blue-block">
+                        <div class="blue-block-word">視覺化專題報導</div>
+                    </div>
+                    <div class="orange-block">
+                        <div class="orange-block-word">85折</div>
+                    </div>
+                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                    <div class="original-price">NT$3,999</div>
+                    <div class="new-price">NT$2,888</div>
+                </div>
+                <div class="share-sticky">
+                    <div class="orange-share">
+                        <div class="orange-share-text">好物不分享？</div>
+                        <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
+                            src="./icon/share-white.png">
+                    </div>
+                    <div class="blue-share">
+                        <div class="blue-share-text">FB Share起來！</div>
+                        <img style="width: 33px; height: auto; margin-left: 201px;margin-top: 8px;display: inline-block; background-color: #3DA6D3;"
+                            src="./icon/facebook.svg">
+                        <img style="width: 28px; height: auto; margin-left: 200px;background-color: transparent;"
+                            src="./icon/question-triangle.png">
+                        <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--輪播區修正部分（以下請把原本「猜你喜歡」、「輪播區」、「footer」一起覆蓋）-->
+    <!--新輪播區-->
+
+    <div class="news-carousel">
+        <div class="container-xl yuchi-adjustment-1">
+            <div class="row">
+                <div class="col-md-9 yuchi-adjustment-0">
+                    <h2><span class="yuchi-adjustment-8">猜你喜歡</span></h2>
+                    <div id="myCarousel" class="carousel slide yuchi-adjustment-9" data-ride="carousel"
+                        data-interval="0">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators yuchi-adjustment-10">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner yuchi-adjustment-2">
+                            <div class="carousel-item active yuchi-adjustment-7">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿千人揉茶.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>千人揉茶飄香　推廣台灣茶葉文化</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿穆斯林.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>摘下穆斯林標籤：我是我，獨一無二</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿書車.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>華夏推行動書車　喚醒華僑滇緬回憶</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿陪跑員.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>陪跑員相伴　視障者征服馬拉松</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿跨國婚姻.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>說好的幸福呢？　戳破非法跨國婚姻仲介的粉紅泡泡</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="img-box"><img src="./image/子頁輪播圖＿自來水.png" class="img-fluid" alt="">
+                                            <div class="carousel-caption" style="background-color: transparent;">
+                                                <h5>自來水普及面臨挑戰　屏東用水轉型的交叉路口</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+
+                        <a class="carousel-control-prev yuchi-adjustment-6" href="#myCarousel" data-slide="prev">
+                            <div class="yuchi-adjustment-3-circle">
+                                <i class="fa fa-chevron-left yuchi-adjustment-4">
+                                </i>
+                            </div>
+                        </a>
+                        <a class="carousel-control-next yuchi-adjustment-5" href="#myCarousel" data-slide="next">
+                            <div class="yuchi-adjustment-3-circle">
+                                <i class="fa fa-chevron-right yuchi-adjustment-4">
+                                </i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+
+    <div class="my-flex-container-footer">
+        <div class="my-repair">
+            <img class="my-Logo3" src="./image/Logo3@4x-8.png">
+            <div class="my-title-footer">
+                <div class="my-know-us">
+                    <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                            style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+                    </span>
+                </div>
+                <p style="display: inline-block; padding-top: 10px;">頭銜頭銜頭銜頭銜　｜　李宜恬</p>
+                <p style="display: inline-block; padding-left: 70px;">指導老師　｜　李法賢</p>
+                <p style="margin-top: 0px;">頭銜頭銜頭銜頭銜　｜　鄭鈺宣</p>
+                <p>頭銜頭銜頭銜頭銜　｜　楊沛霓</p>
+                <p>頭銜頭銜頭銜頭銜　｜　于恆生</p>
+                <p>頭銜頭銜頭銜頭銜　｜　黃郁期</p>
+            </div>
+        </div>
+        <div class="my-copyright">
+            <span>© 2020 資恩荼報 All rights reserved</span>
+        </div>
+    </div>
+
+    <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
+
+
+</body>
+
+</html>
