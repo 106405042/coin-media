@@ -61,7 +61,7 @@
         .thumbnail>.first_image_block {
             width: 700px;
             height: 550px;
-            margin-top: 60px;
+            margin-top: 110px;
             margin-left: 60px
         }
 
@@ -83,7 +83,7 @@
             font-weight: 700;
             width: 230px;
             margin-left: 22px;
-            margin-top: 50px;
+            margin-top: 30px;
             margin-bottom: 30px;
         }
 
@@ -118,7 +118,7 @@
             height: 55px;
             background-color: #FA9D1F;
             margin: auto;
-            margin-top: 50px;
+            margin-top: 30px;
             display: flex;
         }
 
@@ -149,20 +149,44 @@
             display: flex;
         }
 
-        .button_save>img {
-            background-color: #ffffff;
-            margin-left: 90px;
-            margin: auto;
-            margin-right: 25px;
+        .button_save:hover {
+            cursor: pointer;
         }
 
+
         .button_save>p {
-            background-color: #ffffff;
+            background-color: transparent;
             color: #FA9D1F;
             font-size: 24px;
             margin: auto;
-            margin-left: 10px;
             font-weight: 700;
+            margin-left: 10px;
+        }
+
+        .button_save>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/small-bookmark\ 1.png);
+            background-color: transparent;
+            margin: auto;
+            margin-right: 10px
+        }
+
+        .button_saved {
+            background-color: #FA9D1F;
+            color: #ffffff;
+        }
+
+        .button_saved>p {
+            background-color: transparent;
+            color: #ffffff;
+        }
+
+        .button_saved>.save_icon {
+            width: 20px;
+            height: 30px;
+            background-image: url(./icon/white_add-bookmark1.png);
+            background-color: transparent;
         }
 
         .desktop-block {
@@ -282,17 +306,17 @@
         }
 
 
-        h1 {
-            font-family: Noto Sans TC;
+        .body-block>h1 {
+            font-size: 28px;
+            color: #4A4949;
+            line-height: 40px;
+            font-family: 'Noto Sans TC', sans-serif;
             font-style: normal;
             font-weight: bold;
-            font-size: 28px;
-            line-height: 40px;
-            color: #4A4949;
-            margin-left: 60px;
-            background-color: #ffffff
-        }
+            background-color: #ffffff;
+            margin: 20px 0px 20px 70px;
 
+        }
         .seller-block {
             width: 440px;
             height: 963px;
@@ -841,7 +865,7 @@
 </head>
 
 <body>
-    <div class="website" style="width:1440px">
+    <div class="website" style="min-width:1440px">
         <div class=header>
             <div class=logo>
                 <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
@@ -857,8 +881,8 @@
         <div class=thumbnail style="background-color:#ffffff">
             <div class=first_image_block style="background-color:#ffffff">
 
-                <img style="width:700px;height:auto" src="./image/發放件數急遽增加.png">
-                <p style="color: #4f4f4f;background-color:#ffffff">英國大學六年來的無條件錄取通知書發放件數急遽增加，成長了超過22倍。　資料整理／黃郁期　圖表製作／劉雨婷
+                <img style="width:700px;height:auto;background-color: transparent;" src="./image/London.png">
+                <p style="color: #4f4f4f;background-color:#ffffff;width:550px;margin-left:85px;margin-top: 10px;">英國大學六年來的無條件錄取通知書發放件數急遽增加，成長了超過22倍。　資料整理／黃郁期　圖表製作／劉雨婷
                 </p>
             </div>
             <div class=second_block style="background-color:#ffffff">
@@ -881,7 +905,7 @@
                     <p>加入購物車</p>
                 </div>
                 <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
+                    <div class="save_icon"></div>
                     <p>收藏商品</p>
                 </div>
             </div>
@@ -965,7 +989,7 @@
                 <div class="seller-date" style="margin-top: 123px;">上架日期：2018/11/29</div>
                 <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
                     src="./icon/curve.png">
-                <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                <img style="width: 153px; height: 11px; margin-top: 25px;margin-left: -6px;background-color: #ffffff"
                     src="./icon/curve.png">
                 <div class="seller" style="margin-top: 40px; margin-left: 44px;">
                     強力推薦
@@ -1006,93 +1030,76 @@
 
     <!--第二篇新聞-->
 
-    <div class="website" style="width:1440px">
-        <div class=thumbnail style="background-color:#ffffff">
-            <div class=first_image_block style="background-color:#ffffff">
-                <img style="width:700px;height:auto" src="./image/吉娜．蔻迪.jpg">
-                <p style="color: #4f4f4f;background-color:#ffffff">吉娜．蔻迪，第一位在康考迪亞大學取得建築工程博士學位的女性學生，畢業後也成為多倫多CCI
-                    Group的執行長。　圖／康考迪亞大學提供
-                </p>
+    <div class=thumbnail style="background-color:#ffffff">
+        <div class=first_image_block style="background-color:#ffffff">
+            <img style="width:700px;height:auto" src="./image/tea02.jpg">
+            <p style="color: #4f4f4f;background-color:#ffffff">「千人揉茶」活動的空拍畫面，民眾依照主辦單位規劃的分區體驗揉茶。　 圖／水里鄉農會推廣部主任黃琇提供
+            </p>
+        </div>
+        <div class=second_block style="background-color:#ffffff">
+            <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">文化小物
+            </p>
+            <p class=title style="background-color:#ffffff">千人揉茶飄香　推廣台灣茶葉文化</p>
+            <p class=price style="background-color:#ffffff">NT$1,579</p>
+            <div class="murmur" style="background-color:#ffffff">
+                <div class="block" style="background-color:#ffffff">
+                    <div class="round"></div>
+                    <p class="discription" style="background-color:#ffffff">お茶の香りが漂う</p>
+                </div>
+                <div class="block" style="background-color:#ffffff">
+                    <div class="round"></div>
+                    <p class="discription" style="background-color:#ffffff">若い学生たちはお茶の文化を促進するために彼らの努力を捧げます</p>
+                </div>
             </div>
-            <div class=second_block style="background-color:#ffffff">
-                <p style="font-size: 24px;color:#016AA1;font-weight:700;background-color:#ffffff;margin-top:50px">海外直送
-                </p>
-                <p class=title style="background-color:#ffffff">性別平等　加國首立女性命名工程院 </p>
-                <p class=price style="background-color:#ffffff">NT$2,499</p>
-                <div class="murmur" style="background-color:#ffffff">
-                    <div class="block" style="background-color:#ffffff">
-                        <div class="round"></div>
-                        <p class="discription" style="background-color:#ffffff">者ヱラタ木世コチ況勢カに香存エチコヱ中</p>
-                    </div>
-                    <div class="block" style="background-color:#ffffff">
-                        <div class="round"></div>
-                        <p class="discription" style="background-color:#ffffff">本ぶ説伝の況見そぴる高役シヒ問思78記レねげ見覧祉しるす合会ルわ</p>
-                    </div>
-                </div>
-                <div class=button_shop>
-                    <img src="./icon/Group.png">
-                    <p>加入購物車</p>
-                </div>
-                <div class=button_save>
-                    <img src="./icon/small-bookmark 1.png">
-                    <p>收藏商品</p>
-                </div>
+            <div class=button_shop>
+                <img src="./icon/Group.png">
+                <p>加入購物車</p>
+            </div>
+            <div class=button_save>
+                <div class="save_icon"></div>
+                <p>收藏商品</p>
             </div>
         </div>
-        <div style="height:50px"></div>
-        <!--paragraph-->
-        <div class="desktop-block">
-            <div class="body-block">
-                <h1>
-                    商品介紹
-                </h1>
-                <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
-
-                <!--subtitle-->
-                <div class="paragraph">
-                    【記者黃郁期綜合報導】加拿大商界領袖吉娜．蔻迪（Gina Cody）為促進女性學習工程，捐獻1500萬美金給母校康考迪亞大學（Concordia
-                    University）。而該校為感念吉娜．蔻迪，9月24日宣布將以她的名字命名電腦科學與工程學院，此為加拿大首次以女性名字為名的工程學院。 </div>
-
-                <div class="paragraph">
-                    吉娜．蔻迪認為教育對於女性十分重要。「女性能夠在社會上生存下去的唯一方式是透過教育。」在接受康考迪亞校方採訪時，她表示母親的這句話令她印象深刻。她從伊朗家鄉的大學畢業後，便前往加拿大，因為獲得經濟援助得以繼續攻讀建築工程，也成為第一位取得康考迪亞大學建築工程博士學位的女性學生。
-                </div>
-                <div class="paragraph">
-                    吉娜．蔻迪畢業後持續在建築工程界發光發熱。她身為知名工程公司「CCI
-                    Group」的前任執行長，不僅是加拿大頂尖的工程師，也成為最優良的商業領袖之一。吉娜．蔻迪有感於學習工程時總是身為班上唯一的女性，因此希望透過捐獻資金給母校，鼓勵女性學習工程，也期盼促進其他少數族群學習中的平等、多元與包容。
-                </div>
-                <div class="paragraph">
-                    康考迪亞大學校長艾倫．沙波（Alan
-                    Shepard）對於吉娜．蔻迪的善舉表示感謝，並指出她將成為代表少數族群的一名指標性人物。「吉娜此舉能夠啟發新的世代。她將會吸引更多女性以及移民們進入原本不敢學習的領域。」艾倫認為她捐獻的資金可以幫助經濟條件不佳的學生追求更高的學位。
-                </div>
-                <div class="paragraph">
-                    關於這筆善款未來的用處，吉娜．蔻迪電腦科學與工程學院院長阿米爾．阿西夫（Amir
-                    Asif）說：「善款最主要的用途是為了達成吉娜．蔻迪的理念——平等、多元與相互包容。我們會評估現在學院的情況，成立工作小組並研擬出促進性別平等的策略。」他表示自己非常期待未來的執行成效與狀況。
-                </div>
-
-                <div class="paragraph">
-                    即使至今，特定學習領域中的少數族群，仍然會面臨許多質疑或是負面的經驗。就讀吉娜．蔻迪電腦科學與工程學院的學生漢娜．赫克蘿（Hannah
-                    Halcro）便說：「在發表意見時，教授或同學會說『女士優先』，使得大家更聚焦於我與多數人性別的不同。」她認為學習工程的女性普遍感覺自己並不屬於工程學院的學生，時常需要他人的鼓勵，才能克服這樣的心理，進而認可學習工程的事實。
-                </div>
-                <img class="paragraph-img" src="./image/女學生正努力.jpg">
-                <p class="paragraph-figcaption">社康考迪亞大學吉娜．蔻迪電腦科學與工程學院的上課期間，身為課堂中少數女學生正努力完成作品。　圖／康考迪亞大學提供</p>
-
-
-                <div class="paragraph">
-                    類似的情形在台灣也屢見不鮮，就讀國立政治大學廣告學系的謝榕鄉在女遠大於男的環境中學習也有相似經驗。他身為學習環境中的少數，也深有同感，「很多男生在選擇文科領域就讀時也會多加思考自己的決定。」謝榕鄉認為如果有吉娜．蔻迪這種突破框架的人物，將能鼓勵年輕學子，翻轉刻板印象，對於培育人才也有正面的幫助。
-                </div>
-                <img class="paragraph-img" src="./image/吉娜．蔻迪電腦科學與工程學院.jpg">
-                <p class="paragraph-figcaption">在吉娜．蔻迪捐獻1500萬美金之後，康考迪亞大學工程學院已重新命名為吉娜．蔻迪電腦科學與工程學院 。　圖／康考迪亞大學提供</p>
-
-
-
-
-                <div
-                    style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
-                </div>
-
+    </div>
+    <div style="height:50px"></div>
+    <!--paragraph-->
+    <div class="desktop-block">
+        <div class="body-block">
+            <h1>
+                商品介紹
+            </h1>
+            <div style="width:700px;height:3px;position: relative; margin-left: 50px;background:#FFB736"></div>
+            <div class="paragraph">
+                一簍簍的茶葉在經過眾人的揉捻、翻攪後，手中的茶香逐漸溢出，濃郁清香瀰漫在空氣中，為國慶日的午後增添了些許芬芳。10日，南投國際茶業博覽會舉辦「千人揉茶」活動吸引上千民眾參與外，也邀請大葉大學及大同技術學院的學生一起推銷茶葉文化。
             </div>
-            <!--about sellers-->
-            <!--<div class="mobile-block">-->
+            <img class="paragraph-img" src="./image/tea01.jpg">
+            <p class="paragraph-figcaption">參與活動的民眾依照主辦單位的規劃坐在草地上，享受一起揉茶的樂趣。　圖／黃郁期攝</p>
+            <div class="paragraph">
+                現場可見群眾於草地上席地而坐，各個家庭不分老少，都聚精會神地搓揉竹簍裡的茶葉，一起體驗揉茶的樂趣。活動主辦單位水里鄉農會提供特產的「水里紅」茶葉供民眾揉茶。推廣部主任黃琇提到：「茶葉在採收後先經過我們的加工，再分裝成一千袋給民眾揉茶。」民眾也可在活動後，用電鍋將揉捻過的茶烘乾，泡成茶飲用。參與活動的民眾張耘誌表示，活動結束後還能品嘗親自製作的茶葉，很有成就感。
+            </div>
+            <img class="paragraph-img" src="./image/tea03.jpg">
+            <p class="paragraph-figcaption">「千人揉茶」活動的參加民眾分布年齡非常廣，現場的小孩們在竹簍裡把玩新鮮的茶葉。　圖／黃郁期攝</p>
+            <div class="paragraph">
+                「千人揉茶」已邁入第四年，主辦單位希望民眾透過體驗製茶的過程，增進對茶葉產製的了解。民眾王培任肯定揉茶活動的教學意義，「平常自己也有在喝茶，也想知道茶葉是怎麼製作的。」他認為藉由此次體驗更了解茶葉的製作過程，也能讓更多人了解茶葉文化。
+            </div>
+            <div class="paragraph">
+                茶業博覽會中的「茶業生活應用館」如同「千人揉茶」，也扮演行銷茶業文化的重要角色，而且完全由大專院校學生自行規劃行銷。大葉大學食品暨應用生物科技學系的學生們注重在花茶的介紹，該系學生陳靜雯表示，現在許多大學生都在飲料店買較不健康的茶種，「希望讓大家更加了解花茶，比較營養且對身體較好。」而大同技術學院本次策展也將茶融入餐點，推出不僅健康又有特殊口感的茶餐，該校餐飲管理系學生蔡沛錡也希望這些特色茶料理能外銷到國外。
+            </div>
+            <img class="paragraph-img" src="./image/tea04.jpg">
+            <p class="paragraph-figcaption">主要由大葉大學及大同技術學院學生們負責策展的茶業生活應用館入口。　圖／黃郁期攝</p>
+            <div class="paragraph">
+                對於年輕學子付出心力推廣茶業文化，大葉的指導老師、同時也是食品暨應用生物科技學系的助理教授許文光說：「現在投入製茶和種茶的年輕人越來越少，茶業需要更多年輕新血投入。」他期盼透過課程及實際策展，培訓年輕的製茶人才。而大同技術學院餐飲管理系指導老師劉邦傳認為策展對於學生有所助益。他表示，「學生平常學習關於茶的基本知識，在展覽時與民眾互動。」他肯定這樣的學習模式，可以讓學生實際應用其所學。
+            </div>
+            <img class="paragraph-img" src="./image/tea05.jpg">
+            <p class="paragraph-figcaption">大葉大學食品暨應用生物科技學系學生正在向民眾介紹花茶以及調茶的相關知識。　圖／黃郁期攝</p>
+            
+
+            <div
+                style="width:700px;height:3px; position: relative; margin-top: 40px; margin-left: 50px;background:#FFB736">
+            </div>
+        </div>
+        <!--about sellers-->
+        <!--<div class="mobile-block">-->
             <div class="seller-block">
                 <div class="seller">
                     <div class="seller-header">關於賣家</div>
@@ -1116,10 +1123,10 @@
                     <img style="width: 30px; height: 30px; display: inline-block; position: absolute; margin-top: 83px; margin-left: 372px;background-color: #ffffff"
                         src="./icon/Star-white.png">
                 </div>
-                <div class="seller-date" style="margin-top: 123px;">上架日期：2019/01/02</div>
+                <div class="seller-date" style="margin-top: 123px;">上架日期：2018/12/11</div>
                 <img style="width: 153px; height: 11px; margin-top: 25px; margin-left: 70px;background-color: #ffffff"
                     src="./icon/curve.png">
-                <img style="width: 153px; height: 11px; margin-left: -6px;background-color: #ffffff"
+                <img style="width: 153px; height: 11px; margin-top: 24px; margin-left: -7px;background-color: #ffffff"
                     src="./icon/curve.png">
                 <div class="seller" style="margin-top: 40px; margin-left: 44px;">
                     強力推薦
@@ -1266,10 +1273,16 @@
     </div>
 
     <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 </body>
 
 </html>
