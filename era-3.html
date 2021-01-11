@@ -871,6 +871,23 @@
             background-color: #FFFFFF;
         }
 
+        .header span a:link {
+            text-decoration: none;
+            background-color: #f1f1f1;
+            color: #4f4f4f;
+        }
+
+        .header span a:visited {
+            background-color: #f1f1f1;
+            color: #4f4f4f;
+        }
+
+        .header span a:hover {
+            text-decoration: underline;
+            background-color: #f1f1f1;
+            color: grey;
+        }
+
         /*以上為修正後footer套件*/
         /*輪播區的修正部分（以上請覆蓋）*/
     </style>
@@ -878,22 +895,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
     </style>
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 </head>
 
 <body>
     <div class="website" style="width:1440px">
         <div class=header>
             <div class=logo>
-                <img style="width:260px" src="./icon/Logo3@4x-8 1.png">
+                <a href="https://106405042.github.io/coin-media/mainpage.html">
+                <img style="width:260px" src="./icon/Logo3@4x-8 1.png"></a>
             </div>
-            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px">精選企劃</span>
+            <span style="color: #F57F01;font-weight: 700;margin-left: 240px; margin-right:0px"><a
+                style="color: #F57F01;"
+                href="https://106405042.github.io/coin-media/I-am-special.html">精選企劃</a></span>
             <div class="round_header"></div>
-            <span>校園熱銷</span>
-            <span>文化小物</span>
-            <span>時代精品</span>
-            <span>在地嚴選</span>
-            <span>海外直送</span>
+            <span><a href="https://106405042.github.io/coin-media/mainpage.html#sec1">校園熱銷</a></span>
+            <span><a href="https://106405042.github.io/coin-media/mainpage.html#sec2">文化小物</a></span>
+            <span><a href="https://106405042.github.io/coin-media/mainpage.html#sec3">時代精品</a></span>
+            <span><a href="https://106405042.github.io/coin-media/mainpage.html#sec4">在地嚴選</a></span>
+            <span><a href="https://106405042.github.io/coin-media/mainpage.html#sec5">海外直送</a></span>
         </div>
         <div class=thumbnail style="background-color:#ffffff">
             <div class=first_image_block style="background-color:#ffffff">
@@ -998,6 +1027,7 @@
                     <div class="seller" style="margin-top: 40px; margin-left: 44px;">
                         強力推薦
                     </div>
+                    <a href="https://106405042.github.io/coin-media/I-am-special.html">
                     <img class="next-img" src="./image/water-1.png">
                     <div class="blue-block">
                         <div class="blue-block-word">視覺化專題報導</div>
@@ -1005,11 +1035,15 @@
                     <div class="orange-block">
                         <div class="orange-block-word">85折</div>
                     </div>
-                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                </a>
+                <a style="text-decoration: none;" href="https://106405042.github.io/coin-media/I-am-special.html">
+                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div></a>
                     <div class="original-price">NT$9,999</div>
                     <div class="new-price">NT$8,499</div>
                 </div>
                 <div class="share-sticky">
+                    <a
+                       target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F106405042.github.io%2Fcoin-media%2Fera-3.html&amp;src=sdkpreparse">
                     <div class="orange-share">
                         <div class="orange-share-text">好物不分享？</div>
                         <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
@@ -1023,6 +1057,7 @@
                             src="./icon/question-triangle.png">
                         <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1038,7 +1073,7 @@
         <div class=thumbnail style="background-color:#ffffff">
             <div class=first_image_block style="background-color:#ffffff">
                 <img style="width:700px;height:auto" src="./image/Canada02.jpg">
-                <p style="color: #4f4f4f;background-color:#ffffff">
+                <p style="color: #4f4f4f;background-color:#ffffff; margin-top: 10px;">
                     康考迪亞大學吉娜．蔻迪電腦科學與工程學院的上課期間，身為課堂中少數女學生正努力完成作品。　圖／康考迪亞大學提供
                 </p>
             </div>
@@ -1143,6 +1178,7 @@
                     <div class="seller" style="margin-top: 40px; margin-left: 44px;">
                         強力推薦
                     </div>
+                    <a href="https://106405042.github.io/coin-media/I-am-special.html">
                     <img class="next-img" src="./image/water-1.png">
                     <div class="blue-block">
                         <div class="blue-block-word">視覺化專題報導</div>
@@ -1150,11 +1186,15 @@
                     <div class="orange-block">
                         <div class="orange-block-word">85折</div>
                     </div>
-                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div>
+                </a>
+                <a style="text-decoration: none;" href="https://106405042.github.io/coin-media/I-am-special.html">
+                    <div class="next-title">自來水普及面臨挑戰　屏東用水轉型的交叉路口</div></a>
                     <div class="original-price">NT$9,999</div>
                     <div class="new-price">NT$8,499</div>
                 </div>
                 <div class="share-sticky">
+                    <a
+                       target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F106405042.github.io%2Fcoin-media%2Fera-3.html&amp;src=sdkpreparse">
                     <div class="orange-share">
                         <div class="orange-share-text">好物不分享？</div>
                         <img style="width: 31.45px; height: auto; margin-left: 176px; margin-top: 6px;display: inline-block;background-color: #FA9D1F;"
@@ -1168,6 +1208,7 @@
                             src="./icon/question-triangle.png">
                         <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1192,50 +1233,62 @@
                             <div class="carousel-item active yuchi-adjustment-7">
                                 <div class="row">
                                     <div class="col-sm-4">
+                                        <a href="https://106405042.github.io/coin-media/culture-3.html">
                                         <div class="img-box"><img src="./image/子頁輪播圖＿千人揉茶.png" class="img-fluid" alt="">
                                             <div class="carousel-caption" style="background-color: transparent;">
                                                 <h5>千人揉茶飄香　推廣台灣茶葉文化</h5>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                     <div class="col-sm-4">
+                                        <a href="https://106405042.github.io/coin-media/culture-1.html">
                                         <div class="img-box"><img src="./image/子頁輪播圖＿穆斯林.png" class="img-fluid" alt="">
                                             <div class="carousel-caption" style="background-color: transparent;">
                                                 <h5>摘下穆斯林標籤：我是我，獨一無二</h5>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                     <div class="col-sm-4">
+                                        <a href="https://106405042.github.io/coin-media/culture-2.html">
                                         <div class="img-box"><img src="./image/子頁輪播圖＿書車.png" class="img-fluid" alt="">
                                             <div class="carousel-caption" style="background-color: transparent;">
                                                 <h5>華夏推行動書車　喚醒華僑滇緬回憶</h5>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-sm-4">
+                                        <a href="https://106405042.github.io/coin-media/era-2.html">
                                         <div class="img-box"><img src="./image/子頁輪播圖＿陪跑員.png" class="img-fluid" alt="">
                                             <div class="carousel-caption" style="background-color: transparent;">
                                                 <h5>陪跑員相伴　視障者征服馬拉松</h5>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                     <div class="col-sm-4">
+                                        <a href="https://106405042.github.io/coin-media/era-1.html">
                                         <div class="img-box"><img src="./image/子頁輪播圖＿跨國婚姻.png" class="img-fluid" alt="">
                                             <div class="carousel-caption" style="background-color: transparent;">
                                                 <h5>說好的幸福呢？　戳破非法跨國婚姻仲介的粉紅泡泡</h5>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                     <div class="col-sm-4">
+                                        <a href="https://106405042.github.io/coin-media/I-am-special.html">
                                         <div class="img-box"><img src="./image/子頁輪播圖＿自來水.png" class="img-fluid" alt="">
                                             <div class="carousel-caption" style="background-color: transparent;">
                                                 <h5>自來水普及面臨挑戰　屏東用水轉型的交叉路口</h5>
                                             </div>
                                         </div>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -1267,7 +1320,7 @@
             <img class="my-Logo3" src="./image/Logo3@4x-8.png">
             <div class="my-title-footer">
                 <div class="my-know-us">
-                    <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+                    <span><a href="https://106405042.github.io/coin-media/aboutus.html"
                             style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
                     </span>
                 </div>
@@ -1284,16 +1337,7 @@
         </div>
     </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script>
-        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
-        $(document).ready(function () {
-            $(".button_save").click(function () {
-                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
-                $(".button_save").toggleClass("button_saved");
-            });
-        });  
-    </script>
+   
 </body>
 
 </html>
