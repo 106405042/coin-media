@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @media (min-width: 1024px) {
+      .desktop-only {
+        display: block;
+      }
+
+      .mobile-only {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .mobile-only {
+        display: block;
+      }
+
+      .desktop-only {
+        display: none;
+      }
+    }
+
+
+
+    * {
+      background-color: #f1f1f1;
+      box-sizing: border-box;
+      font-family: Roboto, Noto Sans TC, sans-serif;
+      font-style: normal;
+    }
+
+    .logo {
+      max-width: 269px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 65px;
+    }
+
+    @media(max-width:1023px) {
+      .logo {
+        display: inline-block;
+        max-width: 250px;
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+
+    .ham {
+      width: 900px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 37px;
+    }
+
+    .ham>span {
+      font-size: 24px;
+      line-height: 40px;
+      color: #4f4f4f;
+      width: 110px;
+    }
+
+    .ham span a:link {
+      text-decoration: none;
+      background-color: #f1f1f1;
+      color: #4f4f4f;
+    }
+
+    .ham span a:visited {
+      text-decoration: none;
+      background-color: #f1f1f1;
+      color: #4f4f4f;
+    }
+
+    .ham span a:hover {
+      text-decoration: underline;
+      background-color: #f1f1f1;
+      color: grey;
+    }
+
+    @media(max-width:1023px) {
+      .ham {
+        display: inline-block;
+        vertical-align: middle;
+        width: 28px;
+        transform: translate(-80%, 280%);
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+      }
+
+      .ham>div {
+        width: 28px;
+        height: 3px;
+        background-color: #f57f01;
+        margin-bottom: 10px;
+      }
+
+
+      #header {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+
+    /*typing animation*/
+    @keyframes typing {
+      from {
+        width: 0
+      }
+    }
+
+    @keyframes caret {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .typing {
+      font-size: 28px;
+      font-weight: bold;
+      color: #4a4949;
+      margin-right: auto;
+      margin-left: auto;
+      width: 14em;
+      border-right: .05em solid;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 5s steps(14) infinite,
+        caret 1s steps(1) infinite;
+    }
+    @media(max-width:767px){
+      .typing{
+        font-size:22px ;
+      }
+    }
+
+    .word {
+      text-align: center;
+      color: #808080;
+      font-size: 24px;
+      word-spacing: 5px;
+    }
+    @media(max-width:767px){
+      .word{
+        font-size:18px ;
+      }
+    }
+
+    .round_header {
+      background-color: #FA9D1F;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 2px;
+      vertical-align: text-top;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="mainpage-carousel.css">
+  <link rel="stylesheet" href="mainpage-article.css">
+  <link rel="stylesheet" href="mainpage-buttom.css">
+  <script src="mainpage-carousel.js" async></script>
+</head>
+
+<body>
+  <!--desktop-->
+  <div class="desktop-only">
+    <div class="logo">
+      <img src="./image/Logo3@4x-8.png" style="width: 100%;">
+    </div>
+  </div>
+  <div class="desktop-only">
+    <p class="ham">
+      <span style="color: #f57f01;font-weight: bold;">精選企劃
+        <span class="round_header"></span>
+      </span>
+      <span><a href="./mainpage.html#sec1">校園熱銷</a></span>
+      <span><a href="./mainpage.html#sec2">文化小物</a></span>
+      <span><a href="./mainpage.html#sec3">時代精品</a></span>
+      <span><a href="./mainpage.html#sec4">在地嚴選</a></span>
+      <span><a href="./mainpage.html#sec5">海外直送</a></span>
+    </p>
+  </div>
+
+  <!--tablet and mobile-->
+
+  <div id="header" class="mobile-only">
+    <div class="logo">
+      <img src="./image/Logo3@4x-8.png" style="width: 100%;">
+    </div>
+    <a href="./mainpage.html#aboutus2">
+      <div class="ham">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="pic">
+        <img src="./image/視覺化3.jpg">
+        <div class="text">自來水普及面臨挑戰 屏東用水轉型的交叉路口</div>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="pic">
+        <img src="./image/輪播2.jpg">
+        <div class="text">老舊宿舍建安眉角多 環境、設備影響住宿心理</div>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="pic">
+        <img src="./image/輪播3.jpg">
+        <div class="text">摘下穆斯林標籤：我是我，獨一無二</div>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="pic">
+        <img src="./image/劃破蘭陽田地線2.jpg">
+        <div class="text">劃破蘭陽田地線 千棟農舍陰影下的農村生活</div>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="pic">
+        <img src="./image/輪播5.jpg">
+        <div class="text">性別平等 加國首立女性命名工程院</div>
+      </div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+  <h1 class="typing">資本的恩惠早已荼毒報導......</h1>
+  <p class="word">現今垂手可得的報導，是如何產製的？<br>
+    這些文字結晶，能讓世人看見新聞工作者的努力嗎？<br>
+    讓我們，用他們製作報導的實際工時，重新衡量新聞價值吧！
+  </p>
+  <div class="related-items" id="sec1">
+    <span>校園熱銷</span>
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/宿苦誰人知.jpg">
+          <div class="on-top">
+            <p>佈滿鏽蝕的寢具和大片剝落的壁癌。住在這裡，你，有生活品質嗎？</p>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">NEW</div>
+          <h3>老舊宿舍建安眉角多<br>環境、設備影響住宿心理</h3>
+        </div>
+        <span>李宜恬</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$4,499</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/我們還會再見面嗎2.jpg">
+          <div class="orange_block">79折</div>
+          <div class="on-top">
+            <p>城鄉不均的資源，真的能讓偏鄉孩童，獲得良好的教育，翻轉階級嗎？</p>
+          </div>
+        </div>
+        <h3>「我們還會見面嗎？」——淺談偏鄉教育資金問題 </h3>
+        <span>鄭鈺宣</span>
+        <div class="price-container">
+          <h2 class="original-price">NT4,999</h2>
+          <h2 class="price">NT$3,949</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="=..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/長榮攜日成立.jpg">
+          <div class="on-top">
+            <p>動漫熱襲捲年輕世代，高等教育機構也搭上這波浪潮，培養學生才能......</p>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">NEW</div>
+          <h3>長榮攜日成立動漫工作室 盼助產業接軌</h3>
+        </div>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$2,499</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-items" id="sec2">
+    <span>文化小物</span>
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/摘下穆斯林標籤.jpg">
+          <div class="on-top">
+            <P>揭開穆斯林神秘面紗，他們也與你我無異。</P>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">HOT</div>
+          <h3>摘下穆斯林標籤：我是我，獨一無二</h3>
+        </div>
+        <span>李宜恬</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$2,999</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/華夏推行動書車.png">
+          <div class="on-top">
+            <p>行動書車喚起滇緬華僑的家鄉情，推廣在地的民俗文化。</p>
+          </div>
+        </div>
+        <h3>華夏推行動書車 喚醒華僑滇緬回憶</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$1,499</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="=..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/千人揉茶2.jpg">
+          <div class="orange_block">79折</div>
+          <div class="on-top">
+            <p>一簍簍的茶葉在經過揉捻、翻攪後，濃郁茶香溢出，瀰漫在空氣中。</p>
+          </div>
+        </div>
+        <h3>長千人揉茶飄香 推廣台灣茶葉文化</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="original-price">NT$1,999</h2>
+          <h2 class="price">NT$1,579</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-items" id="sec3">
+    <span>時代精品</span>
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/大觀社區2.png">
+          <div class="blue_block">影音報導</div>
+          <div class="on-top">
+            <p>居住了一輩子的家，又怎麼能說放棄就放棄呢？看大觀社區居民在抗爭中生活。</p>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">HOT</div>
+          <h3>大觀社區拆遷爭議不斷 居民抗爭中生活</h3>
+        </div>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$6,799</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/跨國婚姻.jpg">
+          <div class="on-top">
+            <p>非法跨國婚姻媒合團體猖獗，尋找真愛的路上處處皆是危機。</p>
+          </div>
+        </div>
+        <h3>說好的幸福呢？戳破非法跨國婚姻仲介的粉紅泡泡</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$5,799</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="=..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/馬拉松.jpg">
+          <div class="on-top">
+            <p>陪跑員是視障跑者的眼睛，讓運動不再受限。</p>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">HOT</div>
+          <h3>陪跑員相伴 視障者征服馬拉松</h3>
+        </div>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$1,899</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-items" id="sec4">
+    <span>在地嚴選</span>
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/輪視覺化2.png">
+          <div class="blue_block" style="width: 183px;">視覺化專題報導</div>
+          <div class="orange_block" style="margin-left: 184px;">85折</div>
+          <div class="on-top">
+            <p>在地下水受汙染，且現代人重視用水品質的時代，屏東居民的用水卻仍面臨挑戰。</p>
+          </div>
+        </div>
+        <h3>自來水普及面臨挑戰 屏東用水轉型的交叉路口</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="original-price">NT$9,999</h2>
+          <h2 class="price">NT$8,499</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/劃破蘭陽田地線2.jpg">
+          <div class="blue_block" style="width: 200px;">華文永續報導首獎</div>
+          <div class="on-top">
+            <p>隨著雪隧通車，宜蘭成為全台農舍數量最多且密度最高的城市。</p>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">HOT</div>
+          <h3>劃破蘭陽田地線 千棟農舍陰影下的農村生活</h3>
+        </div>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$10,999</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="=..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/漫漫修復路2.jpg">
+          <div class="blue_block" style="width: 200px;">華文永續報導入圍</div>
+          <div class="on-top">
+            <p>住在南橫的布農族居民，本應坐享交通之便、等待遊客前來，但事實卻並非如此......</p>
+          </div>
+        </div>
+        <h3>漫漫修復路 — 南橫居民尋生存之「道」</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$7,999</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="related-items" id="sec5">
+    <span>海外直送</span>
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/輪播5.jpg">
+          <div class="orange_block">85折</div>
+          <div class="on-top">
+            <p>加拿大商界領袖以女性命名學院，啟發無數人，她的理念是......</p>
+          </div>
+        </div>
+        <h3>性別平等 加國首立女性命名工程院</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="original-price">NT$2,999</h2>
+          <h2 class="price">NT$2,549</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/無條件入學.png">
+          <div class="on-top">
+            <p>眾多大學校長、教育界領袖投書，是什麼樣的制度損害了英國高教利益？</p>
+          </div>
+        </div>
+        <div class="new-flag-block">
+          <div class="new-flag">HOT</div>
+          <h3>無條件入學氾濫 恐降低學習意願</h3>
+        </div>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$1,999</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="related-item">
+      <a href="=..." target="_blank">
+        <div class="hover-img">
+          <img src="./image/法政府.jpg">
+          <div class="on-top">
+            <p>非歐盟學生不再留學法國，法國總理大破大立實施這些措施......</p>
+          </div>
+        </div>
+        <h3>法政府提高獎學金 盼國際生人數成長</h3>
+        <span>黃郁期</span>
+        <div class="price-container">
+          <h2 class="normal-price">NT$2,699</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="flex-container-footer" id="aboutus2">
+    <img class="Logo3" src="./image/Logo3@4x-8.png">
+    <div class="title-footer">
+      <div class="know-us">
+        <span><a href="https://hackmd.io/ojTXG2s0RQaJz85goqIz1w" target="_blank"
+            style="color: #FFFFFF; text-decoration: none; text-decoration: none; background-color: #F57F01;">認識我們</a>
+        </span>
+      </div>
+      <p style="display: inline-block;">法賢小人養成人力資源總監　｜　李宜恬</p>
+      <p class="hsine"style="display: inline-block;">企業精神領袖兼顧問　｜　李法賢</p>
+      <p class="xuan">日出而作日出而息技術總監　｜　鄭鈺宣</p>
+      <p>可憐沒人愛企業形象代言人　｜　楊沛霓</p>
+      <p>不想只領基本時薪設計總監　｜　于恆生</p>
+      <p>寫文寫摳左右互搏業務總監　｜　黃郁期</p>
+    </div>
+    <div class="copyright">
+      <span>© 2020 資恩荼報 All rights reserved</span>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+* {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1094px;
+            position: relative;
+            margin: auto;
+            margin-top: 37px;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            max-width: 55px;
+            width:100%;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            background-color:rgba(250, 157, 31, 0.5);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 50%;
+            user-select: none;
+        }
+        @media(max-width:862px){
+            .prev,
+            .next{
+                background-color:transparent;
+            }
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 50%;
+            padding-left: 22.5px;
+        }
+
+        .prev {
+            border-radius: 50%;
+            padding-left: 22.5px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color:#f57f01;
+        }
+
+    
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #f57f01;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        .pic{
+            max-width: 862px;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+
+        .pic>img{
+            width: 100%;
+            max-height: 482px;
+            object-fit: cover;
+            display: flex;
+        }
+
+        .text {
+            color: #e2e2e2;
+            font-size: 25px;
+            bottom: 0px;
+            padding: 8px 12px;
+            text-align: center;
+            background-color: rgb(0,0,0,0.6);
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+            max-width: 862px;
+          }
+        @media(max-width:1023px) and (min-width:600px){
+            .text{
+                font-size: 22px;
+            }
+        }
+        @media(max-width:599px){
+            .text{
+                font-size: 16px;
+            }
+        }
+
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
