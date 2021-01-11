@@ -190,7 +190,10 @@
             background-color: #f1f1f1;
             margin-left: 75px;
             display: flex;
+            flex-direction: row;
+            align-items: stretch;
             flex-wrap: wrap;
+            margin-bottom: 100px;
         }
 
         .body-block {
@@ -246,9 +249,17 @@
             background-color: #ffffff
         }
 
+        .nick-block {
+            width: 440px;
+            padding-bottom: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
         .seller-block {
             width: 440px;
-            height: 963px;
+            height: 850px;
             background-color: #ffffff;
             position: relative;
             margin-left: 40px
@@ -424,14 +435,12 @@
         }
 
         .share-sticky {
-            width: 485px;
-            margin-left: 930px;
-            margin-top: 50px;
+            margin-top: 30px;
             display: inline-block;
             position: sticky;
             top: 50%;
             bottom: auto;
-            transform: translateY(-10%);
+            transform: translateY(-15%);
         }
 
         .orange-share {
@@ -710,6 +719,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 
 </head>
 
@@ -862,7 +881,8 @@
             </div>
             <!--about sellers-->
             <!--<div class="mobile-block">-->
-            <div class="seller-block">
+            <div class="nick-block">
+                <div class="seller-block">
                 <div class="seller">
                     <div class="seller-header">關於賣家</div>
                 </div>
@@ -919,6 +939,7 @@
                     <img style="width: 200px; height: auto;" src="./image/Nick_Li.png">
                 </div>
             </div>
+        </div>
         </div>
 
         <!--新聞分篇-->
@@ -998,7 +1019,8 @@
             </div>
             <!--about sellers-->
             <!--<div class="mobile-block">-->
-            <div class="seller-block">
+            <div class="nick-block">
+                <div class="seller-block">
                 <div class="seller">
                     <div class="seller-header">關於賣家</div>
                 </div>
@@ -1056,6 +1078,7 @@
                 </div>
             </div>
         </div>
+        </div>
 
         <!--沒有輪播區的底部-->
     <div class="container-three-images">
@@ -1107,16 +1130,7 @@
 
         <!--輪播區修正部分（以上請連同footer一起覆蓋）-->
     </div>
-            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script>
-        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
-        $(document).ready(function () {
-            $(".button_save").click(function () {
-                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
-                $(".button_save").toggleClass("button_saved");
-            });
-        });  
-    </script>
+    
 </body>
 
 </html>
