@@ -1251,6 +1251,16 @@
             <span>© 2020 資恩荼報 All rights reserved</span>
         </div>
     </div>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script>
+        /* document 載入後，針對 button_save class 的元素設定toggle的效果*/
+        $(document).ready(function () {
+            $(".button_save").click(function () {
+                /* 當 .button_save 元素被 click 後，新增 .button_saved class 在元素上 */
+                $(".button_save").toggleClass("button_saved");
+            });
+        });  
+    </script>
 </body>
 
 </html>
